@@ -54,7 +54,8 @@ i buit this website using the html and css tech stack.
 
 ### Key Features <a name="key-features"></a>
 
-- one of the keyfeatures to this website is its responsiveness to mobile and desktop/pc
+- one of the key features to this website is its responsiveness to mobile and desktop/pc
+- another key feature is the way way portfolios are displayed without actually visiting the website  
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -104,6 +105,7 @@ https://github.com/gisachris/week1_portfolio
 ## 🔭 Future Features <a name="future-features"></a>
 
 -adding more imagery and completing the portfolio
+-another key feature that will be added in the future is the tech support 24/7
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
