@@ -1,6 +1,8 @@
 * {
   /* stylelint-disable length-zero-no-unit */
   margin: 0px;
+
+   --font-family: 'poppins', sans-serif;
 }
 
 body {
@@ -42,7 +44,7 @@ body {
 
 .logo-text {
   display: inline-flex;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-family), 'inter', sans-serif;
   font-size: 32px;
   font-weight: 700;
   line-height: 20px;
@@ -72,7 +74,7 @@ body {
   align-items: center;
   padding: 0vh;
   gap: 1.199400299850075vh;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-family), 'inter', sans-serif;
   font-size: 15px;
   font-weight: 600;
   line-height: 20px;
@@ -117,7 +119,7 @@ body {
 
 .text1 {
   color: #f55800;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-family), 'crete round', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 65px;
@@ -134,7 +136,7 @@ body {
   color: white;
   width: 41vh;
   height: 24px;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-family), 'roboto', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 22px;
@@ -153,7 +155,7 @@ body {
 .text3 {
   width: 56vh;
   height: 123px;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-family), 'poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
