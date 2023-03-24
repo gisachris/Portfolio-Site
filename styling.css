@@ -23,7 +23,6 @@ body {
   margin: 0vh;
 }
 
- /* stylelint-disable length-zero-no-unit */
 .section2 {
   margin: 0vh;
 }
@@ -39,7 +38,6 @@ body {
   display: flex;
 }
 
- /* stylelint-disable length-zero-no-unit */
 .logo-text {
   display: inline-flex;
   font-family: 'Inter', sans-serif;
@@ -66,7 +64,6 @@ body {
   color: rgb(255, 85, 0);
 }
 
- /* stylelint-disable length-zero-no-unit */
 .item-nav {
   display: flex;
   flex-direction: row;
@@ -101,7 +98,6 @@ body {
 }
 
  /* second heading part*/
- /* stylelint-disable length-zero-no-unit */
 .intro-text {
   display: flex;
   flex-direction: column;
@@ -118,7 +114,6 @@ body {
   right: 0vh;
 }
 
- /* stylelint-disable length-zero-no-unit */
 .text1 {
   color: #f55800;
   font-family: 'Crete Round';
@@ -185,7 +180,6 @@ body {
   left: 2vh;
 }
 
- /* stylelint-disable length-zero-no-unit*/
 .medium {
   color: #cfcfcf;
   left: 160px;
