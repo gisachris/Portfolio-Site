@@ -1,7 +1,8 @@
 * {
-  /* stylelint-disable length-zero-no-unit*/
+  /* stylelint-disable length-zero-no-unit */
   margin: 0px;
 }
+
 body {
   background-color: #1c1a19;
   min-width: 49.3vh;
@@ -81,7 +82,7 @@ body {
   width: 38.23088455772114vh;
   height: 5.997001499250374vh;
   right: 29.08545727136432vh;
-  top: calc(6% - 40px/2);
+  top: calc(6% - 40px / 2);
 }
 
 .menu-bar {
@@ -97,7 +98,6 @@ body {
   display: none;
 }
 
- /* second heading part*/
 .intro-text {
   display: flex;
   flex-direction: column;
@@ -157,7 +157,7 @@ body {
   font-weight: 400;
   font-size: 20px;
   line-height: 32px;
-  color: #F4F5F7;
+  color: #f4f5f7;
   flex: none;
   order: 2;
   flex-grow: 0;
@@ -184,7 +184,6 @@ body {
   color: #cfcfcf;
   left: 160px;
   top: 0px;
-  padding: 8px;
   flex-direction: row;
   align-items: flex-start;
   padding: 8px;
@@ -193,7 +192,7 @@ body {
 }
 
 .github {
-  color: #CFCFCF;
+  color: #cfcfcf;
   left: 0px;
   top: 0px;
   flex-direction: row;
@@ -204,7 +203,7 @@ body {
 }
 
 .angellist {
-  color: #CFCFCF;
+  color: #cfcfcf;
   left: 80px;
   top: 0px;
   border-radius: 8px;
@@ -249,7 +248,6 @@ body {
   left: 36vh;
 }
 
-/*media queries*/
 @media only screen and (min-width: 378px) {
   .container {
     max-width: 100%;
