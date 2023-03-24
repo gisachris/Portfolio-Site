@@ -1,9 +1,9 @@
 * {
+  /* stylelint-disable length-zero-no-unit*/
   margin: 0px;
 }
-
 body {
-  background-color: #1C1A19;
+  background-color: #1c1a19;
   min-width: 49.3vh;
   max-width: 100%;
   min-height: 100%;
@@ -16,44 +16,34 @@ body {
   max-width: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
-/*display: flex;
-max-width: 100%;
-/*position: static;*/
-}
-/*header part*/
-.section1 {
-  margin: 0vh;
-/*width: 65vh;*/
-/*max-width: 100%;*/
 }
 
+/* header part */
+ /* stylelint-disable length-zero-no-unit */
+.section1 {
+  margin: 0vh;
+}
+
+ /* stylelint-disable length-zero-no-unit */
 .section2 {
   margin: 0vh;
-/*overflow-x: hidden;
-overflow-y: hidden;.*/
 }
 
 .navigation {
-  background: #3E3C3C;
+  background: #3e3c3c;
   height: 15.794602698650674vh;
   width: 65vh;
   max-width: 100%;
-/*flex-basis: 300.5vh;
-flex-shrink: 1;
-left: 0vh;
-top: 0vh;
-border-radius: 0vh;
-max-height: 150%;
-border: 10px solid red;*/
 }
 
 .logo {
   display: flex;
 }
 
+ /* stylelint-disable length-zero-no-unit */
 .logo-text {
   display: inline-flex;
-  font-family: Inter;
+  font-family: 'Inter', sans-serif;
   font-size: 32px;
   font-weight: 700;
   line-height: 20px;
@@ -61,7 +51,6 @@ border: 10px solid red;*/
   text-align: center;
   color: white;
   align-items: center;
-/*border: 10px solid red;*/
   position: absolute;
   top: 5vh;
   left: 3vh;
@@ -71,20 +60,21 @@ border: 10px solid red;*/
 }
 
 .touch:hover {
-  border: 1px solid #F55800;
+  border: 1px solid #f55800;
 }
 
-.rough:active:active {
+.rough:active {
   color: rgb(255, 85, 0);
 }
 
+ /* stylelint-disable length-zero-no-unit */
 .item-nav {
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 0vh;
   gap: 1.199400299850075vh;
-  font-family: Inter;
+  font-family: 'Inter', sans-serif;
   font-size: 15px;
   font-weight: 600;
   line-height: 20px;
@@ -110,13 +100,14 @@ border: 10px solid red;*/
 .items {
   display: none;
 }
-/* second heading part*/
+
+ /* second heading part*/
+ /* stylelint-disable length-zero-no-unit */
 .intro-text {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0vh 0vh;
-  padding-bottom: 0vh;
   gap: 0.4vh;
   bottom: 0vh;
   position: absolute;
@@ -128,8 +119,9 @@ border: 10px solid red;*/
   right: 0vh;
 }
 
+ /* stylelint-disable length-zero-no-unit */
 .text1 {
-  color: #F55800;
+  color: #f55800;
   font-family: 'Crete Round';
   font-style: normal;
   font-weight: 400;
@@ -138,7 +130,6 @@ border: 10px solid red;*/
   flex: none;
   order: 0;
   flex-grow: 0;
-/*border: 10px solid red;*/
   position: absolute;
   top: 18vh;
   left: 2vh;
@@ -185,23 +176,21 @@ border: 10px solid red;*/
   display: inline-flex;
   flex-direction: row;
   align-items: center;
-  padding: 0px;
   width: 200px;
   height: 40px;
   flex: none;
   order: 5;
   flex-grow: 0;
-/*border: 10px solid red;*/
   position: absolute;
   top: 84vh;
   left: 2vh;
 }
 
+ /* stylelint-disable length-zero-no-unit*/
 .medium {
-  color: #CFCFCF;
+  color: #cfcfcf;
   left: 160px;
   top: 0px;
-  border-radius: 8px;
   padding: 8px;
   flex-direction: row;
   align-items: flex-start;
@@ -214,8 +203,6 @@ border: 10px solid red;*/
   color: #CFCFCF;
   left: 0px;
   top: 0px;
-  border-radius: 8px;
-  padding: 8px;
   flex-direction: row;
   align-items: flex-start;
   padding: 8px;
@@ -231,8 +218,6 @@ border: 10px solid red;*/
   padding: 8px;
   flex-direction: row;
   align-items: flex-start;
-  padding: 8px;
-  border-radius: 8px;
   order: 2;
 }
 
@@ -243,8 +228,6 @@ border: 10px solid red;*/
   padding: 8px;
   flex-direction: row;
   align-items: flex-start;
-  padding: 8px;
-  border-radius: 8px;
   order: 3;
 }
 
@@ -255,15 +238,13 @@ border: 10px solid red;*/
   padding: 8px;
   flex-direction: row;
   align-items: flex-start;
-  padding: 8px;
-  border-radius: 8px;
   order: 4;
 }
 
 .main {
   display: none;
 }
-/*.art {}*/
+
 .flow {
   overflow-y: hidden;
   overflow-x: hidden;
@@ -276,36 +257,34 @@ border: 10px solid red;*/
 }
 
 /*media queries*/
-@media only screen and (min-width:378px) {
+@media only screen and (min-width: 378px) {
   .container {
-      max-width: 100%;
-      overflow-x: hidden;
-      overflow-y: hidden;
-      display: flex;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
   }
 
   .navigation {
-      max-width: 100%;
-      max-height: 100%;
-      position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
   }
 
   .menu-bar {
-      display: flex;
-      position: absolute;
-      left: 164vh;
-      top: 6vh;
-      left: 50vh;
-      right: -10vh;
-      display: inline-flex;
-      width: 20px;
+    position: absolute;
+    top: 6vh;
+    left: 50vh;
+    right: -10vh;
+    display: inline-flex;
+    width: 20px;
   }
 }
 
-@media only screen and (min-width:768px) {
+@media only screen and (min-width: 768px) {
   .navigation {
-      max-width: 100%;
-      max-height: 100%;
-      position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
   }
 }
