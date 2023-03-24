@@ -62,30 +62,70 @@ i buit this website using the html and css tech stack.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+<!-- GETTING STARTED -->
+
 ## 💻 Getting Started <a name="getting-started"></a>
 
-as a new developer you can folk the project and try changing some html and css.
+
 
 ### Prerequisites
 
 In order to run this project you need:
 
-vscode editor or any other editor
+
+Example command:
+
+```sh
+ install vs code or any other text editor.
+```
+ 
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-https://github.com/gisachris/week1_portfolio
+
+Example commands:
+
+```sh
+  cd my-folder
+  git clone https://github.com/gisachris/week1_portfolio```
+
 
 ### Install
 
+Install this project with:
+
+
+Example command:
+
+```sh
+  node.js V16 and above
+```
+
+
 ### Usage
+
+To run the project, execute the following command:
+
+
+Example command:
+
+```sh
+  use git bash to open in Vs code
+```
+
 
 ### Run tests
 
+To run tests, run the following command:
 
-### Deployment
+
+Example command:
+
+```sh
+Run "npx stylelint "**/*.{css,scss}" --fix " to fix linters 
+```
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
