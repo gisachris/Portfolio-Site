@@ -116,7 +116,7 @@ body {
 
 .text1 {
   color: #f55800;
-  font-family: 'Crete Round';
+  font-family: 'Crete Round', san-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 65px;
@@ -133,7 +133,7 @@ body {
   color: white;
   width: 41vh;
   height: 24px;
-  font-family: 'Inter';
+  font-family: 'Inter', san-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 22px;
@@ -152,7 +152,7 @@ body {
 .text3 {
   width: 56vh;
   height: 123px;
-  font-family: 'Inter';
+  font-family: 'Inter', san-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
