@@ -4,7 +4,6 @@
 
   --font-family: 'poppins', sans-serif;
 }
-
 .mail {
   display: none;
 }
@@ -25,10 +24,15 @@ body {
   height: 900px;
 }
 
-.navigation {
+.header {
   display: flex;
   background-color: #3c3a39;
   height: 15vh;
+}
+
+.navigation {
+  margin-top: 5vh;
+  margin-right: 5vh;
 }
 
 .logo-text {
@@ -46,7 +50,7 @@ body {
 .menu-bar {
   width: 80px;
   height: 80px;
-  margin-top: 6vh;
+  margin-top: 6vh;  
 }
 
 .section2 {
@@ -64,7 +68,7 @@ body {
 }
 
 .text1 {
-  color: #ff6b00;
+  color: #FF6B00;
   font-size: 8vh;
   font-family: 'crete round';
   margin-left: 2vh;
@@ -101,14 +105,14 @@ ul {
 .image {
   width: 100vh;
   height: 100vh;
-  transform: translate(-7vh, -90vh);
+  transform: translate(-7vh, -90vh); 
 }
 
 .linkedn {
   transform: translate(4vh, -5vh);
 }
 
-.angellist {
+.angellist{
   transform: translate(11vh, -10vh);
 }
 
@@ -124,45 +128,46 @@ ul {
   .image {
     width: 100vh;
     height: 100vh;
-    transform: translate(2vh, -90vh);
+    transform: translate(2vh, -90vh); 
   }
-
+  
   .linkedn {
     transform: translate(4vh, -6vh);
   }
-
-  .angellist {
+  
+  .angellist{
     transform: translate(11vh, -11.5vh);
   }
-
+  
   .twitter {
     transform: translate(14vh, -17.5vh);
   }
-
+  
   .github {
     transform: translate(21vh, -23.5vh);
   }
+
 }
 
 @media only screen and (min-width: 768px) {
   .image {
     width: 100vh;
     height: 100vh;
-    transform: translate(-7vh, -90vh);
+    transform: translate(-7vh, -90vh); 
   }
-
+  
   .linkedn {
     transform: translate(4vh, -5vh);
   }
-
-  .angellist {
+  
+  .angellist{
     transform: translate(11vh, -10vh);
   }
-
+  
   .twitter {
     transform: translate(14vh, -15vh);
   }
-
+  
   .github {
     transform: translate(21vh, -20vh);
   }
