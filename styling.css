@@ -5,284 +5,164 @@
   --font-family: 'poppins', sans-serif;
 }
 
+.mail {
+  display: none;
+}
+
 body {
   background-color: #1c1a19;
-  min-width: 49.3vh;
+  min-width: 28.4vw;
   max-width: 100%;
-  min-height: 100%;
+  height: fit-content;
   max-height: 100%;
-  font-family: serif;
 }
 
 .container {
-  height: auto;
-  min-width: 49.3vh;
-  max-width: 100%;
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
-
-/* header part */
-.section1 {
-  margin: 0vh;
-}
-
-.section2 {
-  margin: 0vh;
+  display: grid;
+  grid-template-columns: 400px;
+  gap: 5vh;
+  justify-content: center;
+  height: 900px;
 }
 
 .navigation {
-  background: #3e3c3c;
-  height: 15.794602698650674vh;
-  width: 65vh;
-  max-width: 100%;
-}
-
-.logo {
   display: flex;
+  background-color: #3c3a39;
+  height: 15vh;
 }
 
 .logo-text {
-  display: inline-flex;
-  font-family: var(--font-family), 'inter', sans-serif;
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 20px;
-  letter-spacing: 0em;
-  text-align: center;
   color: white;
-  align-items: center;
-  position: absolute;
-  top: 5vh;
-  left: 3vh;
-  right: 0vh;
+  margin-top: 3vh;
+  margin-left: 1.5vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 26px;
+  font-weight: 500;
   text-decoration: none;
-  width: fit-content;
-}
-
-.touch:hover {
-  border: 1px solid #f55800;
-}
-
-.rough:active {
-  color: rgb(255, 85, 0);
-}
-
-.item-nav {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0vh;
-  gap: 1.199400299850075vh;
-  font-family: var(--font-family), 'inter', sans-serif;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 20px;
-  letter-spacing: 0em;
-  text-align: center;
-  color: white;
-  position: absolute;
-  width: 38.23088455772114vh;
-  height: 5.997001499250374vh;
-  right: 29.08545727136432vh;
-  top: calc(6% - 40px / 2);
+  display: inline-flex;
+  width: 100vh;
 }
 
 .menu-bar {
-  position: fixed;
-  top: 6vh;
-  left: 50vh;
-  right: -10vh;
-  display: inline-flex;
-  width: 20px;
+  width: 80px;
+  height: 80px;
+  margin-top: 6vh;
 }
 
-.items {
-  display: none;
+.section2 {
+  display: grid;
+  grid-template-columns: 300px;
+  gap: 5vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 .intro-text {
   display: flex;
+  gap: 2vh;
   flex-direction: column;
-  align-items: center;
-  padding: 0vh 0vh;
-  gap: 0.4vh;
-  bottom: 0vh;
-  position: absolute;
-  min-width: 49.3vh;
-  max-width: 100%;
-  height: auto;
-  left: 0vh;
-  top: 0vh;
-  right: 0vh;
 }
 
 .text1 {
-  color: #f55800;
-  font-family: var(--font-family), 'crete round', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 65px;
-  line-height: 82px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  position: absolute;
-  top: 18vh;
-  left: 2vh;
+  color: #ff6b00;
+  font-size: 8vh;
+  font-family: 'crete round';
+  margin-left: 2vh;
+  margin-top: 8vh;
 }
 
 .text2 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 28px;
   color: white;
-  width: 41vh;
-  height: 24px;
-  font-family: var(--font-family), 'roboto', sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 22px;
-  line-height: 44px;
-  display: flex;
-  align-items: center;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-  position: absolute;
-  top: 48vh;
-  left: 2vh;
-  right: 0px;
+  font-weight: 600;
+  height: 10vh;
+  margin-left: 2vh;
 }
 
 .text3 {
-  width: 56vh;
-  height: 123px;
-  font-family: var(--font-family), 'poppins', sans-serif;
+  font-family: 'poppins';
+  color: white;
+  font-size: 18px;
   font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 32px;
-  color: #f4f5f7;
-  flex: none;
-  order: 2;
-  flex-grow: 0;
-  position: absolute;
-  top: 56vh;
-  left: 2vh;
+  font-weight: none;
+  margin-left: 2vh;
 }
 
 ul {
   list-style-type: none;
 }
 
-.icons {
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  width: 200px;
-  height: 40px;
-  flex: none;
-  order: 5;
-  flex-grow: 0;
-  position: absolute;
-  top: 84vh;
-  left: 2vh;
+.bottom {
+  height: 38vh;
+  gap: 3vh;
 }
 
-.medium {
-  color: #cfcfcf;
-  left: 160px;
-  top: 0px;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 8px;
-  order: 0;
-  border-radius: 8px;
-}
-
-.github {
-  color: #cfcfcf;
-  left: 0px;
-  top: 0px;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 8px;
-  border-radius: 8px;
-  order: 1;
-}
-
-.angellist {
-  color: #cfcfcf;
-  left: 80px;
-  top: 0px;
-  border-radius: 8px;
-  padding: 8px;
-  flex-direction: row;
-  align-items: flex-start;
-  order: 2;
+.image {
+  width: 100vh;
+  height: 100vh;
+  transform: translate(-7vh, -90vh);
 }
 
 .linkedn {
-  left: 40px;
-  top: 0px;
-  border-radius: 8px;
-  padding: 8px;
-  flex-direction: row;
-  align-items: flex-start;
-  order: 3;
+  transform: translate(4vh, -5vh);
+}
+
+.angellist {
+  transform: translate(11vh, -10vh);
 }
 
 .twitter {
-  left: 120px;
-  top: 0px;
-  border-radius: 8px;
-  padding: 8px;
-  flex-direction: row;
-  align-items: flex-start;
-  order: 4;
+  transform: translate(14vh, -15vh);
 }
 
-.main {
-  display: none;
+.github {
+  transform: translate(21vh, -20vh);
 }
 
-.flow {
-  overflow-y: hidden;
-  overflow-x: hidden;
-}
-
-.art-i {
-  position: absolute;
-  top: 43vh;
-  left: 36vh;
-}
-
-@media only screen and (min-width: 378px) {
-  .container {
-    max-width: 100%;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    display: flex;
+@media only screen and (min-width: 375px) {
+  .image {
+    width: 100vh;
+    height: 100vh;
+    transform: translate(2vh, -90vh);
   }
 
-  .navigation {
-    max-width: 100%;
-    max-height: 100%;
-    position: absolute;
+  .linkedn {
+    transform: translate(4vh, -6vh);
   }
 
-  .menu-bar {
-    position: absolute;
-    top: 6vh;
-    left: 50vh;
-    right: -10vh;
-    display: inline-flex;
-    width: 20px;
+  .angellist {
+    transform: translate(11vh, -11.5vh);
+  }
+
+  .twitter {
+    transform: translate(14vh, -17.5vh);
+  }
+
+  .github {
+    transform: translate(21vh, -23.5vh);
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .navigation {
-    max-width: 100%;
-    max-height: 100%;
-    position: absolute;
+  .image {
+    width: 100vh;
+    height: 100vh;
+    transform: translate(-7vh, -90vh);
+  }
+.linkedn {
+    transform: translate(4vh, -5vh);
+  }
+
+  .angellist {
+    transform: translate(11vh, -10vh);
+  }
+
+  .twitter {
+    transform: translate(14vh, -15vh);
+  }
+
+  .github {
+    transform: translate(21vh, -20vh);
   }
 }
