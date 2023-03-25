@@ -1,8 +1,8 @@
 * {
   /* stylelint-disable length-zero-no-unit */
   margin: 0px;
- 
-  --font-family: 'poppins', sans-serif;
+
+   --font-family: 'poppins', sans-serif;
 }
 
 body {
@@ -167,6 +167,10 @@ body {
   position: absolute;
   top: 56vh;
   left: 2vh;
+}
+
+ul {
+  list-style-type: none;
 }
 
 .icons {
