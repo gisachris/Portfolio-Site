@@ -1,0 +1,174 @@
+* {
+  /* stylelint-disable length-zero-no-unit */
+  margin: 0px;
+
+  --font-family: 'poppins', sans-serif;
+}
+
+.mail {
+  display: none;
+}
+
+body {
+  background-color: #1c1a19;
+  min-width: 28.4vw;
+  max-width: 100%;
+  height: fit-content;
+  max-height: 100%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 400px;
+  gap: 5vh;
+  justify-content: center;
+  height: 900px;
+}
+
+.header {
+  display: flex;
+  background-color: #3c3a39;
+  height: 15vh;
+}
+
+.navigation {
+  margin-top: 5vh;
+  margin-right: 5vh;
+}
+
+.logo-text {
+  color: white;
+  margin-top: 3vh;
+  margin-left: 1.5vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  width: 100vh;
+}
+
+.menu-bar {
+  width: 80px;
+  height: 80px;
+  margin-top: 6vh;
+}
+
+.section2 {
+  display: grid;
+  grid-template-columns: 300px;
+  gap: 5vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.intro-text {
+  display: flex;
+  gap: 2vh;
+  flex-direction: column;
+}
+
+.text1 {
+  color: #ff6b00;
+  font-size: 8vh;
+  font-family: 'crete round';
+  margin-left: 2vh;
+  margin-top: 8vh;
+}
+
+.text2 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 28px;
+  color: white;
+  font-weight: 600;
+  height: 10vh;
+  margin-left: 2vh;
+}
+
+.text3 {
+  font-family: 'poppins';
+  color: white;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: none;
+  margin-left: 2vh;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.bottom {
+  height: 38vh;
+  gap: 3vh;
+}
+
+.image {
+  width: 100vh;
+  height: 100vh;
+  transform: translate(-7vh, -90vh);
+}
+
+.linkedn {
+  transform: translate(4vh, -5vh);
+}
+
+.angellist {
+  transform: translate(11vh, -10vh);
+}
+
+.twitter {
+  transform: translate(14vh, -15vh);
+}
+
+.github {
+  transform: translate(21vh, -20vh);
+}
+
+@media only screen and (min-width: 375px) {
+  .image {
+    width: 100vh;
+    height: 100vh;
+    transform: translate(2vh, -90vh);
+  }
+
+  .linkedn {
+    transform: translate(4vh, -6vh);
+  }
+
+  .angellist {
+    transform: translate(11vh, -11.5vh);
+  }
+
+  .twitter {
+    transform: translate(14vh, -17.5vh);
+  }
+
+  .github {
+    transform: translate(21vh, -23.5vh);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .image {
+    width: 100vh;
+    height: 100vh;
+    transform: translate(-7vh, -90vh);
+  }
+
+  .linkedn {
+    transform: translate(4vh, -5vh);
+  }
+
+  .angellist {
+    transform: translate(11vh, -10vh);
+  }
+
+  .twitter {
+    transform: translate(14vh, -15vh);
+  }
+
+  .github {
+    transform: translate(21vh, -20vh);
+  }
+}
