@@ -37,7 +37,7 @@ body {
 }
 
 .logo-text {
-  color: #fff;
+  color: white;
   margin-top: 3vh;
   margin-left: 1.5vh;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -79,7 +79,7 @@ body {
 .text2 {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 28px;
-  color: #fff;
+  color: white;
   font-weight: 600;
   height: 10vh;
   margin-left: 2vh;
@@ -87,7 +87,7 @@ body {
 
 .text3 {
   font-family: 'poppins';
-  color: #fff;
+  color: white;
   font-size: 18px;
   font-style: normal;
   font-weight: none;
@@ -203,7 +203,9 @@ ul {
 
 .body-container {
   margin-top: 40vh;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  margin-right: 0px;
 }
 
 .grid-container {
@@ -226,6 +228,20 @@ ul {
   padding-left: 0px;
 }
 
+.grid-item-4 li {
+  list-style-type: none;
+}
+
+.formating li {
+  margin-bottom: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.grid-item-4 li:active {
+  background-color: white;
+}
+
 .grid-item-5 {
   background-color: #c46710;
   width: 30vh;
@@ -238,8 +254,8 @@ ul {
   border: 2px solid #00008b;
 }
 
-.grid-item-5:enabled {
-  color: whitesmoke;
+.grid-item-5:active {
+  background-color: whitesmoke;
 }
 
 .t-b-stack {
@@ -266,7 +282,7 @@ ul {
   font-family: var(--font-family), 'Inter', sans-serif;
   align-items: center;
   font-size: 20px;
-  color: #fff;
+  color: white;
 }
 
 /* grid 1 ends here */
@@ -315,7 +331,7 @@ ul {
   line-height: 44px;
   letter-spacing: 0em;
   text-align: left;
-  color: #fff;
+  color: white;
   height: 0vh;
   min-width: auto;
 }
@@ -329,7 +345,7 @@ ul {
 
 .text-2 {
   font-family: var(--font-family), 'inter', sans-serif;
-  color: #fff;
+  color: white;
   font-size: 20px;
 }
 
@@ -342,6 +358,10 @@ a {
   height: 5vh;
   gap: 0vh;
   padding-left: 0vh;
+}
+
+.sec-grid-item-3 ul:active {
+  background-color: white;
 }
 
 .grid-item-rest-4 {
@@ -363,16 +383,16 @@ a {
 }
 
 .but {
-  color: #fff;
+  color: white;
   font-family: var(--font-family), 'inter', sans-serif;
 }
 
 .sec-grid-item-5 {
   background-color: #c46710;
-  width: 360px;
+  width: 355px;
   height: 8vh;
   border: 0vh;
-  color: #fff;
+  color: white;
   position: absolute;
   margin-top: 62vh;
   margin-bottom: 20vh;
@@ -382,12 +402,15 @@ a {
   border: 2px solid #00008b;
 }
 
-li {
-  list-style-type: none;
+.sec-grid-item-5:active {
+  background-color: white;
 }
 
 .last-grid-container {
   display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  width: 300px;
   min-width: 28.4vw;
   max-width: 100%;
   min-height: auto;
@@ -396,6 +419,7 @@ li {
   justify-content: center;
   margin-top: 7vh;
   margin-bottom: 20vh;
+  margin-left: 71vh;
 }
 
 /* about page starts here */
@@ -441,7 +465,7 @@ li {
   font-family: 'Inter', sans-serif;
   font-size: 17px;
   font-weight: lighter;
-  color: #fff;
+  color: white;
   letter-spacing: normal;
 }
 
@@ -454,13 +478,17 @@ li {
   border: 0vh;
 }
 
+.resume-button:active {
+  background-color: white;
+}
+
 .resume-button:hover {
   border: 2px solid #00008b;
 }
 
 .b-button {
   font-family: 'Inter', sans-serif;
-  color: #fff;
+  color: white;
   font-size: 15px;
   font-weight: bold;
 }
@@ -508,7 +536,7 @@ li {
 }
 
 li .langs:hover {
-  border: 2px solid #f00;
+  border: 2px solid red;
 }
 
 li::marker {
@@ -535,7 +563,7 @@ li::marker {
   list-style-position: inside;
   padding: 0;
   gap: 4vh;
-  color: #fff;
+  color: white;
   font-size: 30px;
   font-weight: 200;
 }
@@ -548,7 +576,7 @@ li::marker {
   list-style-position: inside;
   padding: 0;
   gap: 4vh;
-  color: #fff;
+  color: white;
   font-size: 30px;
   font-weight: 200;
   margin-top: 10vh;
@@ -562,17 +590,11 @@ li::marker {
   list-style-position: inside;
   padding: 0;
   gap: 4vh;
-  color: #fff;
+  color: white;
   font-size: 30px;
   font-weight: 200;
   margin-top: 10vh;
   margin-bottom: 20vh;
-}
-
-.formating li {
-  margin-bottom: 10px;
-  padding: 10px;
-  text-align: center;
 }
 
 .title-1 {
@@ -602,7 +624,7 @@ li::marker {
 }
 
 .click {
-  color: #fff;
+  color: white;
   width: 190px;
   height: 50px;
   background-color: transparent;
@@ -612,5 +634,9 @@ li::marker {
 }
 
 .click:hover {
-  border: 2px solid #ff0;
+  border: 2px solid yellow;
+}
+
+.click:active {
+  background-color: yellow;
 }
