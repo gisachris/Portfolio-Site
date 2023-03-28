@@ -19,7 +19,7 @@ body {
   display: flex;
 }
 
-.intro-container {
+.container {
   background-color: #1c1a19;
   height: auto;
   width: 105.5vw;
