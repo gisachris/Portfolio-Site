@@ -5,6 +5,7 @@
   @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Crete+Round&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
   text-decoration: none;
 }
 
@@ -18,6 +19,10 @@ body {
   max-width: 100%;
   height: fit-content;
   max-height: 100%;
+}
+
+.doc-container {
+  display: grid;
 }
 
 .intro-container {
@@ -74,7 +79,7 @@ body {
 .text1 {
   color: #ff6b00;
   font-size: 8vh;
-  font-family: 'crete round';
+  font-family: 'crete round', sans-serif;
   margin-left: 2vh;
   margin-top: 8vh;
 }
@@ -89,7 +94,7 @@ body {
 }
 
 .text3 {
-  font-family: 'poppins';
+  font-family: 'poppins', sans-serif;
   color: white;
   font-size: 18px;
   font-style: normal;
@@ -238,6 +243,10 @@ ul {
   padding-left: 0px;
 }
 
+.listing-section li {
+  width: fit-content;
+}
+
 .grid-item-4 li {
   list-style-type: none;
 }
@@ -250,6 +259,7 @@ ul {
 
 .grid-item-4 li:active {
   background-color: white;
+  color: black;
 }
 
 .t-b-stack {
@@ -332,8 +342,6 @@ ul {
 }
 
 .sec-item-1 {
-  height: 45vh;
-  min-width: 55vh;
   max-width: 100%;
   border-radius: 0px;
   margin-top: 15vh;
@@ -410,7 +418,7 @@ ul {
   background-color: #7f3318;
 }
 
-.see-project{
+.see-project {
   color: white;
   font-size: 20px;
   font-weight: 600;
@@ -433,4 +441,185 @@ ul {
 }
 
 /* end of work section */
+.about-section-container {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  margin-right: 0%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.about-header {
+  margin-top: 20vh;
+}
+
+.about-header-text {
+  font-size: 80px;
+  font-family: 'crete round', sans-serif;
+  color: #ff6b00;
+  font-weight: 300;
+  margin-bottom: 3vh;
+}
+
+.about-paragraph {
+  width: fit-content;
+}
+
+.about-paragraph-text {
+  font-size: 19px;
+  font-family: 'Inter', sans-serif;
+  color: white;
+}
+
+.resume-button {
+  background-color: #c46710;
+  width: 22vh;
+  height: 7vh;
+  border: 0vh;
+  margin-top: 3vh;
+}
+
+.resume-button:active {
+  background-color: #7f3318;
+}
+
+.resume-button:hover {
+  border: 2px solid #00008b;
+}
+
+.b-button {
+  font-family: 'Inter', sans-serif;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.about-img {
+  width: 40vh;
+  height: 40vh;
+  align-self: flex-end;
+}
+
+.listing-section {
+  margin-bottom: 20vh;
+}
+
+.languages-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style-position: inside;
+  padding: 0;
+  gap: 4vh;
+  color: white;
+  font-size: 30px;
+  font-weight: 200;
+}
+
+.frameworks-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style-position: inside;
+  padding: 0;
+  gap: 4vh;
+  color: white;
+  font-size: 30px;
+  font-weight: 200;
+  margin-top: 10vh;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style-position: inside;
+  padding: 0;
+  gap: 4vh;
+  color: white;
+  font-size: 30px;
+  font-weight: 200;
+  margin-top: 10vh;
+  margin-bottom: 20vh;
+}
+
+.ls-header {
+  font-family: 'Inter', sans-serif;
+  gap: 10vh;
+}
+
+.f-header {
+  font-family: 'Inter', sans-serif;
+  gap: 10vh;
+}
+
+.s-header {
+  font-family: 'Inter', sans-serif;
+  gap: 10vh;
+}
+
+.click {
+  color: white;
+  width: 190px;
+  height: 50px;
+  background-color: transparent;
+  border: 0px;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+}
+
+.click:hover {
+  border: 2px solid yellow;
+}
+
+.click:active {
+  background-color: yellow;
+  color: black;
+  font-weight: 900;
+}
+
+.click-header {
+  color: white;
+  width: fit-content;
+  height: 50px;
+  background-color: transparent;
+  border: 0px;
+  font-family: 'Inter', sans-serif;
+  font-size: 5.5vh;
+  font-weight: bold;
+}
+
+.click-header:hover {
+  border: 2px solid blue;
+}
+
+.click-header:active {
+  background-color: red;
+}
+
+li::marker {
+  color: #ff6b00;
+  margin: 0px;
+}
+
+.listing-section .ls-header {
+  list-style-type: square;
+}
+
+.listing-section .f-header {
+  list-style-type: square;
+}
+
+.listing-section .s-header {
+  list-style-type: disc;
+}
+
+.large {
+  width: fit-content;
+}
+
 /* end of about section */
