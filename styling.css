@@ -1,7 +1,7 @@
 * {
   /* stylelint-disable length-zero-no-unit */
   margin: 0px;
-  
+
   @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Crete+Round&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
@@ -178,8 +178,8 @@ ul {
 
   .github {
     transform: translate(21vh, -20vh);
-    }
   }
+}
 
 /* end of mobile part one portfolio */
 
