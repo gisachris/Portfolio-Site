@@ -14,7 +14,7 @@
 }
 
 body {
-  background-color: #1c1a19;
+  background-color: #dadada;
   min-width: 28.4vw;
   max-width: 100%;
   height: fit-content;
@@ -25,12 +25,15 @@ body {
   display: grid;
 }
 
-.intro-container {
+.homepage-container {
   display: grid;
   grid-template-columns: 400px;
   gap: 5vh;
-  justify-content: center;
+  justify-self: center;
   height: 900px;
+  background-color: #1c1a19;
+  min-width: 399px;
+  max-width: 100%;
 }
 
 .header {
@@ -64,7 +67,7 @@ body {
 
 .section2 {
   display: grid;
-  grid-template-columns: 300px;
+  grid-template-columns: 399px;
   gap: 5vh;
   overflow-y: hidden;
   overflow-x: hidden;
@@ -78,10 +81,11 @@ body {
 
 .text1 {
   color: #ff6b00;
-  font-size: 8vh;
-  font-family: 'crete round', sans-serif;
+  font-size: 70px;
+  font-family: 'Crete Round', sans-serif;
   margin-left: 2vh;
   margin-top: 8vh;
+  font-weight: 100;
 }
 
 .text2 {
@@ -107,78 +111,52 @@ ul {
 }
 
 .bottom {
-  height: 38vh;
+  height: 60px;
   gap: 3vh;
 }
 
+.icons {
+  display: flex;
+  align-items: flex-start;
+  gap: 0px;
+}
+
 .image {
-  width: 100vh;
-  height: 100vh;
-  transform: translate(-7vh, -90vh);
+  width: 700px;
+  height: 700px;
+  transform: translate(-9vh, -60vh);
+}
+
+.medium {
+  width: fit-content;
+  height: fit-content;
+  margin-top: 13px;
 }
 
 .linkedn {
-  transform: translate(4vh, -5vh);
+  /* transform: translate(4vh, -5vh); */
+  width: fit-content;
+  height: fit-content;
 }
 
 .angellist {
-  transform: translate(11vh, -10vh);
+  /* transform: translate(11vh, -10vh); */
+  width: fit-content;
+  height: fit-content;
+  margin-top: 14px;
 }
 
 .twitter {
-  transform: translate(14vh, -15vh);
+  /* transform: translate(14vh, -15vh); */
+  width: fit-content;
+  height: fit-content;
 }
 
 .github {
-  transform: translate(21vh, -20vh);
-}
-
-@media only screen and (min-width: 375px) {
-  .image {
-    width: 100vh;
-    height: 100vh;
-    transform: translate(2vh, -90vh);
-  }
-
-  .linkedn {
-    transform: translate(4vh, -6vh);
-  }
-
-  .angellist {
-    transform: translate(11vh, -11.5vh);
-  }
-
-  .twitter {
-    transform: translate(14vh, -17.5vh);
-  }
-
-  .github {
-    transform: translate(21vh, -23.5vh);
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .image {
-    width: 100vh;
-    height: 100vh;
-    transform: translate(-7vh, -90vh);
-  }
-
-  .linkedn {
-    transform: translate(4vh, -5vh);
-  }
-
-  .angellist {
-    transform: translate(11vh, -10vh);
-  }
-
-  .twitter {
-    transform: translate(14vh, -15vh);
-  }
-
-  .github {
-    transform: translate(21vh, -20vh);
-  }
+  /* transform: translate(21vh, -20vh); */
+  width: fit-content;
+  height: fit-content;
+  margin-top: 14px;
 }
 
 /* end of mobile part one portfolio */
@@ -186,19 +164,22 @@ ul {
 .work-section-container {
   background-color: white;
   display: grid;
-  grid-template-columns: 360px;
-  justify-content: center;
+  grid-template-columns: 399px;
+  justify-self: center;
+  min-width: 399px;
+  max-width: 100%;
 }
 
 .heading {
   display: flex;
   flex-direction: column;
   margin-top: 24vh;
+  justify-self: center;
 }
 
 .title-1 {
   font-family: 'Crete Round', sans-serif;
-  font-size: 7vh;
+  font-size: 46px;
   font-weight: 400;
   line-height: 52px;
   letter-spacing: 0em;
@@ -214,33 +195,39 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 3vh;
-  width: 300px;
-  min-width: 28.4vw;
+  min-width: 399px;
   max-width: 100%;
   min-height: auto;
   max-height: 100%;
-  justify-content: center;
   margin-top: 30vh;
-  margin-left: 2vh;
+}
+
+.grid-item-1 {
+  width: 365px;
+  height: 256px;
+  margin-left: 17px;
 }
 
 .grid-item-2 {
   font-family: 'Crete Round', sans-serif;
   font-size: 32px;
   color: #091e42;
+  margin-left: 15px;
 }
 
 .grid-item-3 {
   font-family: 'Inter', sans-serif;
   font-weight: 900;
-  font-size: 18px;
+  font-size: 19px;
   color: #091e42;
+  margin-left: 15px;
 }
 
 .grid-item-4 {
   display: flex;
   gap: 2vh;
   padding-left: 0px;
+  margin-left: 15px;
 }
 
 .listing-section li {
@@ -264,9 +251,9 @@ ul {
 
 .t-b-stack {
   border-radius: 0px;
-  border: 1.6px solid #121224;
+  border: 2px solid #aaa;
   padding: 10px 8px 10px 8px;
-  color: rgb(255, 255, 255);
+  color: transparent;
 }
 
 .t-b-stack:hover {
@@ -289,10 +276,11 @@ ul {
 
 .grid-item-5 {
   background-color: #c46710;
-  width: 30vh;
-  height: 10vh;
+  width: 150px;
+  height: 55px;
   border: 0vh;
   color: white;
+  margin-left: 15px;
 }
 
 .grid-item-5:hover {
@@ -315,11 +303,9 @@ ul {
 .sec-container {
   display: flex;
   flex-direction: column;
-  width: 300px;
-  gap: 3vh;
-  margin-left: 0vh;
-  min-width: 28.4vw;
+  min-width: 399px;
   max-width: 100%;
+  gap: 3vh;
   min-height: auto;
   max-height: 100%;
   justify-content: center;
@@ -328,23 +314,20 @@ ul {
 
 .background {
   background-image: url('Img\ Place\ rest.png');
-  background-size: cover;
-  min-width: 355px;
+  width: 370px;
   max-width: 100%;
-  min-height: 70vh;
+  height: 400px;
   max-height: 100%;
   display: grid;
-  grid-template-columns: 360px;
+  grid-template-columns: 385px;
+  row-gap: 20px;
   grid-template-rows: auto;
-  justify-content: center;
-  row-gap: 3vh;
   margin-left: 2vh;
 }
 
 .sec-item-1 {
-  max-width: 100%;
   border-radius: 0px;
-  margin-top: 15vh;
+  margin-top: 70px;
   margin-left: 2vh;
   font-family: 'crete round', sans-serif;
   font-size: 36px;
@@ -353,33 +336,32 @@ ul {
   letter-spacing: 0em;
   text-align: left;
   color: white;
-  height: 0vh;
-  min-width: auto;
+  width: fit-content;
+  height: fit-content;
 }
 
 .sec-item-2 {
-  height: 60px;
-  min-width: 65vh;
-  max-width: 100%;
-  margin-top: 2vh;
+  width: fit-content;
+  height: fit-content;
   margin-left: 2vh;
   font-family: 'inter', sans-serif;
   color: white;
   font-size: 20px;
+  padding: 0px;
 }
 
 .sec-item-3 {
   display: flex;
-  min-height: 5vh;
-  max-height: 100%;
-  gap: 0vh;
-  padding-left: 0vh;
+  height: fit-content;
+  width: fit-content;
+  padding-left: 0px;
+  margin-top: 20px;
 }
 
 .button {
-  min-width: 13vh;
+  width: 90px;
   max-width: 100%;
-  min-height: 7vh;
+  height: 40px;
   max-height: 100%;
   background-color: #ffffff59;
   border: 0px;
@@ -401,13 +383,11 @@ ul {
 
 .sec-item-5 {
   background-color: #c46710;
-  width: 355px;
-  height: 8vh;
-  border: 0vh;
+  width: 370px;
+  height: 60px;
+  border: 0px;
   color: white;
-  position: absolute;
-  margin-top: 62vh;
-  margin-bottom: 20vh;
+  margin-top: 0px;
 }
 
 .sec-item-5:hover {
@@ -428,12 +408,10 @@ ul {
 .last-sec-container {
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 377px;
   gap: 3vh;
   margin-left: 0vh;
   margin-bottom: 20vh;
-  min-width: 28.4vw;
-  max-width: 100%;
   min-height: auto;
   max-height: 100%;
   justify-content: center;
@@ -448,6 +426,9 @@ ul {
   margin-right: 0%;
   overflow-y: hidden;
   overflow-x: hidden;
+  min-width: 399px;
+  max-width: 100%;
+  background-color: #1c1a19;
 }
 
 .about-header {
@@ -459,7 +440,8 @@ ul {
   font-family: 'crete round', sans-serif;
   color: #ff6b00;
   font-weight: 300;
-  margin-bottom: 3vh;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .about-paragraph {
@@ -470,14 +452,16 @@ ul {
   font-size: 19px;
   font-family: 'Inter', sans-serif;
   color: white;
+  margin-left: 22px;
 }
 
 .resume-button {
   background-color: #c46710;
-  width: 22vh;
-  height: 7vh;
+  width: 140px;
+  height: 50px;
   border: 0vh;
   margin-top: 3vh;
+  margin-left: 22px;
 }
 
 .resume-button:active {
@@ -496,13 +480,34 @@ ul {
 }
 
 .about-img {
-  width: 40vh;
-  height: 40vh;
+  width: 280px;
+  height: 280px;
   align-self: flex-end;
 }
 
+.about-line {
+  width: 300px;
+  margin-left: 50px;
+}
+
 .listing-section {
-  margin-bottom: 20vh;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.list-title-1 {
+  margin-left: 70px;
+  margin-bottom: 20px;
+}
+
+.list-title-2 {
+  margin-top: 50px;
+  margin-left: 60px;
+}
+
+.list-title-3 {
+  margin-top: 50px;
+  margin-left: 120px;
 }
 
 .languages-list {
@@ -516,6 +521,7 @@ ul {
   color: white;
   font-size: 30px;
   font-weight: 200;
+  margin-bottom: 20px;
 }
 
 .frameworks-list {
@@ -529,7 +535,8 @@ ul {
   color: white;
   font-size: 30px;
   font-weight: 200;
-  margin-top: 10vh;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .skills-list {
@@ -543,8 +550,8 @@ ul {
   color: white;
   font-size: 30px;
   font-weight: 200;
-  margin-top: 10vh;
-  margin-bottom: 20vh;
+  margin-top: 20px;
+  margin-bottom: 100px;
 }
 
 .ls-header {
@@ -589,7 +596,7 @@ ul {
   background-color: transparent;
   border: 0px;
   font-family: 'Inter', sans-serif;
-  font-size: 5.5vh;
+  font-size: 45px;
   font-weight: bold;
 }
 
@@ -604,6 +611,7 @@ ul {
 li::marker {
   color: #ff6b00;
   margin: 0px;
+  font-size: 70px;
 }
 
 .listing-section .ls-header {
