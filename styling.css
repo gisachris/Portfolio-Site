@@ -715,9 +715,25 @@ li::marker {
   margin-bottom: 50px;
 }
 
+.cont_button:enabled {
+  background-color: #ff6b00;
+  color: white;
+}
+
 .cont_button:hover {
-  border: 2px solid blue;
-  align-self: center;
+  border: 2px solid #ff6b00;
+  background-color: #ecc9b2;
+  color: #c46710;
+}
+
+.cont_button:active {
+  background-color: #ff6b00;
+  color: white;
+}
+
+.cont_button:disabled {
+  background-color: #b4b4b4;
+  color: #3c3a39;
 }
 
 .footer_icons {
