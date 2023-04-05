@@ -637,7 +637,7 @@ li::marker {
 .form {
   width: fit-content;
   align-items: center;
-  margin-left: 20px;
+  margin-top: 30px;
 }
 
 .contact_form {
@@ -668,14 +668,11 @@ li::marker {
   height: 274px;
 }
 
-.form {
-  margin-top: 30px;
-}
-
 .contact_imfo {
   border: 0px;
   border-bottom: 1px solid #dbd8d7;
   gap: 30px;
+  margin-left: 20px;
 }
 
 .field_box {
