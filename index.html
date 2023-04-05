@@ -225,6 +225,52 @@
         </article>
   </section>
   <!--end of the about myself section-->
+  <!--start of the contact form page-->
+  <section class="contact_form">
+    <h3 class="contact_mssg">
+      I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.
+    </h3>
+    <form  action="https://formspree.io/f/mrgvyylv" method="post" class="form">
+      <fieldset class="contact_imfo">
+        <label for="names">
+        <input 
+        type="text" 
+        class="field_box" 
+        name="names" 
+        placeholder="Full name"
+        required
+        maxlength="30">
+      </label><br>
+        <label for="mail">
+        <input 
+        type="email" 
+        class="field_box" 
+        name="email" 
+        placeholder="Email Address"
+        required
+        pattern=".*[.com]">
+      </label>
+        <textarea name="comment" id="comment_text" cols="30" rows="10" required maxlength="500">write me something....
+        </textarea>
+        <br>
+        <input type="submit" value="get in touch" name="submit" class="cont_button">
+      </fieldset>
+    </form>
+  </section>
+  <!--end of the contact form page-->
+  <!--footer section-->
+  <footer class="foot_section">
+    <figure class="footer_icons">
+      <img src="footer_Icons/git hub.png" alt="github" class="f_ics">
+      <img src="footer_Icons/linkedn.png" alt="linkedn" class="f_ics">
+      <img src="footer_Icons/angellist.svg" alt="angellist" class="f_ics">
+      <img src="footer_Icons/twitter.png" alt="twitter" class="f_ics">
+      <img src="footer_Icons/media.svg" alt="medium" class="f_ics">
+    </figure>
+    <figure class="last_shape">
+      <img src="Shape.png" alt="home access" class="ac_shape">
+    </figure>
+    </footer>
     </main>
   </body>
 </html>
