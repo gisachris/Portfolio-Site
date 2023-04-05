@@ -668,7 +668,7 @@ li::marker {
 
 .contact_imfo {
   border: 0px;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #dbd8d7;
   gap: 30px;
 }
 
@@ -677,7 +677,7 @@ li::marker {
   padding: 10px;
   padding-right: 65px;
   border: 0px;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #dbd8d7;
   font-size: 17px;
 }
 
