@@ -634,6 +634,12 @@ li::marker {
 
 /* start to contact form */
 
+.form {
+  width: fit-content;
+  align-items: center;
+  margin-left: 20px;
+}
+
 .contact_form {
   background-color: #fffffffd;
   display: flex;
@@ -675,7 +681,7 @@ li::marker {
 .field_box {
   margin-top: 20px;
   padding: 10px;
-  padding-right: 65px;
+  padding-right: 106px;
   border: 0px;
   border-bottom: 1px solid #dbd8d7;
   font-size: 17px;
@@ -684,7 +690,7 @@ li::marker {
 #comment_text {
   margin-top: 20px;
   background-color: #fbf8f7;
-  width: 296px;
+  width: 329px;
   height: 80px;
   border: 0px;
 }
@@ -710,7 +716,7 @@ li::marker {
   font-weight: bold;
   line-height: 24px;
   align-items: center;
-  margin-left: 70px;
+  margin-left: 52px;
   transform: translate(50px, -5px);
   margin-bottom: 50px;
 }
