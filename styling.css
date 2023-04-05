@@ -5,6 +5,7 @@
   @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Crete+Round&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+  @import url("styling.css") screen and (max-width: 768px);
 
   text-decoration: none;
 }
@@ -63,6 +64,10 @@ body {
   width: 80px;
   height: 80px;
   margin-top: 6vh;
+}
+
+.nav-text {
+  display: none;
 }
 
 .section2 {
@@ -125,6 +130,10 @@ ul {
   width: 700px;
   height: 700px;
   transform: translate(-9vh, -60vh);
+}
+
+.image-1 {
+  display: none;
 }
 
 .medium {
