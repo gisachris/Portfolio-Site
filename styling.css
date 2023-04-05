@@ -722,7 +722,7 @@ li::marker {
 
 .footer_icons {
   display: flex;
-  gap: 25px;
+  gap: 15px;
   justify-content: center;
   margin-top: 20px;
   margin-bottom: 40px;
@@ -733,5 +733,5 @@ li::marker {
 }
 
 .ac_shape {
-  margin-left: 125px;
+  margin-left: 131px;
 }
