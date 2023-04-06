@@ -217,6 +217,12 @@ ul {
   margin-left: 17px;
 }
 
+.placer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .grid-item-2 {
   font-family: 'Crete Round', sans-serif;
   font-size: 32px;
