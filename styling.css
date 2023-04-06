@@ -437,13 +437,18 @@ ul {
 .about-section-container {
   display: flex;
   flex-direction: column;
-  justify-self: center;
+  justify-content: center;
   margin-right: 0%;
   overflow-y: hidden;
   overflow-x: hidden;
-  min-width: 399px;
+  width: 399px;
   max-width: 100%;
   background-color: #1c1a19;
+  margin-left: 126px;
+}
+
+.about-text-area {
+  width: 390px;
 }
 
 .about-header {
@@ -456,7 +461,7 @@ ul {
   color: #ff6b00;
   font-weight: 300;
   margin-bottom: 20px;
-  text-align: center;
+  margin-left: 20px;
 }
 
 .about-paragraph {
@@ -495,9 +500,9 @@ ul {
 }
 
 .about-img {
-  width: 280px;
-  height: 280px;
-  align-self: flex-end;
+  width: 200px;
+  height: auto;
+  margin-left: 199px;
 }
 
 .about-img-desk {
@@ -773,3 +778,4 @@ li::marker {
 .ac_shape {
   margin-left: 131px;
 }
+
