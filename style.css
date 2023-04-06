@@ -146,7 +146,7 @@ body {
   align-items: center;
 }
 
-.title-1{
+.title-1 {
   font-size: 35px;
   font-weight: none;
   color: #091e42;
@@ -156,7 +156,7 @@ body {
   padding: 0px;
 }
 
-.line-top{
+.line-top {
   width: 705px;
   opacity: 40%;
   margin-left: 20px;
