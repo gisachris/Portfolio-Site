@@ -500,6 +500,10 @@ ul {
   align-self: flex-end;
 }
 
+.about-img-desk {
+  display: none;
+}
+
 .about-line {
   width: 300px;
   margin-left: 50px;
