@@ -64,8 +64,8 @@ body {
   }
 
   to {
-     opacity: 100%;
-     text-shadow: 0 0 0px white;
+    opacity: 100%;
+    text-shadow: 0 0 0px white;
   }
 }
 
@@ -801,7 +801,6 @@ li::marker {
 
 .foot_section {
   width: 1366px;
-  
   margin: 20px;
 }
 
