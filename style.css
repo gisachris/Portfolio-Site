@@ -49,6 +49,24 @@ body {
   text-decoration: none;
   display: inline-flex;
   width: 100vh;
+  overflow-x: hidden;
+  animation: intro-to-logo 2000ms ease-in 0ms 1 normal forwards;
+}
+
+@keyframes intro-to-logo {
+  from {
+     opacity: 0%;
+     text-shadow: 0 0 30px white;
+  }
+
+  50% {
+    text-shadow: 0 0 80px white;
+  }
+
+  to {
+    opacity: 100%;
+    text-shadow: 0 0 0px white;
+  }
 }
 
 .navigation {
@@ -118,6 +136,15 @@ body {
   gap: 10px;
   width: fit-content;
   align-items: center;
+}
+
+.icon-sizing {
+  transition-property: transform;
+  transition-duration: 300ms;
+}
+
+.icon-sizing:hover {
+  transform: translateX(60%);
 }
 
 .image {
