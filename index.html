@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>my portfolio</title>
-    <link rel="stylesheet" href="styling.css">
+    <link rel="stylesheet" href="styling.css" media="only screen and (max-width: 768px)">
+    <link rel="stylesheet" type="text/css" href="style.css" media="only screen and (min-width: 768px)">
     <link href="Inter-VariableFont_slnt,wght.ttf" rel="stylesheet">
     <link href="CreteRound-Regular.ttf" rel="stylesheet">
     <link href="Roboto-Regular.ttf" rel="stylesheet">
@@ -21,15 +22,20 @@
           <header class="header">
               <a href="index.html" class="logo-text touch rough">my logo</a>
               <nav class="navigation">
-                <a href="menu-items" class="menu-bar touch rough"><img src="mobile tag.png" alt="menu bar"></a></nav>
+                <a href="index.html" class="nav-text">Portfolio</a>
+                <a href="index.html" class="nav-text">About</a>
+                <a href="index.html" class="nav-text">Contact</a>
+                <a href="index.html" class="nav-text"><img src="Union.png" alt="mssg-option" class="nav-mssg"></a>
+                <a href="menu-items" class="menu-bar"><img src="mobile tag.png" alt="menu bar"></a>
+              </nav>
           </header>
       <section class="section2">
         <article class="intro-text">
           <h1 class="text1">Hey There.<br>I'm Chris.</h1>
           <p class="text2">I'm a Software Developer</p>
-          <p class="text3">I can help you build a product , feature <br> or
-            website. Look through some of my <br> work and experience! If you
-            like what you <br> see and have a project you need coded,<br>
+          <p class="text3">I can help you build a product , feature or
+            website. Look through some of my  work and experience! If you
+            like what you  see and have a project you need coded,
             don’t hesitate to contact me.</p>
         </article>
         <article class="bottom">
@@ -47,6 +53,7 @@
           </ul>
         </article>
         <img src="illustration-header-mobile.svg" alt="some art" class="image">
+        <img src="body-image1.png" alt="some art" class="image-1">
     </section>
   </section>
   <!--end of the homepage-->
@@ -59,6 +66,7 @@
     </article>
     <article class="work-grid-container">
       <img src="img-place-1.png" alt="portfolio-1" class="grid-item grid-item-1">
+      <article class="placer">
       <h2 class="grid-item grid-item-2">
         Multi-Post Stories
       </h2>
@@ -73,8 +81,10 @@
       </ul>
       <button class="grid-item grid-item-5"><a href="index.html" class="see-project-t">see project</a></button>
     </article>
+    </article>
+    <section class="all-sec-container">
     <article class="sec-container">
-      <article class="background">
+      <article class="background background-d-1">
       <h2 class="sec-item-1">
         Profesional Art <br> Printing Data
       </h2>
@@ -90,7 +100,7 @@
       </article>
     </article>
     <article class="sec-container">
-      <article class="background">
+      <article class="background background-d-1">
       <h2 class="sec-item-1">
         Profesional Art <br> Printing Data
       </h2>
@@ -106,7 +116,7 @@
       </article>
     </article>
     <article class="sec-container">
-      <article class="background">
+      <article class="background background-d-1">
       <h2 class="sec-item-1">
         Profesional Art <br> Printing Data
       </h2>
@@ -122,7 +132,7 @@
     </article>
   </article>
     <article class="sec-container">
-      <article class="background">
+      <article class="background background-d-1">
       <h2 class="sec-item-1">
         Profesional Art <br> Printing Data
       </h2>
@@ -138,7 +148,7 @@
     </article>
   </article>
     <article class="sec-container">
-      <article class="background">
+      <article class="background background-d-1">
       <h2 class="sec-item-1">
         Profesional Art <br> Printing Data
       </h2>
@@ -153,8 +163,8 @@
       <button class="sec-item-5"><a href="index.html" class="see-project">see project</a></button>
     </article>
   </article>
-    <article class="last-sec-container">
-      <article class="background">
+    <article class="last-sec-container sec-container">
+      <article class="background background-d-1">
       <h2 class="sec-item-1">
         Profesional Art <br> Printing Data
       </h2>
@@ -170,14 +180,17 @@
       </article>
     </article>
   </section>
+</section>
   <!--end of the work section-->
   <section class="about-section-container">
+    <section class="high-part">
+    <section class="about-text-area">
     <article class="about-header">
         <h2 class="about-header-text">About me</h2>
     </article>
     <article class="about-paragraph">
         <p class="about-paragraph-text">
-          Hello I’m a software developer! I can help <br> you build a product , feature or website <br> Look through some of my work and <br> experience! If you like what you see and<br> have a project you need coded, don’t<br> hesitate to contact me.
+          Hello I’m a software developer! I can help you build a product , feature or website  Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hesitate to contact me.
         </p>
     </article>
       <button class="resume-button">
@@ -185,9 +198,13 @@
           Get my resume
         </a>
       </button>
+    </section>
         <img src="illustration-about-me-mobile.svg" alt="some art" class="about-img">
+        <img src="desktop_files/illustration-about me desktop.svg" alt="some art" class="about-img-desk">
+    </section>
         <img src="Devider-line.png" alt="a line" class="about-line">
         <article class="listing-section">
+          <article class="about-lang-1">
           <ul class="list-title-1">
             <li class="ls-header lst">
               <button class="click-header"> language</button>
@@ -199,6 +216,8 @@
             <li class="lang formating"><button class="click">html</li>
             <li class="lang formating"><button class="click">Css</li>
           </ul>
+        </article>
+        <article class="about-lang-2">
           <ul class="list-title-2">
             <li class="f-header lst">
               <button class="click-header">frameworks</button>
@@ -210,6 +229,8 @@
             <li class="frames formating"><button class="click">rspec</button></li>
             <li class="frames formating"><button class="click">kapybara</button></li>
           </ul>
+        </article>
+        <article class="about-lang-3">
           <ul class="list-title-3">
             <li class="s-header lst">
             <button class="click-header">skills</button>
@@ -223,10 +244,12 @@
             <li class="skills formating"><button class="click">webdevelopment</button></li>
           </ul>
         </article>
+        </article>
   </section>
   <!--end of the about myself section-->
   <!--start of the contact form page-->
   <section class="contact_form">
+    <section class="contact-holder">
     <h3 class="contact_mssg">
       I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.
     </h3>
@@ -256,6 +279,7 @@
         <input type="submit" value="get in touch" name="submit" class="cont_button">
       </fieldset>
     </form>
+  </section>
   </section>
   <!--end of the contact form page-->
   <!--footer section-->
