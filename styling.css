@@ -64,8 +64,8 @@ body {
 
 @keyframes intro-to-logo {
   from {
-     opacity: 0%;
-     text-shadow: 0 0 30px white;
+    opacity: 0%;
+    text-shadow: 0 0 30px white;
   }
 
   50% {
@@ -799,4 +799,3 @@ li::marker {
 .ac_shape {
   margin-left: 131px;
 }
-
