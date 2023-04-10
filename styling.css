@@ -104,8 +104,8 @@
     overflow-x: hidden;
     background-image: url(illustration-header-mobile.svg);
     background-repeat: no-repeat;
-    background-size: 170px;
-    background-position: 236px 190px;
+    background-size: 40%;
+    background-position: 103% 114%;
   }
 
   .intro-text {
