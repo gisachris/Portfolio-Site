@@ -1,0 +1,8 @@
+Accesibility Constraints To Follow.
+
+-page title✅
+-image alternative text✅
+-resize text ✅
+-Forms, labels, and errors✅
+-✅
+-✅
