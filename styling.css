@@ -296,7 +296,6 @@
     border-radius: 0px;
     border: 2px solid #aaa;
     padding: 10px 8px 10px 8px;
-    color: transparent;
     transition-property: border-radius;
     transition-duration: 100ms;
   }
@@ -1055,7 +1054,6 @@
     border-radius: 0px;
     border: 2px solid #aaa;
     padding: 10px 8px 10px 8px;
-    color: transparent;
     transition-property: border-radius;
     transition-duration: 100ms;
   }
