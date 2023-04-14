@@ -149,6 +149,8 @@ Run "npx stylelint "**/*.{css,scss}" --fix " to fix linters
 
 -LinkedIn: https://www.linkedin.com/in/gisa-chris-907948267/
 
+-presentation:https://www.loom.com/share/487900f0670d4b909bad5a405b21a862
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
