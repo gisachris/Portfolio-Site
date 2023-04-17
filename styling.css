@@ -92,6 +92,14 @@
     margin-top: 6vh;
   }
 
+  .bar-1{
+    content: url("mobile tag.png");
+  }
+
+  .bar-2{
+    content: url("Icon_Cancel.png");
+  }
+
   .nav-text {
     display: none;
   }
