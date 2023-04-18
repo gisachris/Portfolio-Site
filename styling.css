@@ -120,9 +120,10 @@
   }
 
   .nav-text {
-    /* add from here */
     font-family: 'Inter', sans-serif;
     font-weight: bolder;
+    font-size: 2rem;
+    color: #FFF5E1;
   }
 
   .nav-mssg {
