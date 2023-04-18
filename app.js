@@ -22,4 +22,11 @@ navToggle.addEventListener('click', () => {
     });
   });
 });
-//add from here
+window.addEventListener('scroll', () => {
+  logo.classList.remove('logo-dis');
+  nav.classList.remove('open');
+  navIcon.forEach(() => {
+    navIcon[0].classList.remove('hidden');
+    navIcon[1].classList.add('hidden');
+  });
+});
