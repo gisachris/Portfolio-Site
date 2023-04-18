@@ -61,11 +61,11 @@
     top: 15vh;
     height: 0;
     background-color: #3c3a39;
-    margin: auto; 
-    padding: auto 0; 
+    margin: auto;
+    padding: auto 0;
     overflow-y: hidden;
     transition: height 400ms ease-in-out;
-    transition-delay: 0ms; 
+    transition-delay: 0ms;
   }
 
   .open {
