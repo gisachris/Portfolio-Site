@@ -120,9 +120,7 @@
   }
 
   .nav-text {
-    /* display: none; */
-    font-size: 3rem;
-    color: white;
+    /* add from here */
     font-family: 'Inter', sans-serif;
     font-weight: bolder;
   }
