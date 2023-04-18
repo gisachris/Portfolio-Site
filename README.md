@@ -63,7 +63,7 @@ i buit this website using the html and css tech stack.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://gisachris.github.io/week1_portfolio/)
+- [gisachris.github.io/week1_portfolio/](https://gisachris.github.io/week1_portfolio/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
