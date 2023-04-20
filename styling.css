@@ -913,6 +913,19 @@
     gap: 5px;
     padding-left: 0px;
     margin-left: 3.5vw;
+    width: 220px;
+    height: fit-content;
+    overflow-x: hidden;
+  }
+
+  .modalListHoldTop{
+    display: flex;
+    gap: 5px;
+    padding-left: 0px;
+    margin-left: 3.5vw;
+    width: fit-content;
+    height: fit-content;
+    overflow-x: hidden;
   }
 
   .modalListItem {
@@ -980,10 +993,11 @@
 
   .modalbutton1 {
     background-color: #c46710;
-    width: 120px;
+    width: 150px;
     border: 0;
     padding-top: 15px;
     padding-bottom: 15px;
+    margin-left: 20px;
   }
 
   .modalbutton1:hover {
@@ -1005,11 +1019,11 @@
   .modalbutton2 {
     background-color: #c46710;
     background-color: #c46710;
-    width: 120px;
+    width: 165px;
     border: 0;
     padding-top: 15px;
     padding-bottom: 15px;
-    margin-right: 65px;
+    margin-right: 33px;
   }
 
   .modalbutton2:hover {
@@ -1937,6 +1951,19 @@
     gap: 15px;
     padding-left: 0px;
     margin-left: 25px;
+    width: 275px;
+    height: fit-content;
+    overflow-x: hidden;
+  }
+  
+  .modalListHoldTop{
+    display: flex;
+    gap: 5px;
+    padding-left: 0px;
+    margin-left: 3.5vw;
+    width: fit-content;
+    height: fit-content;
+    overflow-x: hidden;
   }
 
   .modalListItem {

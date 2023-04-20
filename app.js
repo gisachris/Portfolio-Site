@@ -130,14 +130,8 @@ portfolioHold.append(otherProjects);
 //select all imfo for project_1
 for (let i = 0; i < projectsArray.length; i++) {
   const project_1 = projectsArray[0];
-  const modalImfo1 = projectsArray[1];
-  const modalImfo2 = projectsArray[2];
-  const modalImfo3 = projectsArray[3];
-  const modalImfo4 = projectsArray[4];
-  const modalImfo5 = projectsArray[5];
 
-
-if(projectsArray[i]==project_1){  
+if(projectsArray[i]==project_1){ // the top project 
   // grab all the properties
   const project = projectsArray[0];
   const { imageTop, titleTop, descTop, techTop} = project;
@@ -187,7 +181,7 @@ buttonCreate.appendChild(buttonlink);
   articleCreate.append(listCreate);
   articleCreate.append(buttonCreate);
 }
-else if (projectsArray.length>1){
+else if (projectsArray.length>1){ // other small project sections
 
   const projectOther = projectsArray[i];
   const {image,title,description,technologies,liveLink,sourceLink} = projectOther;
@@ -235,136 +229,15 @@ sectionCreateOther.append(listCreateOther);
   }
 //create the button for other projects 
 const buttonCreateOther = document.createElement('button');
-buttonCreateOther.classList.add('sec-item-5');
+buttonCreateOther.classList.add(`sec-item-5`, `order${i}`);
+
 const buttonlink = document.createElement('a');
 buttonlink.classList.add('see-project');
 buttonlink.textContent = 'see project';
 buttonCreateOther.appendChild(buttonlink);
 sectionCreateOther.append(buttonCreateOther);
-
-//add the pop up modals
-
-//start to building the modals
-const modalOther = document.createElement('section');
-modalOther.classList.add('.modalOtherParent');
-body.append(modalOther);
-
-//add to the other modal
-//other modal child section
-const modalChild = document.createElement('section');
-modalChild.classList.add('modalSection');
-modalOther.appendChild(modalChild);
-
-//top modal heading section
-const modalHeading = document.createElement('article');
-modalHeading.classList.add('heading-section');
-
-//modal heading text
-const heading = document.createElement('h2');
-heading.classList.add('modalH2');
-heading.innerHTML = title;
-
-//modal X button
-const Xbutton = document.createElement('span');
-Xbutton.classList.add('Xbutton');
-Xbutton.innerHTML = `&times;`
-
-//appending everything from heading&button => article => topmodalchild
-modalHeading.append(heading,Xbutton);
-modalChild.append(modalHeading);
-
-//adding technologies to modal
-const topModallistCreate = document.createElement('ul');
-topModallistCreate.classList.add('modalListHold');
-(technologies).forEach((item) => {
- const li = document.createElement('li');
- li.setAttribute('class', 'modalListItem');
- li.textContent = item;
- topModallistCreate.append(li);
- modalChild.append(topModallistCreate);
-});
-
-//adding section for rest of page
-const modalRestSection = document.createElement('section');
-modalRestSection.classList.add('rest-section');
-
-//create the modal image
-const modalImage = document.createElement('img');
-modalImage.classList.add('modalImageOther');
-modalImage.src = image;
-
-//add description and buttons holder
-const modalDesc = document.createElement('article');
-modalDesc.classList.add('restArticle');
-
-//create a buttons holder as well.
-const modalButtons = document.createElement('section');
-modalButtons.classList.add('modalbuttonsholder');
-
-//add a description text
-const descriptionModalOther= document.createElement('p');
-descriptionModalOther.classList.add('modalDescription');
-descriptionModalOther.textContent = description;
-
-//add buttons
-const modalButtons1 = document.createElement('button');
-modalButtons1.classList.add('modalbutton1');
-const modalTopLinkLive = document.createElement('a');
-modalTopLinkLive.href = liveLink;
-modalTopLinkLive.innerHTML =
-`
-<h3 class="modallivebutton-text">see live</h3>
-<img src="liveIcon.svg" alt="live icon" class="live-icon">
-`
-modalButtons1.append(modalTopLinkLive);
-const modalButtons2 = document.createElement('button');
-modalButtons2.classList.add('modalbutton2');
-const modalTopSourceLive = document.createElement('a');
-modalTopSourceLive.href = sourceLink;
-modalTopSourceLive.innerHTML = 
-`
-<h3 class="modalsourcebutton-text">see source</h3>
-<img src="github.svg" alt="live icon" class="live-icon">
-`
-modalButtons1.append(modalTopLinkLive);
-modalButtons2.append(modalTopSourceLive);
-modalButtons.append(modalButtons1,modalButtons2);
-modalDesc.append(descriptionModalOther,modalButtons);
-modalRestSection.append(modalImage, modalDesc);
-modalChild.append(modalRestSection);
-
-//connecting the button to the modal
-
-//selecting the opening modal button
-const clickButtonOpen = document.querySelectorAll('.sec-item-5');
-
-clickButtonOpen.forEach((button) =>{
-  button.addEventListener('click',(e) =>{
-    e.preventDefault(); 
-    //if(){
-    modalOther.style.display = "block";
-    modalChild.style.display = "block";
-    modalOther.style.backgroundColor = "#0000004f";
-    //}
-  });
-
-//selecting the closing modal button
- const clickButtonClose = Xbutton;
- clickButtonClose.addEventListener('click', () =>{
-    modalOther.style.display = "none";
-    modalChild.style.display = "none";
- });
-
- const spacingModalClick = modalOther;
- spacingModalClick.addEventListener('click', (e) =>{
-  if (e.target.className == "modalOtherParent") {
-      modalOther.style.display = "none";
-      modalChild.style.display = "none";
-  }
- });
-});
 }
-if (projectsArray[i]==project_1) {
+if (projectsArray[i]==project_1) {// top pop up
   //start to building the modals
 const modalTop = document.createElement('section');
 modalTop.classList.add('modalTopParent');
@@ -400,7 +273,7 @@ modalTopChild.append(modalHeading);
 
 //adding technologies to modal
 const topModallistCreate = document.createElement('ul');
-topModallistCreate.classList.add('modalListHold');
+topModallistCreate.classList.add('modalListHoldTop');
 (techTop).forEach((item) => {
   const li = document.createElement('li');
   li.setAttribute('class', 'modalListItem');
@@ -476,6 +349,80 @@ spacingModalClick.addEventListener('click', (e) =>{
   }
 });
 }
-
 };
+
+const clickbutton = document.querySelectorAll('[class*="order"]');
+clickbutton.forEach((button) =>{
+  button.addEventListener('click', function(event){
+    event.preventDefault(); 
+    const modalOther = document.querySelector('.modalOtherParent');
+    const modalChild = document.querySelector('.modalSection');
+    modalOther.style.display = "block";
+    modalChild.style.display = "block";
+    modalOther.style.backgroundColor = "#0000004f";  
+    
+    const print1 = document.querySelector('[class*="order1"]');
+    const print2 = document.querySelector('[class*="order2"]');
+
+    for (let j = 1; j < projectsArray.length; j++) {
+      const modalImfo1 = projectsArray[1];
+      const modalImfo2 = projectsArray[2];
+      const modalImfo3 = projectsArray[3];
+      const modalImfo4 = projectsArray[4];
+      const modalImfo5 = projectsArray[5];
+      const modalImfo6 = projectsArray[6];
+      const modalOther = document.querySelector('.modalOtherParent');
+      const modalChild = document.querySelector('.modalSection');
+
+      const {image,title,description,technologies,liveLink,sourceLink} = modalImfo1;
+      const {image:image2,title:title2,description:desc2,technologies:tech2,liveLink:live2,sourceLink:source2} = modalImfo2;
+      const {image:image3,title:title3,description:desc3,technologies:tech3,liveLink:live3,sourceLink:source3} = modalImfo3;
+
+
+
+      if(projectsArray[0+1]==modalImfo1 && print1){
+        const modalH2 = document.querySelector('.modalH2');
+        modalH2.innerHTML = title;
+
+        const modalListHold = document.querySelector('.modalListHold');
+        (technologies).forEach((item) => {
+          const li = document.createElement('li');
+          li.setAttribute('class', 'modalListItem');
+          li.innerHTML = item;
+          modalListHold.append(li);
+    });
+
+        const modalImageOther = document.querySelector('.modalImageOther');
+        modalImageOther.src = image;
+
+        const modalDescription = document.querySelector('.modalDescription');
+        modalDescription.textContent = description;
+
+        const modallivebutton1 = document.querySelector('.see-live');
+        modallivebutton1.href = liveLink;
+
+        const modallivebutton2 = document.querySelector('.see-source');
+        modallivebutton2.href = sourceLink;
+
+        const clickButtonClose = document.querySelector('.Xbutton');
+ clickButtonClose.addEventListener('click', () =>{
+    modalOther.style.display = "none";
+    modalChild.style.display = "none";
+ });
+
+ const spacingModalClick = modalOther;
+ spacingModalClick.addEventListener('click', (e) =>{
+  if (e.target.className == "modalOtherParent") {
+      modalOther.style.display = "none";
+      modalChild.style.display = "none";
+  }
+ });
+        
+        }
+    else if (print2){
+      console.log('text');
+    }
+  };
+    });
+  });
 });
