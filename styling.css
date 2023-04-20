@@ -17,6 +17,7 @@
   transition: filter 0.3s;
   transition-delay: 0s;
 }
+
 @media screen and (max-width: 768px) {
   html,
   body {
@@ -879,7 +880,7 @@
   .modalSection {
     width: fit-content;
     height: auto;
-    background-color: #ffffff;
+    background-color: #fff;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -918,7 +919,7 @@
     overflow-x: hidden;
   }
 
-  .modalListHoldTop{
+  .modalListHoldTop {
     display: flex;
     gap: 5px;
     padding-left: 0px;
@@ -982,7 +983,7 @@
     padding-bottom: 10px;
   }
 
-  .modalbuttonsholder{
+  .modalbuttonsholder {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -1018,7 +1019,6 @@
 
   .modalbutton2 {
     background-color: #c46710;
-    background-color: #c46710;
     width: 165px;
     border: 0;
     padding-top: 15px;
@@ -1042,7 +1042,6 @@
     column-gap: 10px;
     justify-content: center;
   }
-
 }
 
 @media screen and (min-width: 768px) {
@@ -1910,7 +1909,7 @@
   .modalSection {
     width: fit-content;
     height: auto;
-    background-color: #ffffff;
+    background-color: #fff;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -1955,8 +1954,8 @@
     height: fit-content;
     overflow-x: hidden;
   }
-  
-  .modalListHoldTop{
+
+  .modalListHoldTop {
     display: flex;
     gap: 5px;
     padding-left: 0px;
@@ -2007,7 +2006,7 @@
     column-gap: 10px;
   }
 
-  .modalbuttonsholder{
+  .modalbuttonsholder {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -2015,7 +2014,6 @@
   }
 
   .modalbutton1 {
-    width: fit-content;
     padding: 1rem;
     background-color: #c46710;
     width: 140px;
@@ -2041,7 +2039,6 @@
   }
 
   .modalbutton2 {
-    width: fit-content;
     padding: 1rem;
     background-color: #c46710;
     width: fit-content;
@@ -2079,5 +2076,4 @@
     display: none;
     background-color: #0000007e;
   }
-
 }

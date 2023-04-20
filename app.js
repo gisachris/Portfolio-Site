@@ -127,10 +127,11 @@ document.addEventListener('DOMContentLoaded', () => {
   otherProjects.classList.add('all-sec-container');
   portfolioHold.append(otherProjects);
   // select all imfo for project_1
-  for (let i = 0; i < projectsArray.length; i++) {
-    const project_1 = projectsArray[0];
+  for (let i = 0; i < projectsArray.length; i += 1) {
+    const projectMob1 = projectsArray[0];
+    // eslint-disable-line camelcase
 
-    if (projectsArray[i] == project_1) { // the top project
+    if (projectsArray[i] === projectMob1) { // the top project
       // grab all the properties
       const project = projectsArray[0];
       const {
@@ -184,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if (projectsArray.length > 1) { // other small project sections
       const projectOther = projectsArray[i];
       const {
-        image, title, description, technologies, liveLink, sourceLink,
+        image, title, description, technologies,
       } = projectOther;
 
       // create the holding element
@@ -238,7 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
       buttonCreateOther.appendChild(buttonlink);
       sectionCreateOther.append(buttonCreateOther);
     }
-    if (projectsArray[i] == project_1) { // top pop up
+    if (projectsArray[i] === projectMob1) { // top pop up
       // start to building the modals
       const modalTop = document.createElement('section');
       modalTop.classList.add('modalTopParent');
@@ -343,12 +344,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const spacingModalClick = modalTop;
       spacingModalClick.addEventListener('click', (e) => {
-        if (e.target.className == 'modalTopParent') {
+        if (e.target.className === 'modalTopParent') {
           modalTop.style.display = 'none';
           modalTopChild.style.display = 'none';
         }
       });
-    }
+    }// eslint-disable-line camelcase
   }
   const clickbuttonPop1 = document.querySelector('.order1');
   clickbuttonPop1.addEventListener('click', (event) => {
@@ -365,7 +366,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalDescription = document.querySelector('.modalDescription');
     const modallivebutton1 = document.querySelector('.see-live');
     const modallivebutton2 = document.querySelector('.see-source');
-    // eslint-disable-line no-restricted-syntax
+    // eslint-disable-next-line no-restricted-syntax
     for (const key in projectsArray) {
       if (Object.hasOwnProperty.call(projectsArray, key)) {
         const { title } = projectsArray[1];
@@ -401,7 +402,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const spacingModalClick = modalOther;
     spacingModalClick.addEventListener('click', (e) => {
-      if (e.target.className == 'modalOtherParent') {
+      if (e.target.className === 'modalOtherParent') {
         modalOther.style.display = 'none';
         modalChild.style.display = 'none';
       }
@@ -424,7 +425,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modallivebutton1 = document.querySelector('.see-live');
     const modallivebutton2 = document.querySelector('.see-source');
 
-    // eslint-disable-line no-restricted-syntax
+    // eslint-disable-next-line no-restricted-syntax
     for (const key in projectsArray) {
       if (Object.hasOwnProperty.call(projectsArray, key)) {
         const { title } = projectsArray[1];
@@ -460,7 +461,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const spacingModalClick = modalOther;
     spacingModalClick.addEventListener('click', (e) => {
-      if (e.target.className == 'modalOtherParent') {
+      if (e.target.className === 'modalOtherParent') {
         modalOther.style.display = 'none';
         modalChild.style.display = 'none';
       }
@@ -483,7 +484,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modallivebutton1 = document.querySelector('.see-live');
     const modallivebutton2 = document.querySelector('.see-source');
 
-    // eslint-disable-line no-restricted-syntax
+    // eslint-disable-next-line no-restricted-syntax
     for (const key in projectsArray) {
       if (Object.hasOwnProperty.call(projectsArray, key)) {
         const { title } = projectsArray[2];
@@ -519,7 +520,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const spacingModalClick = modalOther;
     spacingModalClick.addEventListener('click', (e) => {
-      if (e.target.className == 'modalOtherParent') {
+      if (e.target.className === 'modalOtherParent') {
         modalOther.style.display = 'none';
         modalChild.style.display = 'none';
       }
@@ -542,7 +543,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modallivebutton1 = document.querySelector('.see-live');
     const modallivebutton2 = document.querySelector('.see-source');
 
-    // eslint-disable-line no-restricted-syntax
+    // eslint-disable-next-line no-restricted-syntax
     for (const key in projectsArray) {
       if (Object.hasOwnProperty.call(projectsArray, key)) {
         const { title } = projectsArray[2];
@@ -578,7 +579,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const spacingModalClick = modalOther;
     spacingModalClick.addEventListener('click', (e) => {
-      if (e.target.className == 'modalOtherParent') {
+      if (e.target.className === 'modalOtherParent') {
         modalOther.style.display = 'none';
         modalChild.style.display = 'none';
       }
@@ -601,7 +602,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modallivebutton1 = document.querySelector('.see-live');
     const modallivebutton2 = document.querySelector('.see-source');
 
-    // eslint-disable-line no-restricted-syntax
+    // eslint-disable-next-line no-restricted-syntax
     for (const key in projectsArray) {
       if (Object.hasOwnProperty.call(projectsArray, key)) {
         const { title } = projectsArray[3];
@@ -637,7 +638,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const spacingModalClick = modalOther;
     spacingModalClick.addEventListener('click', (e) => {
-      if (e.target.className == 'modalOtherParent') {
+      if (e.target.className === 'modalOtherParent') {
         modalOther.style.display = 'none';
         modalChild.style.display = 'none';
       }
@@ -660,7 +661,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modallivebutton1 = document.querySelector('.see-live');
     const modallivebutton2 = document.querySelector('.see-source');
 
-    // eslint-disable-line no-restricted-syntax
+    // eslint-disable-next-line no-restricted-syntax
     for (const key in projectsArray) {
       if (Object.hasOwnProperty.call(projectsArray, key)) {
         const { title } = projectsArray[3];
@@ -696,7 +697,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const spacingModalClick = modalOther;
     spacingModalClick.addEventListener('click', (e) => {
-      if (e.target.className == 'modalOtherParent') {
+      if (e.target.className === 'modalOtherParent') {
         modalOther.style.display = 'none';
         modalChild.style.display = 'none';
       }
