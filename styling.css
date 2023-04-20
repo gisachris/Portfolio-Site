@@ -13,6 +13,9 @@
 
 .doc-container {
   overflow-x: hidden;
+  filter: blur(0px);
+  transition: filter 0.3s;
+  transition-delay: 0s;
 }
 @media screen and (max-width: 768px) {
   html,
@@ -671,12 +674,12 @@
 
   .click {
     color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.25rem;
     width: 190px;
     height: 50px;
     background-color: transparent;
     border: 0px;
-    font-family: 'Inter', sans-serif;
-    font-size: 1.25rem;
   }
 
   .click:hover {
@@ -850,6 +853,182 @@
     justify-content: center;
     align-items: center;
   }
+
+  /* adding the top modal desktop version */
+  .modalTopParent {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: none;
+  }
+
+  .modalOtherParent {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: none;
+    background-color: #0000007e;
+  }
+
+  .modalSection {
+    width: fit-content;
+    height: auto;
+    background-color: #ffffff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-47%, -50%);
+    display: none;
+  }
+
+  .heading-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-bottom: 30px;
+  }
+
+  .modalH2 {
+    font-family: 'Crete Round', sans-serif;
+    font-size: 1.5rem;
+    color: #091e42;
+    margin-left: 30px;
+  }
+
+  .Xbutton {
+    font-size: 30px;
+    font-weight: 900;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+
+  .modalListHold {
+    display: flex;
+    gap: 5px;
+    padding-left: 0px;
+    margin-left: 3.5vw;
+  }
+
+  .modalListItem {
+    border-radius: 0px;
+    border: 2px solid #aaa;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.063rem;
+    font-weight: 800;
+    text-align: left;
+    padding: 5px;
+  }
+
+  .rest-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .modalImage {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 360px;
+    height: 214px;
+  }
+
+  .modalImageOther {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 360px;
+    height: 214px;
+  }
+
+  .restArticle {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    padding-top: 0px;
+  }
+
+  .modalDescription {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 1.188rem;
+    color: #091e42;
+    column-gap: 10px;
+    width: 360px;
+    height: fit-content;
+    padding-bottom: 10px;
+  }
+
+  .modalbuttonsholder{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 60px;
+    margin-top: 10px;
+  }
+
+  .modalbutton1 {
+    background-color: #c46710;
+    width: 120px;
+    border: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .modalbutton1:hover {
+    background-color: #ceb49d;
+  }
+
+  .modalbutton1:active {
+    background-color: #973a04;
+  }
+
+  .modalbutton1 > a {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    column-gap: 10px;
+    justify-content: center;
+  }
+
+  .modalbutton2 {
+    background-color: #c46710;
+    background-color: #c46710;
+    width: 120px;
+    border: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-right: 65px;
+  }
+
+  .modalbutton2:hover {
+    background-color: #ceb49d;
+  }
+
+  .modalbutton2:active {
+    background-color: #973a04;
+  }
+
+  .modalbutton2 > a {
+    width: fit-content;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    column-gap: 10px;
+    justify-content: center;
+  }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -1702,4 +1881,176 @@
   .last_shape {
     display: none;
   }
+
+  /* adding the top modal desktop version */
+  .modalTopParent {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: none;
+  }
+
+  .modalSection {
+    width: fit-content;
+    height: auto;
+    background-color: #ffffff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
+
+  .heading-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-bottom: 30px;
+  }
+
+  .modalH2 {
+    font-family: 'Crete Round', sans-serif;
+    font-size: 2rem;
+    color: #091e42;
+    margin-left: 30px;
+  }
+
+  .Xbutton {
+    font-size: 40px;
+    font-weight: 900;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+
+  .rest-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+  }
+
+  .modalListHold {
+    display: flex;
+    gap: 15px;
+    padding-left: 0px;
+    margin-left: 25px;
+  }
+
+  .modalListItem {
+    border-radius: 0px;
+    border: 2px solid #aaa;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.063rem;
+    font-weight: 800;
+    text-align: left;
+    padding: 10px;
+  }
+
+  .modalImage {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 500px;
+  }
+
+  .modalImageOther {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 500px;
+    height: 350px;
+    margin-left: 20px;
+  }
+
+  .restArticle {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .modalDescription {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 1.188rem;
+    color: #091e42;
+    column-gap: 10px;
+  }
+
+  .modalbuttonsholder{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .modalbutton1 {
+    width: fit-content;
+    padding: 1rem;
+    background-color: #c46710;
+    width: 140px;
+    height: 50px;
+    border: 0vh;
+  }
+
+  .modalbutton1:hover {
+    background-color: #ceb49d;
+  }
+
+  .modalbutton1:active {
+    background-color: #973a04;
+  }
+
+  .modalbutton1 > a {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    column-gap: 10px;
+  }
+
+  .modalbutton2 {
+    width: fit-content;
+    padding: 1rem;
+    background-color: #c46710;
+    width: fit-content;
+    height: 50px;
+    border: 0vh;
+    margin-right: 0px;
+  }
+
+  .modalbutton2:hover {
+    background-color: #ceb49d;
+  }
+
+  .modalbutton2:active {
+    background-color: #973a04;
+  }
+
+  .modalbutton2 > a {
+    width: fit-content;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    column-gap: 10px;
+  }
+
+  /* building other modal */
+  .modalOtherParent {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: none;
+    background-color: #0000007e;
+  }
+
 }
