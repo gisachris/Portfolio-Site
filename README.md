@@ -63,9 +63,7 @@ i buit this website using the html and css tech stack.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
-
-- [Live Demo Link](https://gisachris.github.io/week1_portfolio/)
+- [gisachris.github.io/week1_portfolio/](https://gisachris.github.io/week1_portfolio/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -148,6 +146,12 @@ Run "npx stylelint "**/*.{css,scss}" --fix " to fix linters
 -Twitter: https://twitter.com/_GisaChris
 
 -LinkedIn: https://www.linkedin.com/in/gisa-chris-907948267/
+
+👤 Anthony MakDessy
+
+-GitHub: https://github.com/ANTOINE1128
+
+<span><b>project presentation</b></span>
 
 -presentation:https://www.loom.com/share/487900f0670d4b909bad5a405b21a862
 

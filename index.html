@@ -20,12 +20,20 @@
     <section class="homepage-container">
           <header class="header">
               <a href="index.html" class="logo-text touch rough">my logo</a>
+              <span href="" class="menu-bar" id="menuToggle">
+                <img src="mobileTag.png" alt="menu bar" class="bar">
+                <img src="Icon_Cancel.png" alt="menu bar" class="bar hidden">
+              </span>
               <nav class="navigation">
-                <a href="index.html" class="nav-text">Portfolio</a>
-                <a href="index.html" class="nav-text">About</a>
-                <a href="index.html" class="nav-text">Contact</a>
-                <a href="index.html" class="nav-text"><img src="Union.png" alt="mssg-option" class="nav-mssg"></a>
-                <a href="menu-items" class="menu-bar"><img src="mobile tag.png" alt="menu bar"></a>
+                <ul class="nav-holder">
+                <li><a href="#portfolio" class="nav-text">Portfolio</a>
+                <span class="mobileDomSeparator"><img src="Separator.png" alt="separating line" class="lineSeparator"></span></li>
+                <li><a href="#About" class="nav-text">About</a>
+                  <span class="mobileDomSeparator"><img src="Separator.png" alt="separating line" class="lineSeparator"></span></li>
+                <li><a href="#Contact" class="nav-text">Contact</a>
+                  <span class="mobileDomSeparator"><img src="Separator.png" alt="separating line" class="lineSeparator"></span></li>
+                <li><a href="index.html" class="nav-text"><img src="Union.png" alt="mssg-option" class="nav-mssg"></a></li>
+              </ul>
               </nav>
           </header>
       <section class="section2">
@@ -54,7 +62,7 @@
       </section>
     </section>
   <!--end of the homepage-->
-  <section class="work-section-container">
+  <section class="work-section-container" id="portfolio">
     <article class="heading">
       <h2 class="title-1" >My Recent Works</h2> 
       <figure class="line-pos">
@@ -179,7 +187,7 @@
   </section>
 </section>
   <!--end of the work section-->
-  <section class="about-section-container">
+  <section class="about-section-container" id="About">
     <section class="high-part">
     <section class="about-text-area">
     <article class="about-header">
@@ -244,7 +252,7 @@
   </section>
   <!--end of the about myself section-->
   <!--start of the contact form page-->
-  <section class="contact_form">
+  <section class="contact_form" id="Contact">
     <section class="contact-holder">
     <h2 class="contact_mssg">
       I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.
@@ -292,6 +300,7 @@
     </figure>
     </footer>
     </main>
+    <script src="app.js"></script>
   </body>
 </html>
 
