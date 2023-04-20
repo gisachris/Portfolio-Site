@@ -350,4 +350,356 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   }
+  const clickbuttonPop1 = document.querySelector('.order1');
+  clickbuttonPop1.addEventListener('click', (event) => {
+    event.preventDefault();
+    const modalOther = document.querySelector('.modalOtherParent');
+    const modalChild = document.querySelector('.modalSection');
+    modalOther.style.display = 'block';
+    modalChild.style.display = 'block';
+    modalOther.style.backgroundColor = '#0000004f';
+
+    const modalH2 = document.querySelector('.modalH2');
+    const modalListHold = document.querySelector('.modalListHold');
+    const modalImageOther = document.querySelector('.modalImageOther');
+    const modalDescription = document.querySelector('.modalDescription');
+    const modallivebutton1 = document.querySelector('.see-live');
+    const modallivebutton2 = document.querySelector('.see-source');
+    // eslint-disable-line no-restricted-syntax
+    for (const key in projectsArray) {
+      if (Object.hasOwnProperty.call(projectsArray, key)) {
+        const { title } = projectsArray[1];
+        modalH2.innerHTML = title;
+
+        const { technologies } = projectsArray[1];
+        (technologies).forEach((item) => {
+          const li = document.createElement('li');
+          li.setAttribute('class', 'modalListItem');
+          li.innerHTML = item;
+          modalListHold.append(li);
+        });
+
+        const { image } = projectsArray[1];
+        modalImageOther.src = image;
+
+        const { description } = projectsArray[1];
+        modalDescription.textContent = description;
+
+        const { liveLink } = projectsArray[1];
+        modallivebutton1.href = liveLink;
+
+        const { sourceLink } = projectsArray[1];
+        modallivebutton2.href = sourceLink;
+      }
+    }
+
+    const clickButtonClose = document.querySelector('.Xbutton');
+    clickButtonClose.addEventListener('click', () => {
+      modalOther.style.display = 'none';
+      modalChild.style.display = 'none';
+    });
+
+    const spacingModalClick = modalOther;
+    spacingModalClick.addEventListener('click', (e) => {
+      if (e.target.className == 'modalOtherParent') {
+        modalOther.style.display = 'none';
+        modalChild.style.display = 'none';
+      }
+    });
+  });
+
+  const clickbuttonPop4 = document.querySelector('.order4');
+  clickbuttonPop4.addEventListener('click', (event) => {
+    event.preventDefault();
+    const modalOther = document.querySelector('.modalOtherParent');
+    const modalChild = document.querySelector('.modalSection');
+    modalOther.style.display = 'block';
+    modalChild.style.display = 'block';
+    modalOther.style.backgroundColor = '#0000004f';
+
+    const modalH2 = document.querySelector('.modalH2');
+    const modalListHold = document.querySelector('.modalListHold');
+    const modalImageOther = document.querySelector('.modalImageOther');
+    const modalDescription = document.querySelector('.modalDescription');
+    const modallivebutton1 = document.querySelector('.see-live');
+    const modallivebutton2 = document.querySelector('.see-source');
+
+    // eslint-disable-line no-restricted-syntax
+    for (const key in projectsArray) {
+      if (Object.hasOwnProperty.call(projectsArray, key)) {
+        const { title } = projectsArray[1];
+        modalH2.innerHTML = title;
+
+        const { technologies } = projectsArray[1];
+        (technologies).forEach((item) => {
+          const li = document.createElement('li');
+          li.setAttribute('class', 'modalListItem');
+          li.innerHTML = item;
+          modalListHold.append(li);
+        });
+
+        const { image } = projectsArray[1];
+        modalImageOther.src = image;
+
+        const { description } = projectsArray[1];
+        modalDescription.textContent = description;
+
+        const { liveLink } = projectsArray[1];
+        modallivebutton1.href = liveLink;
+
+        const { sourceLink } = projectsArray[1];
+        modallivebutton2.href = sourceLink;
+      }
+    }
+
+    const clickButtonClose = document.querySelector('.Xbutton');
+    clickButtonClose.addEventListener('click', () => {
+      modalOther.style.display = 'none';
+      modalChild.style.display = 'none';
+    });
+
+    const spacingModalClick = modalOther;
+    spacingModalClick.addEventListener('click', (e) => {
+      if (e.target.className == 'modalOtherParent') {
+        modalOther.style.display = 'none';
+        modalChild.style.display = 'none';
+      }
+    });
+  });
+
+  const clickbuttonPop2 = document.querySelector('.order2');
+  clickbuttonPop2.addEventListener('click', (event) => {
+    event.preventDefault();
+    const modalOther = document.querySelector('.modalOtherParent');
+    const modalChild = document.querySelector('.modalSection');
+    modalOther.style.display = 'block';
+    modalChild.style.display = 'block';
+    modalOther.style.backgroundColor = '#0000004f';
+
+    const modalH2 = document.querySelector('.modalH2');
+    const modalListHold = document.querySelector('.modalListHold');
+    const modalImageOther = document.querySelector('.modalImageOther');
+    const modalDescription = document.querySelector('.modalDescription');
+    const modallivebutton1 = document.querySelector('.see-live');
+    const modallivebutton2 = document.querySelector('.see-source');
+
+    // eslint-disable-line no-restricted-syntax
+    for (const key in projectsArray) {
+      if (Object.hasOwnProperty.call(projectsArray, key)) {
+        const { title } = projectsArray[2];
+        modalH2.innerHTML = title;
+
+        const { technologies } = projectsArray[2];
+        (technologies).forEach((item) => {
+          const li = document.createElement('li');
+          li.setAttribute('class', 'modalListItem');
+          li.innerHTML = item;
+          modalListHold.append(li);
+        });
+
+        const { image } = projectsArray[2];
+        modalImageOther.src = image;
+
+        const { description } = projectsArray[2];
+        modalDescription.textContent = description;
+
+        const { liveLink } = projectsArray[2];
+        modallivebutton1.href = liveLink;
+
+        const { sourceLink } = projectsArray[2];
+        modallivebutton2.href = sourceLink;
+      }
+    }
+
+    const clickButtonClose = document.querySelector('.Xbutton');
+    clickButtonClose.addEventListener('click', () => {
+      modalOther.style.display = 'none';
+      modalChild.style.display = 'none';
+    });
+
+    const spacingModalClick = modalOther;
+    spacingModalClick.addEventListener('click', (e) => {
+      if (e.target.className == 'modalOtherParent') {
+        modalOther.style.display = 'none';
+        modalChild.style.display = 'none';
+      }
+    });
+  });
+
+  const clickbuttonPop5 = document.querySelector('.order5');
+  clickbuttonPop5.addEventListener('click', (event) => {
+    event.preventDefault();
+    const modalOther = document.querySelector('.modalOtherParent');
+    const modalChild = document.querySelector('.modalSection');
+    modalOther.style.display = 'block';
+    modalChild.style.display = 'block';
+    modalOther.style.backgroundColor = '#0000004f';
+
+    const modalH2 = document.querySelector('.modalH2');
+    const modalListHold = document.querySelector('.modalListHold');
+    const modalImageOther = document.querySelector('.modalImageOther');
+    const modalDescription = document.querySelector('.modalDescription');
+    const modallivebutton1 = document.querySelector('.see-live');
+    const modallivebutton2 = document.querySelector('.see-source');
+
+    // eslint-disable-line no-restricted-syntax
+    for (const key in projectsArray) {
+      if (Object.hasOwnProperty.call(projectsArray, key)) {
+        const { title } = projectsArray[2];
+        modalH2.innerHTML = title;
+
+        const { technologies } = projectsArray[2];
+        (technologies).forEach((item) => {
+          const li = document.createElement('li');
+          li.setAttribute('class', 'modalListItem');
+          li.innerHTML = item;
+          modalListHold.append(li);
+        });
+
+        const { image } = projectsArray[2];
+        modalImageOther.src = image;
+
+        const { description } = projectsArray[2];
+        modalDescription.textContent = description;
+
+        const { liveLink } = projectsArray[2];
+        modallivebutton1.href = liveLink;
+
+        const { sourceLink } = projectsArray[2];
+        modallivebutton2.href = sourceLink;
+      }
+    }
+
+    const clickButtonClose = document.querySelector('.Xbutton');
+    clickButtonClose.addEventListener('click', () => {
+      modalOther.style.display = 'none';
+      modalChild.style.display = 'none';
+    });
+
+    const spacingModalClick = modalOther;
+    spacingModalClick.addEventListener('click', (e) => {
+      if (e.target.className == 'modalOtherParent') {
+        modalOther.style.display = 'none';
+        modalChild.style.display = 'none';
+      }
+    });
+  });
+
+  const clickbuttonPop3 = document.querySelector('.order3');
+  clickbuttonPop3.addEventListener('click', (event) => {
+    event.preventDefault();
+    const modalOther = document.querySelector('.modalOtherParent');
+    const modalChild = document.querySelector('.modalSection');
+    modalOther.style.display = 'block';
+    modalChild.style.display = 'block';
+    modalOther.style.backgroundColor = '#0000004f';
+
+    const modalH2 = document.querySelector('.modalH2');
+    const modalListHold = document.querySelector('.modalListHold');
+    const modalImageOther = document.querySelector('.modalImageOther');
+    const modalDescription = document.querySelector('.modalDescription');
+    const modallivebutton1 = document.querySelector('.see-live');
+    const modallivebutton2 = document.querySelector('.see-source');
+
+    // eslint-disable-line no-restricted-syntax
+    for (const key in projectsArray) {
+      if (Object.hasOwnProperty.call(projectsArray, key)) {
+        const { title } = projectsArray[3];
+        modalH2.innerHTML = title;
+
+        const { technologies } = projectsArray[3];
+        (technologies).forEach((item) => {
+          const li = document.createElement('li');
+          li.setAttribute('class', 'modalListItem');
+          li.innerHTML = item;
+          modalListHold.append(li);
+        });
+
+        const { image } = projectsArray[3];
+        modalImageOther.src = image;
+
+        const { description } = projectsArray[3];
+        modalDescription.textContent = description;
+
+        const { liveLink } = projectsArray[3];
+        modallivebutton1.href = liveLink;
+
+        const { sourceLink } = projectsArray[3];
+        modallivebutton2.href = sourceLink;
+      }
+    }
+
+    const clickButtonClose = document.querySelector('.Xbutton');
+    clickButtonClose.addEventListener('click', () => {
+      modalOther.style.display = 'none';
+      modalChild.style.display = 'none';
+    });
+
+    const spacingModalClick = modalOther;
+    spacingModalClick.addEventListener('click', (e) => {
+      if (e.target.className == 'modalOtherParent') {
+        modalOther.style.display = 'none';
+        modalChild.style.display = 'none';
+      }
+    });
+  });
+
+  const clickbuttonPop6 = document.querySelector('.order6');
+  clickbuttonPop6.addEventListener('click', (event) => {
+    event.preventDefault();
+    const modalOther = document.querySelector('.modalOtherParent');
+    const modalChild = document.querySelector('.modalSection');
+    modalOther.style.display = 'block';
+    modalChild.style.display = 'block';
+    modalOther.style.backgroundColor = '#0000004f';
+
+    const modalH2 = document.querySelector('.modalH2');
+    const modalListHold = document.querySelector('.modalListHold');
+    const modalImageOther = document.querySelector('.modalImageOther');
+    const modalDescription = document.querySelector('.modalDescription');
+    const modallivebutton1 = document.querySelector('.see-live');
+    const modallivebutton2 = document.querySelector('.see-source');
+
+    // eslint-disable-line no-restricted-syntax
+    for (const key in projectsArray) {
+      if (Object.hasOwnProperty.call(projectsArray, key)) {
+        const { title } = projectsArray[3];
+        modalH2.innerHTML = title;
+
+        const { technologies } = projectsArray[3];
+        (technologies).forEach((item) => {
+          const li = document.createElement('li');
+          li.setAttribute('class', 'modalListItem');
+          li.innerHTML = item;
+          modalListHold.append(li);
+        });
+
+        const { image } = projectsArray[3];
+        modalImageOther.src = image;
+
+        const { description } = projectsArray[3];
+        modalDescription.textContent = description;
+
+        const { liveLink } = projectsArray[3];
+        modallivebutton1.href = liveLink;
+
+        const { sourceLink } = projectsArray[3];
+        modallivebutton2.href = sourceLink;
+      }
+    }
+
+    const clickButtonClose = document.querySelector('.Xbutton');
+    clickButtonClose.addEventListener('click', () => {
+      modalOther.style.display = 'none';
+      modalChild.style.display = 'none';
+    });
+
+    const spacingModalClick = modalOther;
+    spacingModalClick.addEventListener('click', (e) => {
+      if (e.target.className == 'modalOtherParent') {
+        modalOther.style.display = 'none';
+        modalChild.style.display = 'none';
+      }
+    });
+  });
 });
