@@ -725,18 +725,18 @@ document.addEventListener('DOMContentLoaded', () => {
     emailError.style.display = 'none';
   });
 
-  //add local storage for forma data
+  // add local storage for forma data
 
-  //initialising form content
+  // initialising form content
   const formSt = document.querySelector('#form');
   const inputName = document.querySelector('#name');
   const inputEmail = document.querySelector('#email');
   const inputTextArea = document.querySelector('#comment_text');
 
-  //get stored data values from the local storage if they exist
+  // get stored data values from the local storage if they exist
   const savedData = JSON.parse(localStorage.getItem('formData')) || {};
 
-  //fill in the inputs
+  // fill in the inputs
   if (savedData.inputName) {
     inputName.value = savedData.inputName;
   }
@@ -747,26 +747,26 @@ document.addEventListener('DOMContentLoaded', () => {
     inputTextArea.value = savedData.inputTextArea;
   }
 
-  //add an event listener to update the input fields if they change 
-  inputName.addEventListener('input',(event) =>{
+  // add an event listener to update the input fields if they change
+  inputName.addEventListener('input', (event) => {
     savedData.inputName = event.target.value;
     localStorage.setItem('formData', JSON.stringify(savedData));
   });
 
-  inputEmail.addEventListener('input',(event) =>{
+  inputEmail.addEventListener('input', (event) => {
     savedData.inputEmail = event.target.value;
     localStorage.setItem('formData', JSON.stringify(savedData));
   });
 
-  inputTextArea.addEventListener('input',(event) =>{
+  inputTextArea.addEventListener('input', (event) => {
     savedData.inputTextArea = event.target.value;
     localStorage.setItem('formData', JSON.stringify(savedData));
   });
 
   // Add event listener to clear the saved data from local storage when the form is submitted
   formSt.addEventListener('submit', (event) => {
-  event.preventDefault();
-  localStorage.removeItem('formData');
-  formSt.reset();
-});
+    event.preventDefault();
+    localStorage.removeItem('formData');
+    formSt.reset();
+  });
 });
