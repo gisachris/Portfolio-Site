@@ -812,10 +812,7 @@
   }
 
   #comment_text::placeholder {
-    margin-left: 0px;
-    padding-left: 0px;
-    text-align: left;
-    font-size: 1.875rem;
+    
   }
 
   .cont_button {
@@ -1899,10 +1896,7 @@
   }
 
   #comment_text::placeholder {
-    margin-left: 0px;
-    padding-left: 0px;
-    text-align: left;
-    font-size: 1.875rem;
+    
   }
 
   .cont_button {

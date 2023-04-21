@@ -724,4 +724,52 @@ document.addEventListener('DOMContentLoaded', () => {
   email.addEventListener('input', () => {
     emailError.style.display = 'none';
   });
+
+  //add local storage for forma data
+
+  //initialising form content
+  const formSt = document.querySelector('#form');
+  const inputName = document.querySelector('#name');
+  const inputEmail = document.querySelector('#email');
+  const inputTextArea = document.querySelector('#comment_text');
+
+  //get stored data values from the local storage if they exist
+  const savedData = JSON.parse(localStorage.getItem('formData')) || {};
+
+  //fill in the inputs
+  if (savedData.inputName) {
+    inputName.value = savedData.inputName;
+  }
+  if (savedData.inputEmail) {
+    inputEmail.value = savedData.inputEmail;
+  }
+  if (savedData.inputTextArea) {
+    inputTextArea.value = savedData.inputTextArea;
+  }
+
+  //add an event listener to update the input fields if they change 
+  inputName.addEventListener('input',(event) =>{
+    savedData.inputName = event.target.value;
+    localStorage.setItem('formData', JSON.stringify(savedData));
+  });
+
+  inputEmail.addEventListener('input',(event) =>{
+    savedData.inputEmail = event.target.value;
+    localStorage.setItem('formData', JSON.stringify(savedData));
+  });
+
+  inputTextArea.addEventListener('input',(event) =>{
+    savedData.inputTextArea = event.target.value;
+    localStorage.setItem('formData', JSON.stringify(savedData));
+  });
+
+  // Add event listener to clear the saved data from local storage when the form is submitted
+  formSt.addEventListener('submit', (event) => {
+  event.preventDefault();
+  localStorage.removeItem('formData');
+  formSt.reset();
+});
+
+  
+
 });
