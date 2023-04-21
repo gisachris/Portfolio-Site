@@ -731,7 +731,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const formSt = document.querySelector('#form');
   const inputName = document.querySelector('#name');
   const inputEmail = document.querySelector('#email');
-  const inputTextArea = document.querySelector('#comment_text');
+  const inputTextArea = document.querySelector('#commentText');
 
   // get stored data values from the local storage if they exist
   const savedData = JSON.parse(localStorage.getItem('formData')) || {};
