@@ -13,9 +13,6 @@
 
 .doc-container {
   overflow-x: hidden;
-  filter: blur(0px);
-  transition: filter 0.3s;
-  transition-delay: 0s;
 }
 
 @media screen and (max-width: 768px) {
@@ -26,6 +23,7 @@
     background-color: #dadada;
     margin: 0 auto;
     padding: 0;
+    box-sizing: border-box;
   }
 
   .mail {
@@ -855,23 +853,26 @@
     align-items: center;
   }
 
-  /* adding the top modal desktop version */
+  /* adding the top modal mobile version */
   .modalTopParent {
-    width: 100%;
+    width: 400px;
     height: 100%;
     position: fixed;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translate(-47%, 0%);
     z-index: 3;
+    background-color: #0000007e;
     display: none;
   }
 
   .modalOtherParent {
-    width: 100%;
+    width: 400px;
     height: 100%;
     position: fixed;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translate(-47%, 0%);
     z-index: 3;
     display: none;
     background-color: #0000007e;
@@ -885,7 +886,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-47%, -50%);
-    display: none;
+
+    /* display: none; */
   }
 
   .heading-section {
@@ -951,15 +953,15 @@
   .modalImage {
     margin-top: 20px;
     margin-bottom: 20px;
-    width: 360px;
-    height: 214px;
+    width: 85%;
+    height: auto;
   }
 
   .modalImageOther {
     margin-top: 20px;
     margin-bottom: 20px;
-    width: 360px;
-    height: 214px;
+    width: 246px;
+    height: 246px;
   }
 
   .restArticle {
@@ -975,11 +977,10 @@
   .modalDescription {
     font-family: 'Inter', sans-serif;
     font-weight: 900;
-    font-size: 1.188rem;
+    font-size: 0.875rem;
     color: #091e42;
-    column-gap: 10px;
-    width: 360px;
-    height: fit-content;
+    width: 250px;
+    height: auto;
     padding-bottom: 10px;
   }
 
@@ -987,17 +988,16 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    column-gap: 60px;
+    column-gap: 15px;
     margin-top: 10px;
   }
 
   .modalbutton1 {
     background-color: #c46710;
-    width: 150px;
+    width: 100px;
     border: 0;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     margin-left: 20px;
   }
 
@@ -1017,13 +1017,37 @@
     justify-content: center;
   }
 
+  .modalbutton1Other {
+    background-color: #c46710;
+    width: 100px;
+    border: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 20px;
+  }
+
+  .modalbutton1Other:hover {
+    background-color: #ceb49d;
+  }
+
+  .modalbutton1Other:active {
+    background-color: #973a04;
+  }
+
+  .modalbutton1Other > a {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    column-gap: 10px;
+    justify-content: center;
+  }
+
   .modalbutton2 {
     background-color: #c46710;
-    width: 165px;
+    width: 115px;
     border: 0;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    margin-right: 33px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   .modalbutton2:hover {
@@ -1039,8 +1063,39 @@
     color: white;
     font-family: 'Inter', sans-serif;
     display: flex;
-    column-gap: 10px;
     justify-content: center;
+  }
+
+  .modalbutton2Other {
+    background-color: #c46710;
+    width: 115px;
+    border: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .modalbutton2Other:hover {
+    background-color: #ceb49d;
+  }
+
+  .modalbutton2Other:active {
+    background-color: #973a04;
+  }
+
+  .modalbutton2Other > a {
+    width: fit-content;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+  }
+
+  .modalsourcebutton-text {
+    width: 88px;
+  }
+
+  .modallivebutton-text {
+    font-size: 16px;
   }
 }
 
@@ -2038,6 +2093,31 @@
     column-gap: 10px;
   }
 
+  .modalbutton1Other {
+    background-color: #c46710;
+    width: 100px;
+    border: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 20px;
+  }
+
+  .modalbutton1Other:hover {
+    background-color: #ceb49d;
+  }
+
+  .modalbutton1Other:active {
+    background-color: #973a04;
+  }
+
+  .modalbutton1Other > a {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    column-gap: 10px;
+    justify-content: center;
+  }
+
   .modalbutton2 {
     padding: 1rem;
     background-color: #c46710;
@@ -2063,6 +2143,30 @@
     font-weight: bold;
     display: flex;
     column-gap: 10px;
+  }
+
+  .modalbutton2Other {
+    background-color: #c46710;
+    width: 115px;
+    border: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .modalbutton2Other:hover {
+    background-color: #ceb49d;
+  }
+
+  .modalbutton2Other:active {
+    background-color: #973a04;
+  }
+
+  .modalbutton2Other > a {
+    width: fit-content;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
   }
 
   /* building other modal */
