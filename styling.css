@@ -15,6 +15,13 @@
   overflow-x: hidden;
 }
 
+.emailError {
+  font-size: 1rem;
+  color: #973a04;
+  padding-top: 10px;
+  font-weight: bold;
+}
+
 @media screen and (max-width: 768px) {
   html,
   body {
@@ -785,10 +792,11 @@
   .field_box {
     margin-top: 20px;
     padding: 10px;
-    padding-right: 106px;
+    padding-right: 70px;
     border: 0px;
     border-bottom: 1px solid #dbd8d7;
     font-size: 1.063rem;
+    width: 250px;
   }
 
   #comment_text {
@@ -1871,10 +1879,11 @@
   .field_box {
     margin-top: 20px;
     padding: 10px;
-    padding-right: 270px;
+    padding-right: 150px;
     border: 0px;
     border-bottom: 1px solid #dbd8d7;
     font-size: 1.063rem;
+    width: 300px;
   }
 
   #comment_text {
