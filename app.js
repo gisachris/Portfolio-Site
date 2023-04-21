@@ -712,7 +712,7 @@ document.addEventListener('DOMContentLoaded', () => {
   form.addEventListener('click', (event) => {
     const emailValue = email.value.trim();
 
-  // check if email is lowercase
+    // check if email is lowercase
     if (emailValue !== emailValue.toLowerCase()) {
       emailError.style.display = 'block';
       emailError.innerHTML = 'Email must be lowercase!';
@@ -723,5 +723,5 @@ document.addEventListener('DOMContentLoaded', () => {
   // add an event listener to the email itself
   email.addEventListener('input', () => {
     emailError.style.display = 'none';
-  });  
+  });
 });
