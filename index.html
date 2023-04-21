@@ -135,7 +135,7 @@
     <h2 class="contact_mssg">
       I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.
     </h2>
-    <form  action="https://formspree.io/f/mrgvyylv" method="post" class="form">
+    <form  action="https://formspree.io/f/mrgvyylv" method="post" class="form" id="form">
       <fieldset class="contact_imfo">
         <label for="names">
         <input 
@@ -155,6 +155,7 @@
         required
         pattern=".*[.com]">
       </label>
+      <span class="emailError"></span>
         <textarea name="comment" id="comment_text" cols="30" rows="10" required maxlength="500">write me something....
         </textarea>
         <br>

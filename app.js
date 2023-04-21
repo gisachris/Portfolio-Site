@@ -703,4 +703,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  //form and Email validation
 });
