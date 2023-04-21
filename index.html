@@ -150,15 +150,14 @@
         <label for="mail">
         <input 
         type="email" 
-        class="field_box" 
+        class="field_box email" 
         id="email"
         name="email" 
         placeholder="Email Address"
         required
         pattern=".*[.com]">
       </label>
-        <textarea name="comment" id="comment_text" cols="30" rows="10" required maxlength="500" placeholder="Write something here...">
-        </textarea>
+      <textarea name="comment" id="commentText" class="comment_text" cols="30" rows="10" maxlength="500" placeholder="Write something here..."></textarea>
         <br>
         <span class="emailError"></span>
         <input type="submit" value="get in touch" name="submit" class="cont_button">
