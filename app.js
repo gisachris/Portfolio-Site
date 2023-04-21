@@ -707,22 +707,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const email = document.getElementById('email');
   const emailError = document.querySelector('.emailError');
   const form = document.querySelector('.cont_button');
-  const formAc = document.querySelector('.form');
 
   // adding an event listener
-form.addEventListener('click', function(event) {
-  const emailValue = email.value.trim();
+  form.addEventListener('click', (event) => {
+    const emailValue = email.value.trim();
 
-  // check if email is lowercase
-  if (emailValue !== emailValue.toLowerCase()) {
-    emailError.style.display = "block";
-    emailError.innerHTML = "Email must be lowercase!";
-    event.preventDefault();
-  }
-});
+    // check if email is lowercase
+    if (emailValue !== emailValue.toLowerCase()) {
+      emailError.style.display = 'block';
+      emailError.innerHTML = 'Email must be lowercase!';
+      event.preventDefault();
+    }
+  });
 
-// add an event listener to the email itself
-email.addEventListener('input', function() {
-  emailError.style.display = "none";
-});
+  // add an event listener to the email itself
+  email.addEventListener('input', () => {
+    emailError.style.display = 'none';
+  });
 });
