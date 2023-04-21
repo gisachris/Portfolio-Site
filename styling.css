@@ -15,6 +15,13 @@
   overflow-x: hidden;
 }
 
+.emailError {
+  font-size: 1rem;
+  color: #973a04;
+  padding-top: 10px;
+  font-weight: bold;
+}
+
 @media screen and (max-width: 768px) {
   html,
   body {
