@@ -799,7 +799,11 @@
     width: 250px;
   }
 
-  #comment_text {
+  .email {
+    margin-bottom: 20px;
+  }
+
+  #commentText {
     margin-top: 20px;
     background-color: #fbf8f7;
     width: 329px;
@@ -809,13 +813,6 @@
 
   #comment_text:hover {
     border: 2px solid rgb(0, 81, 255);
-  }
-
-  #comment_text::placeholder {
-    margin-left: 0px;
-    padding-left: 0px;
-    text-align: left;
-    font-size: 1.875rem;
   }
 
   .cont_button {
@@ -1886,23 +1883,24 @@
     width: 300px;
   }
 
-  #comment_text {
-    margin-top: 20px;
+  .email {
+    margin-bottom: 35px;
+  }
+
+  .comment_text {
     background-color: #fbf8f7;
     width: 496px;
     height: 80px;
     border: 0px;
   }
 
-  #comment_text:hover {
-    border: 2px solid rgb(0, 81, 255);
+  .commentText {
+    margin-top: 20px;
+    background-color: #fbf8f7;
   }
 
-  #comment_text::placeholder {
-    margin-left: 0px;
-    padding-left: 0px;
-    text-align: left;
-    font-size: 1.875rem;
+  #comment_text:hover {
+    border: 2px solid rgb(0, 81, 255);
   }
 
   .cont_button {
