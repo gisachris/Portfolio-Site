@@ -764,5 +764,9 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Add event listener to clear the saved data from local storage when the form is submitted
-  
+  formSt.addEventListener('submit', (event) => {
+  event.preventDefault();
+  localStorage.removeItem('formData');
+  formSt.reset();
+});
 });
