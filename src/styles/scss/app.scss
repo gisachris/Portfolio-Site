@@ -1,4 +1,4 @@
-@import 'config';
+@import 'partials/config';
 
 //base settings
 * {
@@ -9,7 +9,14 @@
 
 html,
 body {
+  min-width: 400px;
   width: 100vw;
   min-height: 100vh;
   background-color: $background-color;
+}
+
+.App {
+  position: relative;
+  min-width: 100vw;
+  min-height: 100vh;
 }

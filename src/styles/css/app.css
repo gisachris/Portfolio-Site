@@ -1,1 +1,1 @@
-*{box-sizing:border-box;margin:0;padding:0}html,body{width:100vw;min-height:100vh;background-color:#212529}/*# sourceMappingURL=app.css.map */
+@import"https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap";*{box-sizing:border-box;margin:0;padding:0}html,body{min-width:400px;width:100vw;min-height:100vh;background-color:#212529}.App{position:relative;min-width:100vw;min-height:100vh}/*# sourceMappingURL=app.css.map */

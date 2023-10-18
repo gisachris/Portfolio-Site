@@ -1,0 +1,21 @@
+@import './partials/config';
+
+.toggleHolder {
+  background-color: $primary-color-dark;
+  border: 0;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  overflow: hidden;
+
+  .toggleSetting {
+    cursor: pointer;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+  }
+}
