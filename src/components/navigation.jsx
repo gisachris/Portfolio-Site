@@ -1,12 +1,19 @@
 import '../styles/css/navigation.css';
 import logo from '../assets/images/logo.png';
+import menuButton from '../assets/icons/hamenu.png';
+import closeButton from '../assets/icons/close.png';
 // import { NavLink } from 'react-router-dom';
 
 const Navigation = () => {
   return(
     <>
+      <div className="navigationBlurOverlay" />
       <div className="navigation">
         <nav>
+          <section className="menuControls">
+            <img src={menuButton} alt="hamMenu" className="hamenu" />
+            <img src={closeButton} alt="close button" className="closeButton" />
+          </section>
           <section className="navLogoPlacement">
             <img src={logo} alt="logo-art" />
           </section>
@@ -18,7 +25,7 @@ const Navigation = () => {
             <a href="/Contact">Contact</a>
           </section>
           <section className="navHireButton">
-            <button className="HireButton">Hire Me</button>
+            <button type="submit" className="HireButton">Hire Me</button>
           </section>
         </nav>
       </div>

@@ -1,10 +1,10 @@
 import '../../styles/css/toggle.css'
-import logo from '../../assets/images/logo.png';
+import settings from '../../assets/icons/settings.png';
 
 const Toggler = () => {
   return (
     <div className="toggleHolder">
-      <img src={logo} alt="settings" className="toggleSetting" />
+      <img src={settings} alt="settings" className="toggleSetting" />
     </div>
   );
 }

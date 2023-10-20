@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
+//dark-mode
+
 $background-color: #212529;
 $primary-color-dark: #ffb742;
 $secondary-color-dark: #fff;
@@ -8,12 +10,23 @@ $other-color: #292b2e;
 $neutral-light: #fff;
 $neutral-dark: #000;
 
+// Light-mode
+
+// $background-color: ;
+// $primary-color-light: ;
+// $secondary-color-light: ;
+// $tertiary-color: ;
+// $other-color: ;
+
+
 //fonts
 $primary-font: 'Poppins', sans-serif;
 
-// Light-mode
-// $background-color: ;
-// $primary-color-dark: ;
-// $secondary-color-dark: ;
-// $tertiary-color: ;
-// $other-color: ;
+//mixins 
+@mixin button-base($bg-color, $font-color, $font-family) {
+  padding: 10px 5px;
+  background-color: $bg-color;
+  color: $font-color;
+  font-family: $font-family;
+  border: 0;
+}
