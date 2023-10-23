@@ -20,19 +20,6 @@ body {
     min-width: 100vw;
     min-height: 100vh;
   }
-  
-  .Main {
-    position: relative;
-    min-width: 100%;
-    min-height: 100%;
-  }
-  
-  .MainBlur {
-    position: relative;
-    min-width: 100%;
-    min-height: 100%;
-    filter: blur(10px);
-  }  
 }
 
 @media screen and (min-width: 767px) {

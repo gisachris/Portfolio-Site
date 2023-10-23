@@ -1,4 +1,4 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import PropTypes from 'prop-types';
 import '../styles/css/navigation.css';
 import logo from '../assets/images/logo.png';
@@ -6,9 +6,7 @@ import menuButton from '../assets/icons/hamenu.png';
 import closeButton from '../assets/icons/close.png';
 import { Link } from 'react-scroll';
 
-const Navigation = ({ isOpen, setIsOpen, toggleNavigation }) => {
-  const [activeSection, setActiveSection] = useState('Home');
-
+const Navigation = ({ isOpen, toggleNavigation }) => {
   return(
     <>
       <div className="navHolder">

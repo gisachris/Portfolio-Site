@@ -1,8 +1,8 @@
 import Toggler from './shared/toggler';
 import '../styles/css/main.css';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
-const Main = (isOpen) => {
+const MainBody = ({isOpen}) => {
   return (
     <div className={isOpen ? 'MainBlur' : "Main"}>
       <div className="testing loc-1" id="Home">
@@ -18,8 +18,8 @@ const Main = (isOpen) => {
   );
 }
 
-Main.propTypes = {
-  isOpen: propTypes.bool.isRequired,
+MainBody.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
 };
 
-export default Main;
+export default MainBody;

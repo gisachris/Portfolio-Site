@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Main from './components/main';
+import MainBody from './components/mainBody';
 import Navigation from './components/navigation';
 import './styles/css/App.css';
 
@@ -12,8 +12,8 @@ function App() {
 
   return (
       <div className='App'>
-        <Navigation toggleNavigation={toggleNavigation} isOpen={isOpen} setIsOpen={setIsOpen} />
-        <Main isOpen={isOpen} />
+        <Navigation toggleNavigation={toggleNavigation} isOpen={isOpen} />
+        <MainBody isOpen={isOpen} />
       </div>
   );
 }

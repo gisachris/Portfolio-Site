@@ -1,15 +1,34 @@
-.Main {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
+@media screen and (max-width: 767px) {
+  .Main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+  }
+
+  .MainBlur {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    filter: blur(10px);
+  }
 }
 
-.MainBlur {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
+@media screen and (min-width: 767px) {
+  .Main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+  }
+
+  .MainBlur {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+  }
 }
 
 .testing {
