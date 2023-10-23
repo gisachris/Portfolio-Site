@@ -1,0 +1,216 @@
+@import './partials/config';
+
+@media screen and (max-width: 767px) {
+  .hamburgerSection {
+    position: absolute;
+    z-index: 999;
+    left: 10px;
+    top: 10px;
+
+    .hamenu {
+      width: 40px;
+      cursor: pointer;
+      transition: width 0.25s ease-in;
+
+      &:active {
+        width: 40px;
+      }
+    }
+  }
+
+  .navHolder {
+    min-width: 50px;
+    max-width: 250px;
+    height: 100vh;
+    position: fixed;
+    z-index: 999;
+  }
+
+  .navigation {
+    background-color: $other-color;
+    width: 250px;
+    height: 100vh;
+    position: absolute;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out, filter 0.3s ease-in-out;
+  }
+
+  .visible {
+    left: 0;
+    filter: blur(0);
+    opacity: 1;
+  }
+
+  .hidden {
+    left: -250px;
+    filter: blur(5px);
+    opacity: 0.3;
+  }
+
+  .menuControls {
+    width: 99%;
+    margin: 0 auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .closeButton {
+      width: 20px;
+      box-sizing: border-box;
+      object-fit: contain;
+      margin-right: 5px;
+      cursor: pointer;
+      transition: width 0.25s ease-in;
+
+      &:active {
+        width: 15px;
+      }
+    }
+  }
+
+  .navLogoPlacement {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+
+    img {
+      width: 50px;
+    }
+  }
+
+  .navLinks {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    column-gap: 13px;
+
+    a {
+      padding-left: 12px;
+      text-decoration: none;
+      color: $neutral-light;
+      font-size: 1.5rem;
+      font-family: $primary-font;
+      background-color: transparent;
+      transition: background-color 800ms;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $primary-color-dark;
+        color: $neutral-dark;
+      }
+    }
+  }
+
+  .navHireButton {
+    margin-left: 12px;
+
+    button {
+      @include button-base($primary-color-dark, $other-color, $primary-font);
+
+      border-radius: 20px;
+      width: 100px;
+      justify-self: start;
+    }
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .hamburgerSection {
+    display: none;
+  }
+
+  .navigation {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 5px;
+  }
+
+  .menuControls {
+    display: none;
+  }
+
+  .navLogoPlacement {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+    padding: 15px;
+    justify-content: flex-start;
+
+    img {
+      min-width: 40px;
+      width: 40px;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  @keyframes linkChange {
+    0% {
+      opacity: 1;
+      border-bottom: 0;
+    }
+
+    50% {
+      opacity: 0.6;
+      border-bottom: 2px solid $primary-color-dark;
+    }
+
+    100% {
+      opacity: 1;
+      border-bottom: 2px solid $primary-color-dark;
+    }
+  }
+
+  .navLinks {
+    display: flex;
+    align-items: center;
+    min-width: 400px;
+    width: 60%;
+    height: 100%;
+    justify-content: center;
+    column-gap: 10px;
+
+    a {
+      text-decoration: none;
+      color: $neutral-light;
+      font-family: $primary-font;
+      padding: 0 3px;
+      border-bottom: 0;
+      cursor: pointer;
+
+      &:hover {
+        animation: linkChange 0.3s normal ease-in forwards;
+      }
+    }
+
+    .active {
+      animation: linkChange 0.3s normal ease-in forwards;
+    }
+  }
+
+  .navHireButton {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    margin-right: 20px;
+    padding-right: 10px;
+    justify-content: flex-end;
+
+    button {
+      @include button-base($primary-color-dark, $other-color, $primary-font);
+
+      border-radius: 20px;
+      width: 100px;
+      justify-self: start;
+      cursor: pointer;
+    }
+  }
+}
