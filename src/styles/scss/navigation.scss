@@ -1,100 +1,51 @@
 @import './partials/config';
 
-@media screen and (min-width: 767px) {
-  .navigation {
-    min-width: 100%;
-    width: 100%;
-    height: 70px;
-    position: fixed;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.39);
-  
-    nav {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: space-between;
-      column-gap: 5px;
-    }
-  }
-
-  .menuControls {
-    display: none;
-  }
-  
-  .navLogoPlacement {
-    display: flex;
-    align-items: center;
-    width: 20%;
-    height: 100%;
-    padding: 15px;
-    justify-content: flex-start;
-  
-    img {
-      min-width: 40px;
-      width: 40px;
-      height: 100%;
-      object-fit: contain;
-    }
-  }
-  
-  .navLinks {
-    display: flex;
-    align-items: center;
-    min-width: 400px;
-    width: 60%;
-    height: 100%;
-    justify-content: center;
-    column-gap: 10px;
-  
-    a {
-      text-decoration: none;
-      color: $neutral-light;
-      font-family: $primary-font;
-    }
-  }
-  
-  .navHireButton {
-    display: flex;
-    align-items: center;
-    width: 20%;
-    margin-right: 20px;
-    padding-right: 10px;
-    justify-content: flex-end;
-  
-    button {
-      @include button-base($primary-color-dark, $other-color, $primary-font);
-      border-radius: 20px;
-      width: 100px;
-      justify-self: start;
-      cursor: pointer;
-    }
-  }    
-}
-
 @media screen and (max-width: 767px) {
-  // .navigationBlurOverlay {
-  //   background-color: rgba(136, 135, 61, 0.4);
-  //   width: 100vw;
-  //   height: 100vh;
-  //   filter: blur(10px);
-  //   position: absolute;
-  //   z-index: 999;
-  // }
+  .hamburgerSection {
+    position: absolute;
+    z-index: 999;
+    left: 10px;
+    top: 10px;
+
+    .hamenu {
+      width: 50px;
+      cursor: pointer;
+      transition: width 0.25s ease-in;
+
+      &:active {
+        width: 40px;
+      }
+    }
+  }
+
+  .navHolder {
+    min-width: 50px;
+    max-width: 250px;
+    height: 100vh;
+    position: relative;
+  }
 
   .navigation {
-    width: 100vw;
+    background-color: $other-color;
+    width: 250px;
     height: 100vh;
     position: absolute;
     z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out, filter 0.3s ease-in-out,;
+  }
 
-    nav {
-      background-color: $other-color;
-      width: 250px;
-      height: 100vh;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-    }
+  .visible {
+    left: 0;
+    filter: blur(0px);
+    opacity: 1;
+  }
+
+  .hidden {
+    left: -250px;
+    filter: blur(5px);
+    opacity: 0.3;
   }
 
   .menuControls {
@@ -105,26 +56,20 @@
     align-items: center;
     justify-content: flex-end;
 
-
-    .hamenu {
-      width: 35px;
-      box-sizing: border-box;
-      object-fit: contain;
-      cursor: pointer;
-      position: absolute;
-      left: 10px;
-      display: none;
-    }
-
     .closeButton {
       width: 20px;
       box-sizing: border-box;
       object-fit: contain;
       margin-right: 5px;
       cursor: pointer;
+      transition: width 0.25s ease-in;
+
+      &:active {
+        width: 15px;
+      }
     }
   }
-  
+
   .navLogoPlacement {
     position: absolute;
     top: 10px;
@@ -134,7 +79,7 @@
       width: 50px;
     }
   }
-  
+
   .navLinks {
     width: 100%;
     margin-top: 10px;
@@ -142,7 +87,7 @@
     display: flex;
     flex-direction: column;
     column-gap: 13px;
-      
+
     a {
       padding-left: 12px;
       text-decoration: none;
@@ -158,23 +103,111 @@
       }
     }
   }
-  
+
   .navHireButton {
     margin-left: 12px;
-      
+
     button {
       @include button-base($primary-color-dark, $other-color, $primary-font);
+
       border-radius: 20px;
       width: 100px;
       justify-self: start;
     }
   }
+}
 
-  .close {
+@media screen and (min-width: 767px) {
+  .hamburgerSection {
+    display: none;
+  }
+  
+  .navigation {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 5px;
+  }
+
+  .menuControls {
     display: none;
   }
 
-  .blur {
-    filter: blur(10px);
+  .navLogoPlacement {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+    padding: 15px;
+    justify-content: flex-start;
+
+    img {
+      min-width: 40px;
+      width: 40px;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  @keyframes linkChange {
+    0% {
+      opacity: 1;
+      border-bottom: 0;
+    }
+
+    50% {
+      opacity: 0.6;
+      border-bottom: 2px solid $primary-color-dark;
+    }
+
+    100% {
+      opacity: 1;
+      border-bottom: 2px solid $primary-color-dark;
+    }
+  }
+
+  .navLinks {
+    display: flex;
+    align-items: center;
+    min-width: 400px;
+    width: 60%;
+    height: 100%;
+    justify-content: center;
+    column-gap: 10px;
+
+    a {
+      text-decoration: none;
+      color: $neutral-light;
+      font-family: $primary-font;
+      padding: 0 3px;
+      border-bottom: 0;
+
+      &:hover {
+        animation: linkChange 0.3s normal ease-in forwards;
+      }
+    }
+
+    .active {
+      animation: linkChange 0.3s normal ease-in forwards;
+    }
+  }
+
+  .navHireButton {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    margin-right: 20px;
+    padding-right: 10px;
+    justify-content: flex-end;
+
+    button {
+      @include button-base($primary-color-dark, $other-color, $primary-font);
+
+      border-radius: 20px;
+      width: 100px;
+      justify-self: start;
+      cursor: pointer;
+    }
   }
 }

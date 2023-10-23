@@ -18,11 +18,10 @@ $neutral-dark: #000;
 // $tertiary-color: ;
 // $other-color: ;
 
-
 //fonts
 $primary-font: 'Poppins', sans-serif;
 
-//mixins 
+//mixins
 @mixin button-base($bg-color, $font-color, $font-family) {
   padding: 10px 5px;
   background-color: $bg-color;

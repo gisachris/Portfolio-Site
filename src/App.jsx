@@ -1,13 +1,19 @@
-import useState from 'react';
-import Navigation from './components/navigation'
-import Toggler from './components/shared/toggler';
-import './styles/css/App.css'
+import { useState } from 'react';
+import Main from './components/main';
+import Navigation from './components/navigation';
+import './styles/css/App.css';
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleNavigation = () => {
+    setIsOpen(!isOpen);
+  }
+
   return (
-      <div className="App">
-        <Navigation />
-        <Toggler />
+      <div className='App'>
+        <Navigation toggleNavigation={toggleNavigation} isOpen={isOpen} setIsOpen={setIsOpen} />
+        <Main isOpen={isOpen} />
       </div>
   );
 }
