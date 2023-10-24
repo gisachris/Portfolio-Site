@@ -1,3 +1,4 @@
+import Contact from './contact';
 import Toggler from './shared/toggler';
 import '../styles/css/main.css';
 import PropTypes from 'prop-types';
@@ -12,7 +13,7 @@ const MainBody = ({isOpen}) => {
       <div className="testing loc-3" id="Skills" />
       <div className="testing loc-4" id="Portfolio" />
       <div className="testing loc-5" id="Testimonials" />
-      <div className="testing loc-6" id="Contact" />
+      <Contact />
       <Toggler />
     </div>
   );
