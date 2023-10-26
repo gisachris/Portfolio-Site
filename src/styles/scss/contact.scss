@@ -1,0 +1,179 @@
+@import './partials/config';
+
+@media screen and (max-width: 767px) {
+  .contactSection {}
+  .contactCredentials {}
+  .contactSocials {}
+  .contactFormHolder {}
+}
+
+@media screen and (min-width: 767px) {
+  .contactSection {
+    background-color: $semi-dark;
+    display: flex;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 10px 10px;
+    justify-content: space-between;
+    min-height: 250px;
+    padding-top: 30px;
+  }
+
+  .contactCredentials {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding-left: 10px;
+
+    .Name {
+      color: $primary-color-dark;
+      font-size: 1.5rem;
+      font-family: $primary-font;
+      font-weight: bold;
+    }
+
+    .duties {
+      color: $neutral-light;
+      font-family: $primary-font;
+      font-size: 0.9rem;
+    }
+  }
+
+  .contactSocials {
+    width: 35%;
+    display: flex;
+    column-gap: 10px;
+    padding: 0 10px;
+
+    .usefulLinksHolder {
+      width: 50%;
+
+      .useful_title {
+        font-family: $secondary-font;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: $neutral-light;
+      }
+    }
+
+    .u_link {
+      list-style: none;
+      margin-top: 10px;
+
+      a {
+        text-decoration: none;
+        color: $tertiary-color;
+        font-size: 0.9rem;
+        font-family: $secondary-font;
+
+        &:hover {
+          border-bottom: 0.5px sol$primary-color-dark;
+        }
+      }
+    }
+
+    .SocialMediasHolder {
+      width: 50%;
+
+      .socials_title {
+        font-family: $secondary-font;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: $neutral-light;
+      }
+
+      .social_links {
+        .s_link {
+          list-style: none;
+          margin-top: 10px;
+
+          a {
+            text-decoration: none;
+            color: $tertiary-color;
+            font-size: 0.9rem;
+            font-family: $secondary-font;
+
+            &:hover {
+              border-bottom: 0.5px sol$primary-color-dark;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .contactFormHolder {
+    width: calc(100% - 65%);
+    padding: 20px;
+    padding-top: 0;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+      position: relative;
+      width: fit-content;
+      font-family: $primary-font;
+
+      section {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          color: $primary-color-dark;
+          font-size: 0.9rem;
+          font-family: $primary-font;
+          margin-bottom: 5px;
+        }
+
+        input {
+          font-size: 1rem;
+          color: black;
+          font-family: $primary-font;
+          padding-left: 6px;
+        }
+
+        textarea {
+          font-size: 1rem;
+          color: black;
+          font-family: $primary-font;
+          padding-left: 6px;
+        }
+
+        .text {
+          height: 30px;
+          width: 250px;
+          border: 0;
+          border-radius: 5px;
+          background-color: #fcf4e7;
+        }
+
+        .messagetext {
+          height: 130px;
+          width: 360px;
+          border: 0;
+          border-radius: 5px;
+          background-color: #fcf4e7;
+        }
+      }
+
+      .field {
+        width: fit-content;
+      }
+
+      .sendButtonLabel {
+        position: absolute;
+        bottom: 0;
+        right: 5px;
+        width: fit-content;
+
+        .sendButton {
+          width: 50px;
+          height: 50px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

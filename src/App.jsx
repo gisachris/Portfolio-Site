@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import MainBody from './components/mainBody';
 import Navigation from './components/navigation';
+import Toggler from '../src/components/shared/toggler';
 import './styles/css/App.css';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <div className='App'>
         <Navigation toggleNavigation={toggleNavigation} isOpen={isOpen} />
         <MainBody isOpen={isOpen} />
+        <Toggler />
       </div>
   );
 }

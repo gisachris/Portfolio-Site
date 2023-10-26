@@ -156,6 +156,7 @@
     0% {
       opacity: 1;
       border-bottom: 0;
+      color: white;
     }
 
     50% {
@@ -166,6 +167,7 @@
     100% {
       opacity: 1;
       border-bottom: 2px solid $primary-color-dark;
+      color: $primary-color-dark;
     }
   }
 

@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import sendButton from "../../assets/icons/emailbutton.svg"
 
 const ContactForm = () => {
   const form = useRef();
@@ -16,16 +17,30 @@ const ContactForm = () => {
       });
   };
 
+  const formSubmittion = () => {
+    form.current.dispatchEvent(new Event("submit"));
+  }
+
   return (
-    <form ref={form} onSubmit={sendEmail}>
-      <label>Your Name</label>
-      <input type="text" name="user_name" />
-      <label>Your Email</label>
-      <input type="email" name="user_email" />
-      <label>Message</label>
-      <textarea name="message" />
-      <input type="submit" value="Send" />
-    </form>
+    <div className="contactFormHolder">
+      <form ref={form} onSubmit={sendEmail}>
+        <section className="field name_field">
+          <label>Your Name:</label>
+          <input type="text" name="user_name" className="text" required />
+        </section>
+        <section className="field email_field">
+          <label>Your Email:</label>
+          <input type="email" name="user_email" className="text" required/>
+        </section>
+        <section className="field message_field">
+          <label>Message:</label>
+          <textarea name="message"  className="messagetext" required/>
+        </section>
+        <label className="sendButtonLabel">
+          <img src={sendButton} alt="send button" className="sendButton" onClick={formSubmittion} />
+        </label>
+      </form>
+    </div>
   );
 }
 
