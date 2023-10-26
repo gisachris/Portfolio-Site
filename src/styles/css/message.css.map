@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"message.css"}
+{"version":3,"sourceRoot":"","sources":["../scss/partials/_config.scss","../scss/message.scss"],"names":[],"mappings":"AAAQ,0GCER,eACE,YACA,YACA,yBACA,mBAGF,0BACE,GACE,YACA,UAGF,IACE,UAGF,KACE,YAIJ,6BACE,GACE,WACA,UAGF,KACE,YACA,WAMJ,YACE,kBACA,aACA,SACA,UACA,6CAGF,cACE","file":"message.css"}

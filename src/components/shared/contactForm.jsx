@@ -1,4 +1,5 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useContext } from "react";
+import PopupContext from "../../contexts/popupContext";
 import emailjs from "@emailjs/browser";
 import sendButton from "../../assets/icons/emailbutton.svg"
 import Loader from "./loader";
@@ -6,6 +7,7 @@ import Loader from "./loader";
 const ContactForm = () => {
   const form = useRef();
   const [loading, setLoading] = useState(false);
+  const { popupShow, setPopShow } = useContext(PopupContext);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -15,6 +17,18 @@ const ContactForm = () => {
       .then(() => {
           setLoading(false);
 
+          setPopShow({
+            ...popupShow,
+            status: true,
+          });
+
+          setTimeout(() => {
+            setPopShow({
+              status: false,
+              message: null,
+            });
+          }, 1000);
+
           const inputs = form.current.querySelectorAll('input');
           const textArea = form.current.querySelector('textarea');
 
@@ -23,7 +37,17 @@ const ContactForm = () => {
             input.value = '';
           })
       }, (error) => {
-          console.log(error.text);
+          setPopShow({
+            status: true,
+            message: error.text,
+          });
+
+          setTimeout(() => {
+            setPopShow({
+              status: false,
+              message: null,
+            });
+          }, 1500);
       });
   };
 
