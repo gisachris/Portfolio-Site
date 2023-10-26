@@ -1,20 +1,23 @@
 import { Oval } from "react-loader-spinner";
+import "../../styles/css/loader.css";
 
 const Loader = () =>  {
   return (
-    <div className="loaderHolder">
-      <Oval
-        height={80}
-        width={80}
-        color="#4fa94d"
-        wrapperStyle={{}}
-        wrapperClass=""
-        visible={true}
-        ariaLabel='oval-loading'
-        secondaryColor="#4fa94d"
-        strokeWidth={7}
-        strokeWidthSecondary={7}
-      />
+    <div className="loadingUnit">
+      <div className="loaderHolder">
+        <Oval
+          height={65}
+          width={65}
+          color="#ffb742"
+          wrapperStyle={{}}
+          wrapperClass=""
+          visible={true}
+          ariaLabel='oval-loading'
+          secondaryColor="#ffb742"
+          strokeWidth={7}
+          strokeWidthSecondary={7}
+        />
+      </div>
     </div>
   );
 }

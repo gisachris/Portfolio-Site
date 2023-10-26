@@ -104,9 +104,11 @@
   }
 
   .contactFormHolder {
-    width: calc(100% - 65%);
+    // width: calc(100% - 65%);
+    margin-right: 30px;
     padding: 20px;
     padding-top: 0;
+    position: relative;
 
     form {
       display: flex;
@@ -174,6 +176,10 @@
           cursor: pointer;
         }
       }
+    }
+
+    .formBlured {
+      filter: blur(5px);
     }
   }
 }
