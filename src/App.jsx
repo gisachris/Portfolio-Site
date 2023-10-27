@@ -11,9 +11,10 @@ function App() {
   const [isOpen, setIsOpen] = useState(false); 
   
   // popups state
-  const [popupShow, setPopShow] = useState({
+  const [popupShow, setPopupShow] = useState({
     status: false,
     message: null,
+    pass: false,
   });
 
   const toggleNavigation = () => {
@@ -23,7 +24,7 @@ function App() {
   return (
       <div className='App'>
         <Navigation toggleNavigation={toggleNavigation} isOpen={isOpen} />
-        <PopupContext.Provider value={{popupShow, setPopShow}}>
+        <PopupContext.Provider value={{popupShow, setPopupShow}}>
           <MainBody isOpen={isOpen} />
           <PopUpMessage />
           <Toggler />

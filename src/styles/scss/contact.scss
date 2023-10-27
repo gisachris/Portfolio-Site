@@ -68,7 +68,8 @@
         font-family: $secondary-font;
 
         &:hover {
-          border-bottom: 0.5px sol$primary-color-dark;
+          border-bottom: 0.5px $primary-color-dark;
+          color: $primary-color-dark;
         }
       }
     }
@@ -95,7 +96,8 @@
             font-family: $secondary-font;
 
             &:hover {
-              border-bottom: 0.5px sol$primary-color-dark;
+              text-decoration: underline;
+              color: $primary-color-dark;
             }
           }
         }
@@ -104,7 +106,6 @@
   }
 
   .contactFormHolder {
-    // width: calc(100% - 65%);
     margin-right: 30px;
     padding: 20px;
     padding-top: 0;
@@ -134,6 +135,7 @@
           color: black;
           font-family: $primary-font;
           padding-left: 6px;
+          margin-bottom: 10px;
         }
 
         textarea {

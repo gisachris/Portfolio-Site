@@ -1,61 +1,79 @@
 import { useState, useRef, useContext } from "react";
 import PopupContext from "../../contexts/popupContext";
 import emailjs from "@emailjs/browser";
-import sendButton from "../../assets/icons/emailbutton.svg"
+import sendButton from "../../assets/icons/emailbutton.svg";
 import Loader from "./loader";
 
 const ContactForm = () => {
   const form = useRef();
   const [loading, setLoading] = useState(false);
-  const { popupShow, setPopShow } = useContext(PopupContext);
+  const { setPopupShow } = useContext(PopupContext);
 
   const sendEmail = (e) => {
     e.preventDefault();
     const keys = import.meta.env;
 
-    emailjs.sendForm(`${keys.VITE_SERVICE_ID}`, `${keys.VITE_TEMPLATE_ID}`, form.current, `${keys.VITE_PUBLIC_KEY}`)
+    setLoading(true);
+
+    emailjs.sendForm(`${keys.VITE_SERVICE_TESTING_ID}`, `${keys.VITE_TEMPLATE_ID}`, form.current, `${keys.VITE_PUBLIC_KEY}`)
       .then(() => {
+        // Email sent successfully
+        setPopupShow({
+          status: true,
+          message: "Email sent successfully!.",
+          pass: true,
+        });
+
+        const inputs = form.current.querySelectorAll('input');
+        const textArea = form.current.querySelector('textarea');
+
+        textArea.value = '';
+        inputs.forEach(input => {
+          input.value = '';
+        });
+
+        // Hide the success message after 2 seconds
+        setTimeout(() => {
+          setPopupShow({
+            status: false,
+            message: null,
+            pass: true,
+          });
+
           setLoading(false);
+        }, 2000);
+      })
+      .catch(error => {
+        // Email sending failed
+        setPopupShow({
+          status: true,
+          message: `Error: ${error.text}`,
+          pass: false,
+        });
 
-          setPopShow({
-            ...popupShow,
-            status: true,
+        // Hide the error message after 3 seconds
+        setTimeout(() => {
+          setPopupShow({
+            status: false,
+            message: null,
+            pass: false,
           });
 
-          setTimeout(() => {
-            setPopShow({
-              status: false,
-              message: null,
-            });
-          }, 1000);
-
-          const inputs = form.current.querySelectorAll('input');
-          const textArea = form.current.querySelector('textarea');
-
-          textArea.value = '';
-          inputs.forEach(input => {
-            input.value = '';
-          })
-      }, (error) => {
-          setPopShow({
-            status: true,
-            message: error.text,
-          });
-
-          setTimeout(() => {
-            setPopShow({
-              status: false,
-              message: null,
-            });
-          }, 1500);
+          console.log('it fails');
+          setLoading(false); 
+        }, 3000);
       });
   };
 
   const formSubmittion = () => {
-    setLoading(true);
+    // setLoading(true);
+
     const innerForm = form.current.querySelector(".form");
     innerForm.classList.add("formBlured");
-    // form.current.dispatchEvent(new Event("submit"));
+    console.log('point1');
+    // form.current.submit((e) => {
+    //   sendEmail(e);
+    // });
   }
 
   return (
@@ -78,6 +96,7 @@ const ContactForm = () => {
           <label className="sendButtonLabel">
             <img src={sendButton} alt="send button" className="sendButton" onClick={formSubmittion} />
           </label>
+          <button type="submit">sub</button>
         </div>
       </form>
     </div>
