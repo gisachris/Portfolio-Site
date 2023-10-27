@@ -1,10 +1,257 @@
 @import './partials/config';
 
 @media screen and (max-width: 767px) {
-  .contactSection {}
-  .contactCredentials {}
-  .contactSocials {}
-  .contactFormHolder {}
+  .contactSection {
+    background-color: $semi-dark;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 10px 10px;
+    min-height: 250px;
+    padding-top: 30px;
+    margin-top: 45px;
+    padding-top: 100px;
+  }
+
+  .contactCredentials {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    padding-left: 10px;
+
+    .Name {
+      width: 80%;
+      color: $primary-color-dark;
+      font-size: 1.5rem;
+      font-family: $primary-font;
+      font-weight: bold;
+      text-align: center;
+      text-align: center;
+    }
+
+    .duties {
+      width: 80%;
+      color: $neutral-light;
+      font-family: $primary-font;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+  }
+
+  .contactSocials {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    column-gap: 10px;
+    margin-top: 20px;
+    border-top: 1px solid black;
+    padding-top: 25px;
+
+    .usefulLinksHolder {
+      width: 50%;
+      margin-bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .useful_title {
+        text-align: center;
+        font-family: $secondary-font;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: $neutral-light;
+      }
+
+      .useful_links {
+        width: 100%;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        padding-bottom: 15px;
+        border-bottom: 1px solid $primary-color-dark;
+
+        .last {
+          display: none;
+          grid-column: 1 / -1;
+        }
+      }
+    }
+
+    .u_link {
+      list-style: none;
+      margin-top: 10px;
+      a {
+        text-decoration: none;
+        color: $tertiary-color;
+        font-size: 0.9rem;
+        font-family: $secondary-font;
+
+        &:hover {
+          border-bottom: 0.5px $primary-color-dark;
+          color: $primary-color-dark;
+        }
+      }
+    }
+
+    .SocialMediasHolder {
+      width: 50%;
+
+      .socials_title {
+        text-align: center;
+        font-family: $secondary-font;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: $neutral-light;
+      }
+
+      .social_links {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        padding-bottom: 15px;
+        border-bottom: 1px solid $primary-color-dark;
+
+        .s_link {
+          list-style: none;
+          margin-top: 10px;
+
+          a {
+            text-decoration: none;
+            color: $tertiary-color;
+            font-size: 0.9rem;
+            font-family: $secondary-font;
+
+            &:hover {
+              text-decoration: underline;
+              color: $primary-color-dark;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes blurSmoothing {
+    from {
+      filter: blur(0px);
+    }
+
+    to {
+      filter: blur(5px);
+    }
+  }
+
+  .contactFormHolder {
+    width: 80%;
+    max-width: 350px;
+    min-width: 350px;
+    margin: 0 auto;
+    padding-top: 20px;
+    position: relative;
+  }
+
+  form {
+    width: 100%;
+    position: relative;
+    font-family: $primary-font;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    label {
+      color: $primary-color-dark;
+      font-size: 0.9rem;
+      font-family: $primary-font;
+      margin-bottom: 5px;
+    }
+
+    input {
+      font-size: 1rem;
+      color: black;
+      font-family: $primary-font;
+      padding-left: 6px;
+      margin-bottom: 20px;
+    }
+
+    textarea {
+      font-size: 1rem;
+      color: black;
+      font-family: $primary-font;
+      padding-left: 6px;
+      min-width: 300px;
+      max-width: 300px;
+      min-height: 100px;
+    }
+  }
+
+  .contactHeader {
+    color: $neutral-light;
+    font-size: 1.5rem;
+    font-family: $primary-font;
+    padding: 0px 10px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid grey;
+    margin-bottom: 25px;
+  }
+
+  .form {
+    position: relative;
+    padding-bottom: 50px;
+  }
+
+  .text {
+    height: 30px;
+    width: 250px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #fcf4e7;
+  }
+
+  .name_field {
+    input {
+      width: 200px;
+    }
+  } 
+
+  .sendButtonLabel {
+    position: absolute;
+    bottom: 45px;
+    right: 5px;
+    width: fit-content;
+
+    button {
+      background-color: transparent;
+      border: 0;
+
+      .sendButton {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .formBlured {
+    filter: blur(5px);
+    animation: loaderSmoothing 0.3s linear forwards;
+  }
 }
 
 @media screen and (min-width: 767px) {
@@ -128,6 +375,10 @@
       position: relative;
       width: fit-content;
       font-family: $primary-font;
+
+      .contactHeader {
+        display: none;
+      }
 
       section {
         display: flex;

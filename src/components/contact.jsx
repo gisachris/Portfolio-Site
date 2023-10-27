@@ -5,7 +5,7 @@ const Contact = () => {
   return (
    <section className="contactSection" id="Contact">
     <div className="contactCredentials">
-      <h1 className="Name">Gisa Chris.</h1>
+      <h1 className="Name">Gisa Chris .M</h1>
       <p className="duties">Creative Designer & Full-Stack <br /> Developer</p>
     </div>
     <div className="contactSocials">
@@ -24,7 +24,7 @@ const Contact = () => {
           <li className="u_link">
             <a href="#Portfolio">Portfolio</a>
           </li>
-          <li className="u_link">
+          <li className="u_link last">
             <a href="#Testimonials">Testimonials</a>
           </li>
         </ul>
