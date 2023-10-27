@@ -1,0 +1,77 @@
+@import './partials/config';
+
+.messageHolder {
+  background-color: rgb(231, 231, 231);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  column-gap: 10px;
+  width: 0;
+  height: 0;
+  opacity: 0;
+
+  .messageIcon {
+    width: 35px;
+  }
+
+  .message {
+    width: 80%;
+    font-size: 0.9rem;
+    font-family: $primary-font;
+  }
+}
+
+@keyframes messageAppears {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    width: 350px;
+    height: 55px;
+    opacity: 1;
+  }
+}
+
+@keyframes messageDisappears {
+  from {
+    width: 350px;
+    height: 55px;
+    opacity: 1;
+  }
+
+  to {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+}
+
+.display {
+  position: absolute;
+  z-index: 1100;
+  bottom: 15px;
+  right: 15px;
+  width: 0;
+  height: 0;
+  animation: messageAppears 0.3s linear forwards;
+}
+
+.dissapear {
+  position: absolute;
+  z-index: 1100;
+  bottom: 15px;
+  right: 15px;
+  width: 350px;
+  height: 55px;
+  animation: messageDissapears 0.3s linear forwards;
+  display: none;
+}

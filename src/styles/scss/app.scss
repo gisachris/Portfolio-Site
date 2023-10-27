@@ -17,14 +17,18 @@ body {
 
 @media screen and (max-width: 767px) {
   .App {
-    min-width: 100vw;
+    max-width: 100vw;
     min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
   }
 }
 
 @media screen and (min-width: 767px) {
   .App {
     max-width: 100vw;
+    width: 100vw;
+    overflow-x: hidden;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
