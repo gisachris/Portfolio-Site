@@ -11,12 +11,19 @@ const ContactForm = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    const keys = import.meta.env;
 
+    const innerForm = form.current.querySelector(".form");
+    innerForm.classList.add("formBlured");
     setLoading(true);
 
-    emailjs.sendForm(`${keys.VITE_SERVICE_TESTING_ID}`, `${keys.VITE_TEMPLATE_ID}`, form.current, `${keys.VITE_PUBLIC_KEY}`)
+    const keys = import.meta.env;
+
+    emailjs.sendForm(`${keys.VITE_SERVICE_ID}`, `${keys.VITE_TEMPLATE_ID}`, form.current, `${keys.VITE_PUBLIC_KEY}`)
       .then(() => {
+        const innerForm = form.current.querySelector(".form");
+        innerForm.classList.remove("formBlured");
+        setLoading(false);
+
         // Email sent successfully
         setPopupShow({
           status: true,
@@ -24,13 +31,13 @@ const ContactForm = () => {
           pass: true,
         });
 
-        const inputs = form.current.querySelectorAll('input');
+        const name = form.current.querySelector('input[name="user_name"]');
+        const email = form.current.querySelector('input[name="user_email"]');
         const textArea = form.current.querySelector('textarea');
-
+        
+        name.value = '';
+        email.value = '';
         textArea.value = '';
-        inputs.forEach(input => {
-          input.value = '';
-        });
 
         // Hide the success message after 2 seconds
         setTimeout(() => {
@@ -39,12 +46,14 @@ const ContactForm = () => {
             message: null,
             pass: true,
           });
-
-          setLoading(false);
         }, 2000);
       })
       .catch(error => {
         // Email sending failed
+        const innerForm = form.current.querySelector(".form");
+        innerForm.classList.remove("formBlured");
+        setLoading(false);
+
         setPopupShow({
           status: true,
           message: `Error: ${error.text}`,
@@ -58,23 +67,9 @@ const ContactForm = () => {
             message: null,
             pass: false,
           });
-
-          console.log('it fails');
-          setLoading(false); 
         }, 3000);
       });
   };
-
-  const formSubmittion = () => {
-    // setLoading(true);
-
-    const innerForm = form.current.querySelector(".form");
-    innerForm.classList.add("formBlured");
-    console.log('point1');
-    // form.current.submit((e) => {
-    //   sendEmail(e);
-    // });
-  }
 
   return (
     <div className="contactFormHolder">
@@ -94,9 +89,10 @@ const ContactForm = () => {
             <textarea name="message"  className="messagetext" required/>
           </section>
           <label className="sendButtonLabel">
-            <img src={sendButton} alt="send button" className="sendButton" onClick={formSubmittion} />
+            <button type="submit">
+              <img src={sendButton} alt="send button" className="sendButton" />
+            </button>
           </label>
-          <button type="submit">sub</button>
         </div>
       </form>
     </div>

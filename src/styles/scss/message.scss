@@ -8,8 +8,8 @@
   align-items: center;
   overflow: hidden;
   column-gap: 10px;
-  width: 0px;
-  height: 0px;
+  width: 0;
+  height: 0;
   opacity: 0;
 
   .messageIcon {
@@ -17,7 +17,6 @@
   }
 
   .message {
-    height: fit-content;
     width: 80%;
     font-size: 0.9rem;
     font-family: $primary-font;
@@ -26,8 +25,8 @@
 
 @keyframes messageAppears {
   0% {
-    width: 0px;
-    height: 0px;
+    width: 0;
+    height: 0;
     opacity: 0;
   }
 
@@ -50,8 +49,8 @@
   }
 
   to {
-    width: 0px;
-    height: 0px;
+    width: 0;
+    height: 0;
     opacity: 0;
   }
 }
@@ -61,8 +60,8 @@
   z-index: 1100;
   bottom: 15px;
   right: 15px;
-  width: 0px;
-  height: 0px;
+  width: 0;
+  height: 0;
   animation: messageAppears 0.3s linear forwards;
 }
 

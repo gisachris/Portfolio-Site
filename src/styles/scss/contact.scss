@@ -105,6 +105,16 @@
     }
   }
 
+  @keyframes blurSmoothing {
+    from {
+      filter: blur(0px);
+    }
+
+    to {
+      filter: blur(5px);
+    }
+  }
+
   .contactFormHolder {
     margin-right: 30px;
     padding: 20px;
@@ -143,6 +153,8 @@
           color: black;
           font-family: $primary-font;
           padding-left: 6px;
+          min-width: 360px;
+          max-width: 360px;
         }
 
         .text {
@@ -172,16 +184,22 @@
         right: 5px;
         width: fit-content;
 
-        .sendButton {
-          width: 50px;
-          height: 50px;
-          cursor: pointer;
+        button {
+          background-color: transparent;
+          border: 0;
+
+          .sendButton {
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+          }
         }
       }
     }
 
     .formBlured {
       filter: blur(5px);
+      animation: loaderSmoothing 0.3s linear forwards;
     }
   }
 }

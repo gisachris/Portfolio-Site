@@ -1,3 +1,13 @@
+@keyframes smoothLoader {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
 .loadingUnit {
   background-color: rgba(0, 0, 0, 0.74);
   border-radius: 10px;
@@ -17,4 +27,9 @@
     align-self: center;
     margin: 0 auto;
   }
+}
+
+.smoothLoader {
+  opacity: 1;
+  animation: smoothLoader 0.3s linear forwards;
 }
