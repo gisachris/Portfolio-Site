@@ -3,11 +3,15 @@
 @media screen and (max-width: 767px) {}
 
 @media screen and (min-width: 767px) {
+  #Testimonial {
+    max-width: 90%;
+    height: 400px;
+    background-color: lightcoral;
+  }
+
   #Testimonials {
     display: flex;
     flex-direction: column;
-    position: inherit;
-    overflow-x: hidden;
     min-height: 400px;
 
     .header {
@@ -21,7 +25,7 @@
         font-size: 0.9rem;
         color: $primary-color-dark;
         background-color: $other-color;
-        border: 0px;
+        border: 0;
         border-radius: 10px;
         padding: 5px 10px;
       }
@@ -40,18 +44,49 @@
     .tms {
       width: 90%;
       margin: 0 auto;
+      position: relative;
+
+      .reccomendationsOverHead {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        cursor: alias;
+      }
 
       .recommendationsHolder {
         width: 100%;
         height: auto;
-        overflow-x: clip;
+        position: relative;
 
         iframe {
-          width: 100%;
-          height: auto;
+          margin: 0 auto;
+        }
+
+        .moreRecommendations {
+          border: 0;
+          border-radius: 10px;
+          background-color: $primary-color-dark;
+          font-family: $secondary-font;
+          padding: 12px 15px;
+          width: fit-content;
+          margin: 0 auto;
+          color: $neutral-dark;
+          font-weight: bold;
+          text-decoration: none;
+          position: absolute;
+          // top: 0;
+          bottom: 10%;
+          right: 40%;
+
+          &:hover {
+            color: $neutral-light;
+            background-color: rgb(0, 140, 255);
+          }
         }
       }
     }
   }
-
 }

@@ -19,25 +19,20 @@
 
 @media screen and (min-width: 767px) {
   .Main {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto;
     position: relative;
     width: 100%;
     margin-top: 70px;
   }
 
   .MainBlur {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto;
     position: relative;
     width: 100%;
     margin-top: 70px;
   }
-}
-
-.testing {
-  // width: 100%;
-  height: 1000px;
 }
 
 .loc-1 {
