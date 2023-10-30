@@ -1,0 +1,57 @@
+@import './partials/config';
+
+@media screen and (max-width: 767px) {}
+
+@media screen and (min-width: 767px) {
+  #Testimonials {
+    display: flex;
+    flex-direction: column;
+    position: inherit;
+    overflow-x: hidden;
+    min-height: 400px;
+
+    .header {
+      width: 100%;
+      margin-top: 20px;
+
+      .title {
+        width: fit-content;
+        margin: 0 auto;
+        font-family: $primary-font;
+        font-size: 0.9rem;
+        color: $primary-color-dark;
+        background-color: $other-color;
+        border: 0px;
+        border-radius: 10px;
+        padding: 5px 10px;
+      }
+
+      .titlecomp {
+        font-family: $third-font;
+        font-size: 1.5rem;
+        color: $neutral-light;
+        width: fit-content;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 10px;
+      }
+    }
+
+    .tms {
+      width: 90%;
+      margin: 0 auto;
+
+      .recommendationsHolder {
+        width: 100%;
+        height: auto;
+        overflow-x: clip;
+
+        iframe {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+
+}

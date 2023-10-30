@@ -1,6 +1,7 @@
 import Contact from './contact';
-import '../styles/css/main.css';
+import Testimonials from './testimonials';
 import PropTypes from 'prop-types';
+import '../styles/css/main.css';
 
 const MainBody = ({isOpen}) => {
   return (
@@ -10,8 +11,8 @@ const MainBody = ({isOpen}) => {
       </div>
       <div className="testing loc-2" id="About" />
       <div className="testing loc-3" id="Skills" />
-      <div className="testing loc-4" id="Portfolio" />
-      <div className="testing loc-5" id="Testimonials" /> */}
+      <div className="testing loc-4" id="Portfolio" /> */}
+      <Testimonials />
       <Contact />
     </div>
   );
