@@ -3,16 +3,9 @@
 @media screen and (max-width: 767px) {}
 
 @media screen and (min-width: 767px) {
-  #Testimonial {
-    max-width: 90%;
-    height: 400px;
-    background-color: lightcoral;
-  }
-
   #Testimonials {
     display: flex;
     flex-direction: column;
-    min-height: 400px;
 
     .header {
       width: 100%;
