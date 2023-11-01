@@ -19,6 +19,7 @@ const LinkedInRecommendations = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     withoutControls: true,
+    enableKeyboardControls: true,
     className: "carouselContainer",
     defaultControlsConfig: {
       containerClassName: "dotsSliderHolder",
@@ -35,6 +36,7 @@ const LinkedInRecommendations = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     withoutControls: true,
+    enableKeyboardControls: true,
     className: "slidesContainer",
     defaultControlsConfig: {
       containerClassName: "dotsSliderHolder",

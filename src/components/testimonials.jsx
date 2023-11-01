@@ -66,7 +66,7 @@ const Testimonials = () => {
       <div className="header">
         <h1 className="title">TESTIMONIALS</h1>
         <h2 className="titlecomp">What customers and colleagues say</h2>
-        <div class="swipeNotify">
+        <div className="swipeNotify">
           <span className="swipeText">Swipe to view More</span>
         </div>
       </div>
