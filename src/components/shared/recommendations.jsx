@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useState, useEffect, useContext } from "react";
 import Carousel from "nuka-carousel";
 import recommendationsContext from "../../contexts/recomsContext";
 import textCleanup from "../../helpers/textCleanup";
@@ -6,9 +6,22 @@ import linkedInLogo from "../../assets/icons/linkedin.png"
 import '../../styles/css/testimonials.css';
 
 const LinkedInRecommendations = () => {
-  const recoms = useContext(recommendationsContext);
+  const [recoms, loading] = useContext(recommendationsContext);
   const pureRecomendations = recoms ? recoms.filter(r => r.received === true) : null;
-  console.log(pureRecomendations);
+
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const largeScreenParams = {
     cellSpacing: 0,
@@ -20,7 +33,7 @@ const LinkedInRecommendations = () => {
     slidesToScroll: 1,
     withoutControls: true,
     enableKeyboardControls: true,
-    className: "carouselContainer",
+    className: "slidesContainer",
     defaultControlsConfig: {
       containerClassName: "dotsSliderHolder",
     },
@@ -36,7 +49,6 @@ const LinkedInRecommendations = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     withoutControls: true,
-    enableKeyboardControls: true,
     className: "slidesContainer",
     defaultControlsConfig: {
       containerClassName: "dotsSliderHolder",
@@ -44,10 +56,10 @@ const LinkedInRecommendations = () => {
   };
 
   return (
-    <div className="recommendationsHolder">
+    <div className= {loading ? "recommendationsHolder blurred" : "recommendationsHolder"}>
       {pureRecomendations ? (
         <div className="carouselContainer">
-          <Carousel {...(window.innerWidth <= 767 ? mobileViewParams : largeScreenParams)}>
+          <Carousel {...(windowWidth <= 767 ? mobileViewParams : largeScreenParams)}>
           {pureRecomendations.map(recommendation =>(
             <div className="singleRecomendationHolder" key={recommendation.id}>
               <section className="personalInformation">

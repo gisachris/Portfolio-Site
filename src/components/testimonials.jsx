@@ -4,6 +4,7 @@ import recommendationsContext from "../contexts/recomsContext";
 import PopupContext from "../contexts/popupContext";
 import Loader from "./shared/loader";
 import "../styles/css/testimonials.css";
+import "../styles/css/helpers.css";
 
 const Testimonials = () => {
   const [loading, setLoading] = useState(false);
@@ -52,12 +53,14 @@ const Testimonials = () => {
       threshold: 0.8,
     });
 
-    if (recomsHolder.current) {
-      observer.observe(recomsHolder.current);
+    let recommendationsHolder = recomsHolder.current;
+
+    if (recommendationsHolder) {
+      observer.observe(recommendationsHolder);
     }
 
     return () => {
-      if (recomsHolder.current) observer.unobserve(recomsHolder.current);
+      if (recommendationsHolder) observer.unobserve(recommendationsHolder);
     }    
   });
 
@@ -71,8 +74,8 @@ const Testimonials = () => {
         </div>
       </div>
       <div className="tms">
-        {loading ? <Loader /> : null}
-        <recommendationsContext.Provider value={recoms}>
+        {loading && <Loader />}
+        <recommendationsContext.Provider value={[recoms, loading]}>
           <LinkedInRecommendations />
         </recommendationsContext.Provider>
       </div>

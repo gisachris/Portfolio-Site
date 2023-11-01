@@ -49,7 +49,7 @@
 
 
       .slider-container {
-        width: 60%;
+        width: 90%;
         margin: 0 auto;
 
         .slidesContainer {
@@ -60,6 +60,7 @@
 
             .slide-current {
               width: fit-content;
+              margin: 0 auto;
             }
           }
         }
@@ -74,7 +75,8 @@
   .singleRecomendationHolder {
     border: 2px solid white;
     border-radius: 10px;
-    width: 390px;
+    width: 100%;
+    max-width: 390px;
     height: 480px;
     padding: 0 10px;
     background-color: $neutral-light;
@@ -279,6 +281,7 @@
       width: 100%;
       display: inline-block;
       margin-bottom: 30px;
+      position: relative;
     }
   }
 
@@ -287,18 +290,11 @@
 
     .carouselContainer {
       width: 100%;
-      // display: flex;
-      // justify-content: center;
-      // align-items: center;
 
       .slider-container {
-        // width: 100%;
-        width: 1200px;
+        width: 100%;
+        max-width: 1200px;
         margin: 0 auto;
-      }
-
-      .carouselContainer {
-        width: fit-content;
       }
 
       .paging-item {
@@ -309,7 +305,8 @@
     .singleRecomendationHolder {
       border: 2px solid white;
       border-radius: 10px;
-      width: 390px;
+      max-width: 390px;
+      min-width: 25%;
       height: 480px;
       padding: 0 10px;
       background-color: $neutral-light;

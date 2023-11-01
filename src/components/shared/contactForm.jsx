@@ -74,9 +74,9 @@ const ContactForm = () => {
   return (
     <div className="contactFormHolder">
       <form ref={form} onSubmit={sendEmail}>
-        {loading ? <Loader /> : null}
+        {loading && <Loader />}
         <h1 className="contactHeader">Contact Me</h1>
-        <div className="form">
+        <div className={loading ? "form blurred" : "form"}>
           <section className="field name_field">
             <label>Your Name</label>
             <input type="text" name="user_name" className="text" required />

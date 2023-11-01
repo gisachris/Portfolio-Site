@@ -1,5 +1,6 @@
 import ContactForm from "./shared/contactForm";
 import '../styles/css/contact.css';
+import '../styles/css/helpers.css';
 
 const Contact = () => {
   return (
