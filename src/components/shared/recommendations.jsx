@@ -35,7 +35,7 @@ const LinkedInRecommendations = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     withoutControls: true,
-    className: "carouselContainer",
+    className: "slidesContainer",
     defaultControlsConfig: {
       containerClassName: "dotsSliderHolder",
     },
