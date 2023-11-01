@@ -1,0 +1,460 @@
+@import './partials/config';
+
+@media screen and (max-width: 767px) {
+  #Testimonials {
+    width: 100%;
+    overflow-x: hidden;
+
+    .header {
+      width: 100%;
+      display: inline-block;
+      margin: 40px 0;
+
+      .titlecomp {
+        font-family: $third-font;
+        font-size: 1.5rem;
+        color: $neutral-light;
+        width: fit-content;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .swipeNotify {
+        width: fit-content;
+        margin: 0 auto;
+        margin-top: 15px;
+
+        .swipeText {
+          font-size: 0.9rem;
+          color: $tertiary-color;
+          font-family: $third-font;
+          margin: 0 10px;
+        }
+      }
+    }
+
+    .tms {
+      width: 100%;
+      display: inline-block;
+      margin-bottom: 30px;
+    }
+  }
+
+  .recommendationsHolder {
+    width: 100%;
+
+    .carouselContainer {
+      width: 100%;
+
+      .slider-container {
+        width: 90%;
+        margin: 0 auto;
+
+        .slidesContainer {
+          width: 100%;
+
+          .slide-list {
+            width: 100%;
+
+            .slide-current {
+              width: fit-content;
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+
+      .paging-item {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .singleRecomendationHolder {
+    border: 2px solid white;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 390px;
+    height: 480px;
+    padding: 0 10px;
+    background-color: $neutral-light;
+    box-shadow: 2px 2px 5px black;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    margin: 0 auto;
+
+    .personalInformation {
+      width: 100%;
+      height: 20%;
+      display: flex;
+      flex-direction: column;
+
+      .coreInfo {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+        margin-top: 15px;
+
+        .personal_Photo {
+          max-width: 65px;
+          border-radius: 50%;
+        }
+
+        .personal_name {
+          font-weight: bold;
+          font-size: 1rem;
+          font-family: $secondary-font;
+          color: #06f;
+        }
+      }
+
+      .date_made {
+        width: 100%;
+        font-family: $third-font;
+        color: $tertiary-color;
+        font-size: 0.85rem;
+        text-align: end;
+        padding-right: 5px;
+      }
+    }
+
+    .personalTitle {
+      width: 100%;
+      height: 20%;
+      margin-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      .title {
+        width: 100%;
+        height: 80%;
+        max-height: 60px;
+        color: $semi-dark;
+        font-size: 1rem;
+        font-family: $third-font;
+      }
+
+      .relation {
+        width: 100%;
+        height: 20%;
+        max-height: 20px;
+        color: $tertiary-color;
+        font-size: 0.9rem;
+        font-family: $primary-font;
+        margin-top: 15px;
+      }
+    }
+
+    .recommendation {
+      width: 100%;
+      height: 50%;
+      overflow: hidden;
+
+      .recommendationBlock {
+        font-size: 1rem;
+        font-family: $primary-font;
+        position: relative;
+        width: 100%;
+        min-height: 100%;
+        overflow: hidden;
+        margin-bottom: 15px;
+
+        &::after {
+          content: "...";
+          color: grey;
+          font-size: 1.2rem;
+        }
+
+        .whiteLayer {
+          width: 100%;
+          height: 45%;
+          position: absolute;
+          bottom: 0;
+          background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+        }
+      }
+    }
+
+    .extras {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 10%;
+      margin-bottom: 10px;
+
+      .readmore {
+        font-size: 1rem;
+        font-family: $primary-font;
+        color: #06f;
+      }
+
+      .linkednLogo {
+        width: 25px;
+      }
+    }
+  }
+
+  .recommendationsNotice {
+    width: 100%;
+
+    .notice {
+      font-size: 1rem;
+      font-family: $third-font;
+      width: fit-content;
+      text-align: center;
+      margin: 0 auto;
+
+      a {
+        color: #06f;
+      }
+    }
+  }
+
+  #Testimonials > .header > .title {
+    width: fit-content;
+    margin: 0 auto;
+    font-family: $primary-font;
+    font-size: 0.9rem;
+    color: $primary-color-dark;
+    background-color: $other-color;
+    border: 0;
+    border-radius: 10px;
+    padding: 5px 10px;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  #Testimonials {
+    width: 100%;
+    overflow-x: hidden;
+
+    .header {
+      width: 100%;
+      display: inline-block;
+      margin: 40px 0;
+
+      .titlecomp {
+        font-family: $third-font;
+        font-size: 1.5rem;
+        color: $neutral-light;
+        width: fit-content;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .swipeNotify {
+        width: fit-content;
+        margin: 0 auto;
+        margin-top: 15px;
+
+        .swipeNotificationLeft {
+          width: 15px;
+          background-color: $other-color;
+          object-fit: cover;
+        }
+
+        .swipeText {
+          font-size: 0.9rem;
+          color: $tertiary-color;
+          font-family: $third-font;
+          margin: 0 10px;
+        }
+
+        .swipeNotificationRight {
+          width: 15px;
+          background-color: $other-color;
+          object-fit: cover;
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .tms {
+      width: 100%;
+      display: inline-block;
+      margin-bottom: 30px;
+      position: relative;
+    }
+  }
+
+  .recommendationsHolder {
+    width: 100%;
+
+    .carouselContainer {
+      width: 100%;
+
+      .slider-container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .paging-item {
+        margin-right: 5px;
+      }
+    }
+
+    .singleRecomendationHolder {
+      border: 2px solid white;
+      border-radius: 10px;
+      max-width: 390px;
+      min-width: 25%;
+      height: 480px;
+      padding: 0 10px;
+      background-color: $neutral-light;
+      box-shadow: 2px 2px 5px black;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+
+      .personalInformation {
+        width: 100%;
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+
+        .coreInfo {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          column-gap: 15px;
+          margin-top: 15px;
+
+          .personal_Photo {
+            max-width: 65px;
+            border-radius: 50%;
+          }
+
+          .personal_name {
+            font-weight: bold;
+            font-size: 1rem;
+            font-family: $secondary-font;
+            color: #06f;
+          }
+        }
+
+        .date_made {
+          width: 100%;
+          font-family: $third-font;
+          color: $tertiary-color;
+          font-size: 0.85rem;
+          text-align: end;
+          padding-right: 5px;
+        }
+      }
+
+      .personalTitle {
+        width: 100%;
+        height: 20%;
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        .title {
+          width: 100%;
+          height: 80%;
+          max-height: 60px;
+          color: $semi-dark;
+          font-size: 1rem;
+          font-family: $third-font;
+        }
+
+        .relation {
+          width: 100%;
+          height: 20%;
+          max-height: 20px;
+          color: $tertiary-color;
+          font-size: 0.9rem;
+          font-family: $primary-font;
+          margin-top: 15px;
+        }
+      }
+
+      .recommendation {
+        width: 100%;
+        height: 50%;
+        overflow: hidden;
+
+        .recommendationBlock {
+          font-size: 1rem;
+          font-family: $primary-font;
+          position: relative;
+          width: 100%;
+          min-height: 100%;
+          overflow: hidden;
+          margin-bottom: 15px;
+
+          &::after {
+            content: "...";
+            color: grey;
+            font-size: 1.2rem;
+          }
+
+          .whiteLayer {
+            width: 100%;
+            height: 45%;
+            position: absolute;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+          }
+        }
+      }
+
+      .extras {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 10%;
+        margin-bottom: 10px;
+
+        .readmore {
+          font-size: 1rem;
+          font-family: $primary-font;
+          color: #06f;
+        }
+
+        .linkednLogo {
+          width: 25px;
+        }
+      }
+    }
+
+    .recommendationsNotice {
+      width: 100%;
+
+      .notice {
+        font-size: 1rem;
+        font-family: $third-font;
+        width: fit-content;
+        text-align: center;
+        margin: 0 auto;
+
+        a {
+          color: #06f;
+        }
+      }
+    }
+  }
+
+  #Testimonials > .header > .title {
+    width: fit-content;
+    margin: 0 auto;
+    font-family: $primary-font;
+    font-size: 0.9rem;
+    color: $primary-color-dark;
+    background-color: $other-color;
+    border: 0;
+    border-radius: 10px;
+    padding: 5px 10px;
+  }
+}

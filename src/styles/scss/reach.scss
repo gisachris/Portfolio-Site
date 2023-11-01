@@ -1,0 +1,88 @@
+@import './partials/config';
+
+@media screen and (max-width: 767px) {
+  .testimonialContactReachHolder {
+    width: 100%;
+
+    .reachOutHolder {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .testimonialContactReachHolder {
+    min-width: 100%;
+
+    .reachOutHolder {
+      position: relative;
+      background-color: transparent;
+      width: 100%;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      border-radius: 25px;
+
+      .upperHold {
+        width: 100%;
+        height: 50%;
+        background-color: $background-color;
+      }
+
+      .lowerHold {
+        width: 100%;
+        height: 50%;
+        background-color: $semi-dark;
+      }
+
+      .reachOutInfoHolder {
+        position: absolute;
+        z-index: 15;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $primary-color-dark;
+        width: 70%;
+        max-width: 1200px;
+        height: 200px;
+        border-radius: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .reachOutImfo {
+      width: 95%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .callToAction {
+        color: $neutral-dark;
+        font-family: $inter-font;
+        font-size: 2rem;
+        font-weight: 900;
+        width: 30%;
+      }
+
+      .callDetail {
+        color: $neutral-dark;
+        font-family: $third-font;
+        font-size: 1rem;
+        width: 50%;
+      }
+
+      .callButton {
+        @include button-base($primary-color-dark, $semi-dark, $third-font);
+
+        font-size: 1rem;
+        border: 2px solid black;
+        padding: 10px 15px;
+        border-radius: 20px;
+      }
+    }
+  }
+}

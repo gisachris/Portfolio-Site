@@ -25,7 +25,7 @@ const Navigation = ({ isOpen, toggleNavigation }) => {
             <Link to="About" spy={true} smooth={true} offset={0} duration={500}>About</Link>
             <Link to="Skills" spy={true} smooth={true} offset={0} duration={500}>Skills</Link>
             <Link to="Portfolio" spy={true} smooth={true} offset={0} duration={500}>Portfolio</Link>
-            <Link to="Testimonials" spy={true} smooth={true} offset={0} duration={500}>Testimonials</Link>
+            <Link to="Testimonials" spy={true} smooth={true} offset={-250} duration={500}>Testimonials</Link>
             <Link to="Contact" spy={true} smooth={true} offset={0} duration={500}>Contact</Link>
           </section>
           <section className="navHireButton">
