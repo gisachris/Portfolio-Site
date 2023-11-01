@@ -1,7 +1,9 @@
 import Contact from './contact';
 import Testimonials from './testimonials';
+import Reachout from './reachOut';
 import PropTypes from 'prop-types';
 import '../styles/css/main.css';
+import '../styles/css/reach.css';
 
 const MainBody = ({isOpen}) => {
   return (
@@ -12,8 +14,11 @@ const MainBody = ({isOpen}) => {
       <div className="testing loc-2" id="About" />
       <div className="testing loc-3" id="Skills" />
       <div className="testing loc-4" id="Portfolio" />
-      <Testimonials />
-      <Contact />
+      <section className="testimonialContactReachHolder" id="Contact">
+        <Testimonials />
+        <Reachout />
+        <Contact />
+      </section>
     </div>
   );
 }

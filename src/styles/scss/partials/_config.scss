@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@700&family=Work+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Poppins:wght@600&family=Roboto:wght@700&family=Work+Sans:wght@500&display=swap');
 
 //dark-mode
 
@@ -23,6 +23,7 @@ $semi-dark: #1c1c1c;
 $primary-font: "Poppins", sans-serif;
 $secondary-font: 'Work Sans', sans-serif;
 $third-font: 'Roboto', sans-serif;
+$inter-font: 'Inter', sans-serif;
 
 //mixins
 @mixin button-base($bg-color, $font-color, $font-family) {
