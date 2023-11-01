@@ -12,6 +12,8 @@ const Testimonials = () => {
   const recomsHolder = useRef(null);
   const recommendationsLink = import.meta.env.VITE_RECOMMENDATIONS_LINK;
 
+  const { setPopupShow } = useContext(PopupContext);
+
   useEffect(() => {
     // Intersection observer
     const observer = new IntersectionObserver( async (entries) => {
@@ -29,12 +31,25 @@ const Testimonials = () => {
           setLoading(false);
         }
       } catch (error) {
-        console.error(error);
+        setLoading(false);
+        setPopupShow({
+          status: true,
+          message: `${error}`,
+          pass: false,
+        });
+
+        setTimeout(() => {
+          setPopupShow({
+            status: false,
+            message: null,
+            pass: false,
+          });
+        }, 3000)
       }
     }, {
       root: null,
       rootMargin: "0px",
-      threshold: 0.3,
+      threshold: 0.8,
     });
 
     if (recomsHolder.current) {
@@ -44,7 +59,7 @@ const Testimonials = () => {
     return () => {
       if (recomsHolder.current) observer.unobserve(recomsHolder.current);
     }    
-  }, []);
+  });
 
   return (
     <section ref={recomsHolder} id="Testimonials">
