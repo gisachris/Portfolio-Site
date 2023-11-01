@@ -66,6 +66,7 @@
 
     .callButton {
       @include button-base($primary-color-dark, $semi-dark, $third-font);
+
       font-size: 1rem;
       border: 2px solid black;
       padding: 10px 15px;

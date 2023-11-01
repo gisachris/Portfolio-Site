@@ -1,5 +1,6 @@
-import { useState, useRef, useContext } from "react";
+import { useState, useRef, useContext, useEffect } from "react";
 import PopupContext from "../../contexts/popupContext";
+import formContext from "../../contexts/formContext";
 import emailjs from "@emailjs/browser";
 import sendButton from "../../assets/icons/emailbutton.svg";
 import Loader from "./loader";
@@ -8,6 +9,11 @@ const ContactForm = () => {
   const form = useRef();
   const [loading, setLoading] = useState(false);
   const { setPopupShow } = useContext(PopupContext);
+  const { setFormInput } = useContext(formContext);
+
+  useEffect(() => {
+    setFormInput(form);
+  });
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -79,7 +85,7 @@ const ContactForm = () => {
         <div className={loading ? "form blurred" : "form"}>
           <section className="field name_field">
             <label>Your Name</label>
-            <input type="text" name="user_name" className="text" required />
+            <input type="text" name="user_name" className="text name_text" required />
           </section>
           <section className="field email_field">
             <label>Your Email</label>
