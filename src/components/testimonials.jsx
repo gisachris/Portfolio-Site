@@ -66,6 +66,9 @@ const Testimonials = () => {
       <div className="header">
         <h1 className="title">TESTIMONIALS</h1>
         <h2 className="titlecomp">What customers and colleagues say</h2>
+        <div class="swipeNotify">
+          <span className="swipeText">Swipe to view More</span>
+        </div>
       </div>
       <div className="tms">
         {loading ? <Loader /> : null}

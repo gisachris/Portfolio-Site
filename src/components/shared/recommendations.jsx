@@ -10,29 +10,42 @@ const LinkedInRecommendations = () => {
   const pureRecomendations = recoms ? recoms.filter(r => r.received === true) : null;
   console.log(pureRecomendations);
 
-  const params = {
+  const largeScreenParams = {
     cellSpacing: 0,
-    cellAlign: 'center',
+    cellAlign: "center",
     wrapAround: true,
-    animation: 'zoom',
+    animation: "zoom",
     dragging: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    className: 'carouselContainer',
+    withoutControls: true,
+    className: "carouselContainer",
     defaultControlsConfig: {
-      containerClassName: 'dotsSliderHolder',
-      nextButtonClassName: 'nextButton',
-      prevButtonClassName: 'prevButton',
+      containerClassName: "dotsSliderHolder",
     },
-    nextButtonText: '',
-    prevButtonText: '',
+  };
+
+  // Define carousel parameters for mobile views
+  const mobileViewParams = {
+    cellSpacing: 0,
+    cellAlign: "center",
+    wrapAround: true,
+    animation: "zoom",
+    dragging: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    withoutControls: true,
+    className: "carouselContainer",
+    defaultControlsConfig: {
+      containerClassName: "dotsSliderHolder",
+    },
   };
 
   return (
     <div className="recommendationsHolder">
       {pureRecomendations ? (
         <div className="carouselContainer">
-          <Carousel {...params}>
+          <Carousel {...(window.innerWidth <= 767 ? mobileViewParams : largeScreenParams)}>
           {pureRecomendations.map(recommendation =>(
             <div className="singleRecomendationHolder" key={recommendation.id}>
               <section className="personalInformation">
