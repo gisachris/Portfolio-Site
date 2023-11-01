@@ -1,6 +1,6 @@
 // Text cleanUp for Recommendations Description
 
-const textCleanup = (text) => {
+const textCleanup = (text, num, additional) => {
   // Remove HTML comments
   const procedureOne = text.replace(/<!---->/g, '');
 
@@ -8,7 +8,14 @@ const textCleanup = (text) => {
   const procedureTwo = procedureOne.replace(/\s*<br>\s*/g, '\n');
 
   // chop text
-  const finalText = procedureTwo.slice(0, 400);
+  let finalText = '';
+
+  if(additional){
+    finalText = procedureTwo.slice(0, num) + additional;
+  }else {
+    finalText = procedureTwo.slice(0, num);
+  }
+  
 
   return finalText; 
 }

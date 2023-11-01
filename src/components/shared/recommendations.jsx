@@ -11,55 +11,66 @@ const LinkedInRecommendations = () => {
   console.log(pureRecomendations);
 
   const params = {
-    cellSpacing: 10,
+    cellSpacing: 0,
+    cellAlign: 'center',
     wrapAround: true,
     animation: 'zoom',
+    dragging: true,
     slidesToShow: 3,
+    slidesToScroll: 1,
+    className: 'carouselContainer',
     defaultControlsConfig: {
-      containerClassName: 'carouselContainer',
+      containerClassName: 'dotsSliderHolder',
+      nextButtonClassName: 'nextButton',
+      prevButtonClassName: 'prevButton',
     },
-    className: 'teest'
+    nextButtonText: '',
+    prevButtonText: '',
   };
 
   return (
     <div className="recommendationsHolder">
-      <Carousel {...params}>
-        {pureRecomendations ? (
-          pureRecomendations.map(recommendation => (
-          <div className="singleRecomendationHolder" key={recommendation.id}>
-            <section className="personalInformation">
-              <section className="coreInfo">
+      {pureRecomendations ? (
+        <div className="carouselContainer">
+          <Carousel {...params}>
+          {pureRecomendations.map(recommendation =>(
+            <div className="singleRecomendationHolder" key={recommendation.id}>
+              <section className="personalInformation">
+                <section className="coreInfo">
                 <img src={recommendation.profile_image} alt="person Photo" className="personal_Photo" />
                 <span className="personal_name">{recommendation.profile_name}</span>
+                </section>
+                <span className="date_made">{recommendation.date_time}</span>
               </section>
-              <span className="date_made">{recommendation.date_time}</span>
-            </section>
-            <section className="personalTitle">
-              <h2 className="title">{recommendation.profile_position}</h2>
+              <section className="personalTitle">
+              <h2 className="title">{
+                textCleanup(recommendation.profile_position, 120, '...')
+              }</h2>
               <p className="relation">{recommendation.profile_notes}</p>
-            </section>
-            <section className="recommendation">
+              </section>
+              <section className="recommendation">
               <p className="recommendationBlock">
                 <span className="whiteLayer" />
-                {textCleanup(recommendation.description)}
+                {textCleanup(recommendation.description, 280)}
               </p>
-            </section>
-            <section className="extras">
+              </section>
+              <section className="extras">
               <img src={linkedInLogo} className="linkednLogo" alt="linkednLogo" />
               <a href="https://www.linkedin.com/in/gisa-chris/" className="readmore">Read More...</a>
-            </section>
-          </div>
-            ))
+              </section>
+            </div>
+            ))}
+          </Carousel>
+        </div>
           ) : (
         <div className="recommendationsNotice">
           <p className="notice">
-            Recommendations cannot be accessed remotely for now. Check them out on LinkedIn here:
-            <a href="">Gisa's LinkedIn page</a>
+            Recommendations cannot be accessed remotely for now. Check them out on 
+            <a href="">My LinkedIn page</a>
             , or refresh the page.
           </p>
         </div>
         )}
-      </Carousel>
     </div>
   );
 };
