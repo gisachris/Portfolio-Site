@@ -21,12 +21,12 @@ const Navigation = ({ isOpen, toggleNavigation }) => {
             <img src={logo} alt="logo-art" />
           </section>
           <section className="navLinks">
-            <Link to="Home" spy={true} smooth={true} offset={0} duration={500}>Home</Link>
-            <Link to="About" spy={true} smooth={true} offset={0} duration={500}>About</Link>
-            <Link to="Skills" spy={true} smooth={true} offset={0} duration={500}>Skills</Link>
-            <Link to="Portfolio" spy={true} smooth={true} offset={0} duration={500}>Portfolio</Link>
+            <Link to="Home" spy={true} smooth={true} offset={-250} duration={500}>Home</Link>
+            <Link to="About" spy={true} smooth={true} offset={-250} duration={500}>About</Link>
+            <Link to="Skills" spy={true} smooth={true} offset={-250} duration={500}>Skills</Link>
+            <Link to="Portfolio" spy={true} smooth={true} offset={-250} duration={500}>Portfolio</Link>
             <Link to="Testimonials" spy={true} smooth={true} offset={-250} duration={500}>Testimonials</Link>
-            <Link to="Contact" spy={true} smooth={true} offset={0} duration={500}>Contact</Link>
+            <Link to="Contact" spy={true} smooth={true} offset={300} duration={500}>Contact</Link>
           </section>
           <section className="navHireButton">
             <button type="submit" className="HireButton">Hire Me</button>
