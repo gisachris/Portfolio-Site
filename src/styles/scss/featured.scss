@@ -9,7 +9,7 @@
       opacity: 0;
     }
 
-    100%{
+    100% {
       height: 100%;
       opacity: 1;
     }
@@ -36,6 +36,7 @@
 
       .featuredText {
         @include sectionTopText();
+
         width: fit-content;
       }
 
@@ -288,13 +289,12 @@
       }
     }
 
-    .projects { 
+    .projects {
       width: 100%;
       position: relative;
     }
 
     .projectsHolder {
-      
       .project {
         overflow: hidden;
         position: relative;
@@ -309,16 +309,17 @@
           opacity: 0;
 
           .imfoSection {
-          width: 100%;
-          height: 100%;
-          padding: 10px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
 
             .projectName {
               @include sectionTopText();
+
               font-size: 1.5rem;
               width: fit-content;
               color: $neutral-light;
@@ -326,6 +327,7 @@
 
             .projectDetails {
               @include sectionTopText();
+
               font-size: 0.8rem;
               color: $neutral-light;
             }
@@ -366,7 +368,7 @@
           text-align: center;
           line-height: 25px;
         }
-        
+
         a {
           text-decoration: none;
           font-size: 1rem;
