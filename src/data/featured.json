@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "EduPlanner",
+    "name": "EduPlanner Web Service",
     "tech-Stack": {
       "frontend": ["ReactJs", "Javascript", "ReduxJs"],
       "backend": ["Ruby", "Rails", "PostgreSql"]

@@ -240,12 +240,10 @@
       margin: 40px 0;
 
       .titlecomp {
-        font-family: $third-font;
-        font-size: 1.5rem;
-        color: $neutral-light;
+        @include sectionTopText();
+
         width: fit-content;
         margin: 0 auto;
-        text-align: center;
         margin-top: 10px;
       }
 
@@ -447,14 +445,9 @@
   }
 
   #Testimonials > .header > .title {
+    @include sectionTitle();
+
     width: fit-content;
     margin: 0 auto;
-    font-family: $primary-font;
-    font-size: 0.9rem;
-    color: $primary-color-dark;
-    background-color: $other-color;
-    border: 0;
-    border-radius: 10px;
-    padding: 5px 10px;
   }
 }

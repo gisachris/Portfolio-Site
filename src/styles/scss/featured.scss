@@ -1,0 +1,173 @@
+@import './partials/config';
+
+@media screen and (max-width: 767px) {}
+
+@media screen and (min-width: 767px) {
+  #Portfolio {
+    width: 100%;
+    overflow-x: hidden;
+    margin-bottom: 50px;
+
+    .portfolioHeader {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 40px 0;
+      row-gap: 15px;
+
+      .headerText {
+        width: fit-content;
+
+        @include sectionTitle();
+      }
+
+      .featuredText {
+        @include sectionTopText();
+
+        width: fit-content;
+      }
+    }
+
+    .projectTypeSelectorsHolder {
+      width: 45%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      column-gap: 6px;
+
+      .typeSelector {
+        font-size: 0.9rem;
+        font-family: $primary-font;
+        color: $neutral-light;
+        cursor: pointer;
+
+        &:hover {
+          text-shadow: 0 0.5px 3px white;
+        }
+      }
+
+      .active {
+        background-color: $primary-color-dark;
+        padding: 5px 15px;
+        border-radius: 6px;
+        text-align: center;
+        color: black;
+
+        &:hover {
+          text-shadow: 0 0 0 transparent;
+        }
+      }
+    }
+
+    .projects-grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(11, 1fr);
+      grid-auto-columns: 200px;
+      grid-auto-rows: 200px;
+      grid-gap: 10px;
+
+      .grid-item {
+        border-radius: 10px;
+        box-shadow: 2px 2px 4px black;
+        border: 2px solid $semi-dark;
+      }
+
+      .grid-item-1 {
+        grid-area: 1 / 1 / span 7 / 2;
+      }
+
+      .grid-item-2 {
+        grid-area: 8 / 1 / span 4 / 2;
+      }
+
+      .grid-item-3 {
+        grid-area: 1 / 2 / span 4 / 3;
+      }
+
+      .grid-item-4 {
+        grid-area: 5 / 2 / span 7 / 3;
+      }
+
+      .grid-item-5 {
+        grid-area: 1 / 3 / span 7 / 4;
+      }
+
+      .grid-item-6 {
+        grid-area: 8 / 3 / span 4 / 4;
+      }
+
+      .grid-item-1,
+      .grid-item-4,
+      .grid-item-5 {
+        min-width: 250px;
+        min-height: 350px;
+      }
+
+      .grid-item-2,
+      .grid-item-3,
+      .grid-item-6 {
+        min-width: 250px;
+      }
+    }
+
+    .projectsHolder {
+      width: 80%;
+      max-width: 1250px;
+      height: 650px;
+      padding: 15px;
+      margin: 0 auto;
+      margin-top: 10px;
+
+      .project {
+        overflow: hidden;
+
+        .projectImage {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    
+    
+    .noProjectsAlert {
+      width: 100%;
+      margin: 20px 0;
+      grid-area: 1 / 1 / span 4 / span 3;
+
+      .alert {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 15px;
+
+        p {
+          width: 65%;
+          font-size: 1rem;
+          color: $neutral-light;
+          font-family: $third-font;
+          text-align: center;
+          line-height: 25px;
+        }
+        
+        a {
+          text-decoration: none;
+          font-size: 1rem;
+          font-family: $third-font;
+          color: $primary-color-dark;
+
+          &:hover {
+            border-bottom: 2px solid $primary-color-dark;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import {useState } from 'react';
 import formContext from "../contexts/formContext";
+import FeaturedApps from './featured';
 import Contact from './contact';
 import Testimonials from './testimonials';
 import Reachout from './reachOut';
@@ -16,7 +17,7 @@ const MainBody = ({isOpen}) => {
       </div>
       <div className="testing loc-2" id="About" />
       <div className="testing loc-3" id="Skills" />
-      <div className="testing loc-4" id="Portfolio" />
+      <FeaturedApps />
       <section className="testimonialContactReachHolder" id="Contact">
         <formContext.Provider value={{formInput, setFormInput}}>
           <Testimonials />
