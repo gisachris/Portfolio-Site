@@ -47,7 +47,7 @@
     }
 
     .projectTypeSelectorsHolder {
-      width: 45%;
+      width: 500px;
       margin: 0 auto;
       display: flex;
       align-items: center;
@@ -78,13 +78,20 @@
       }
     }
 
-    .projects-grid-container {
+    .projects-grid-container-all {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(11, 1fr);
       grid-auto-columns: 200px;
       grid-auto-rows: 200px;
       grid-gap: 10px;
+      width: 80%;
+      min-width: 600px;
+      max-width: 1250px;
+      height: 650px;
+      padding: 15px;
+      margin: 0 auto;
+      margin-top: 10px;
 
       .grid-item {
         border-radius: 10px;
@@ -119,25 +126,175 @@
       .grid-item-1,
       .grid-item-4,
       .grid-item-5 {
-        min-width: 250px;
+        min-width: calc(100% / 3);
         min-height: 350px;
       }
 
       .grid-item-2,
       .grid-item-3,
       .grid-item-6 {
-        min-width: 250px;
+        min-width: calc(100% / 3);
       }
     }
 
-    .projectsHolder {
+    .projects-grid-container-web {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(11, 1fr);
+      grid-auto-columns: 200px;
+      grid-auto-rows: 200px;
+      grid-gap: 10px;
       width: 80%;
+      min-width: 600px;
       max-width: 1250px;
       height: 650px;
       padding: 15px;
       margin: 0 auto;
       margin-top: 10px;
 
+      .grid-item {
+        border-radius: 10px;
+        box-shadow: 2px 2px 4px black;
+        border: 2px solid $semi-dark;
+      }
+
+      .grid-item-1 {
+        grid-area: 1 / 1 / span 7 / 2;
+      }
+
+      .grid-item-2 {
+        grid-area: 8 / 1 / span 4 / 2;
+      }
+
+      .grid-item-3 {
+        grid-area: 1 / 2 / span 4 / 3;
+      }
+
+      .grid-item-4 {
+        grid-area: 5 / 2 / span 7 / 3;
+      }
+
+      .grid-item-5 {
+        grid-area: 1 / 3 / span 7 / 4;
+      }
+
+      .grid-item-6 {
+        grid-area: 8 / 3 / span 4 / 4;
+      }
+
+      .grid-item-1,
+      .grid-item-4,
+      .grid-item-5 {
+        min-width: calc(100% / 3);
+        min-height: 350px;
+      }
+
+      .grid-item-2,
+      .grid-item-3,
+      .grid-item-6 {
+        min-width: calc(100% / 3);
+      }
+    }
+
+    .projects-grid-container-mobile {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+      grid-gap: 10px;
+      width: 60%;
+      min-width: 600px;
+      max-width: 1250px;
+      height: 650px;
+      padding: 15px;
+      margin: 0 auto;
+      margin-top: 10px;
+
+      .grid-item {
+        border-radius: 10px;
+        box-shadow: 2px 2px 4px black;
+        border: 2px solid $semi-dark;
+      }
+
+      .grid-item-1 {
+        grid-area: 1 / 1 / 3 / 2;
+      }
+
+      .grid-item-3 {
+        grid-area: 1 / 2 / 3 / 3;
+      }
+
+      .grid-item-4 {
+        grid-area: 3 / 1 / 6 / 2;
+      }
+
+      .grid-item-6 {
+        grid-area: 3 / 2 / 6 / 3;
+      }
+
+      .grid-item-1,
+      .grid-item-3 {
+        min-width: calc(100% / 2);
+        min-height: 300px;
+      }
+
+      .grid-item-4,
+      .grid-item-6 {
+        min-width: calc(100% / 2);
+        min-height: 250px;
+      }
+    }
+
+    .projects-grid-container-webmob {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-auto-columns: 200px;
+      grid-auto-rows: 200px;
+      grid-gap: 10px;
+      width: 55%;
+      min-width: 600px;
+      max-width: 1250px;
+      height: 850px;
+      padding: 15px;
+      margin: 0 auto;
+      margin-top: 10px;
+
+      .grid-item {
+        border-radius: 10px;
+        box-shadow: 2px 2px 4px black;
+        border: 2px solid $semi-dark;
+        min-width: 250px;
+        min-height: 200px;
+      }
+
+      .grid-item-1 {
+        grid-area: 1 / 1 / 2 / span 6;
+      }
+
+      .grid-item-2 {
+        grid-area: 1 / 7 / 2 / span 6;
+      }
+
+      .grid-item-3 {
+        grid-area: 2 / 1 / 3 / span 6;
+      }
+
+      .grid-item-4 {
+        grid-area: 2 / 7 / 3 / span 6;
+      }
+
+      .grid-item-6 {
+        grid-area: 3 / 4 / 4 / span 6;
+      }
+    }
+
+    .projects { 
+      width: 100%;
+      position: relative;
+    }
+
+    .projectsHolder {
+      
       .project {
         overflow: hidden;
         position: relative;
@@ -187,8 +344,6 @@
       }
     }
 
-    
-    
     .noProjectsAlert {
       width: 100%;
       margin: 20px 0;

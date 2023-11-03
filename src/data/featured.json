@@ -14,7 +14,8 @@
     "links": {
       "liveDemo": "https://edu-planner.onrender.com/",
       "sourceCode": "https://github.com/gisachris/EduPlanner-Frontend"
-    }
+    },
+    "type": ["all","mobile","web", "webmob"]
   },
   {
     "id": 2,
@@ -31,7 +32,8 @@
     "links": {
       "liveDemo": "https://moviebest.onrender.com/",
       "sourceCode": "https://github.com/gisachris/MovieBest-website"
-    }
+    },
+    "type": ["all","web","webmob"]
   },
   {
     "id": 3,
@@ -48,14 +50,15 @@
     "links": {
       "liveDemo": "https://lister-hm86.onrender.com/",
       "sourceCode": "https://github.com/gisachris/To-Do-List-app"
-    }
+    },
+    "type": ["all","web","mobile","webmob"]
   },
   {
     "id": 4,
     "name": "World Metrics Service",
     "tech-Stack": {
       "frontend": ["JavaScript", "ReactJs", "ReduxJs", "Scss"],
-      "backend": ["", "", "", ""]
+      "backend": []
     },
     "description": "A world class web service that retrieves data from the restCountries API and displays it in a myriad of ways with top notch UI-design and craftsmanship as well as industry standard techniques and functionality to get you the information you desire from any country in the world",
     "images": {
@@ -65,7 +68,8 @@
     "links": {
       "liveDemo": "https://worldmetrics-lw0g.onrender.com/",
       "sourceCode": "https://github.com/gisachris/world-Metrics-service"
-    }
+    },
+    "type": ["all", "web","webmob","mobile"]
   },
   {
     "id": 5,
@@ -82,7 +86,8 @@
     "links": {
       "liveDemo": "https://bookcms.onrender.com/",
       "sourceCode": "https://github.com/gisachris/react-bookstore-application"
-    }
+    },
+    "type": ["all","web"]
   },
   {
     "id": 6,
@@ -99,6 +104,7 @@
     "links": {
       "liveDemo": "https://simple-landing-page.pages.dev/",
       "sourceCode": "https://github.com/gisachris/simple_landing_page"
-    }
+    },
+    "type": ["all","web","webmob", "mobile"]
   }
 ]
