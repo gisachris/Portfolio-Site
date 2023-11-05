@@ -25,6 +25,32 @@
     }
   }
 
+  @keyframes imageShowCase {
+    0% {
+      transform: scale(1);
+      object-position: 50% 50%;
+    }
+
+    35% {
+      transform: scale(1.5);
+    }
+
+    55% {
+      transform: scale(1.5);
+      object-position: center left;
+    }
+
+    75% {
+      transform: scale(1.5);
+      object-position: center right;
+    }
+
+    100% {
+      transform: scale(1);
+      object-position: center;
+    }
+  }
+
   .projectModalHolder {
     position: fixed;
     z-index: 1000;
@@ -56,8 +82,6 @@
       padding: 20px 10px;
 
       .projectDetails {
-        // border: 2px solid $primary-color-dark;
-        // border-radius: 10px;
         width: 100%;
         height: 55%;
         overflow: hidden;
@@ -68,9 +92,18 @@
 
         .projectImage {
           width: 45%;
-          border: 2px solid $primary-color-dark;
+          border: 2px solid $neutral-dark;
           border-radius: 10px;
-          // object-fit: cover;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 50% 50%;
+            transform: scale(1);
+            animation: imageShowCase 15s linear forwards;
+          }
         }
 
         .projectDescription {
@@ -80,17 +113,21 @@
           row-gap: 10px;
 
           .projectTitle {
-            width: 70%;
-            border: 2px solid $primary-color-dark;
-            border-radius: 10px;
-            height: 20%;
+            width: fit-content;
+            padding: 0 15px;
+            padding-left: 0px;
+            font-size: 1.5rem;
+            font-family: $third-font;
+            color: $neutral-light;
+            border-bottom: 2px solid $primary-color-dark;
           }
 
           .projectText {
-            width: 100%;
-            border: 2px solid $primary-color-dark;
-            border-radius: 10px;
+            width: 95%;
             height: 80%;
+            font-size: 1rem;
+            color: $neutral-light;
+            font-family: $primary-font;
           }
         }
       }
@@ -98,9 +135,8 @@
       .moreProjectInfo {
         width: 100%;
         height: 45%;
-        border: 2px solid $primary-color-dark;
-        border-radius: 10px;
         padding: 10px;
+        padding-left: 0px;
         display: flex;
         justify-content: space-around;
         column-gap: 20px;
@@ -111,29 +147,62 @@
           display: flex;
           column-gap: 10px;
 
-          .liveDemoLink {
+          a {
             border: 2px solid $primary-color-dark;
+            background-color: $primary-color-dark;
             border-radius: 10px;
             width: 50%;
-            height: 20%;
-          }
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0px 10px;
+            text-decoration: none;
 
-          .sourceCodeLink {
-            border: 2px solid $primary-color-dark;
-            border-radius: 10px;
-            width: 50%;
-            height: 20%;
+            span {
+             width: 85%;
+             font-size: 1rem;
+             text-align: center;
+             font-weight: bold;
+             font-family: $secondary-font;
+             color: $neutral-dark;
+            }
+
+            .liveDemoIcon {
+              width: 25px;
+            }
+
+            .sourceCodeIcon {
+              width: 35px;
+            }
           }
         }
 
         .projectTechStack {
           width: 55%;
-          border: 2px solid $primary-color-dark;
-          border-radius: 10px;
+          margin: 0 auto;
           display: flex;
           flex-direction: column;
           row-gap: 10px;
-          padding: 10px;
+          padding: 0px 10px;
+
+          .techHeader {
+            color: $neutral-light;
+            font-size: 1.2rem;
+            font-family: $third-font;
+            padding-right: 10px;
+            border-bottom: 2px solid $primary-color-dark;
+          }
+
+          .technologyType {
+            border-radius: 10px;
+            padding: 5px 10px;
+            background-color: $tertiary-color;
+            color: $neutral-light;
+            font-size: 1.2rem;
+            width: fit-content;
+            font-family: $third-font;
+          }
 
           .frontEndTechnologies {
             border: 2px solid $primary-color-dark;

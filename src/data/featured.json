@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "EduPlanner Web Service",
-    "tech-Stack": {
+    "techStack": {
       "frontend": ["ReactJs", "Javascript", "ReduxJs"],
       "backend": ["Ruby", "Rails", "PostgreSql"]
     },
@@ -20,7 +20,7 @@
   {
     "id": 2,
     "name": "MovieBest App",
-    "tech-Stack": {
+    "techStack": {
       "frontend": ["JavaScript", "Css"],
       "backend": ["Api", "Postman"]
     },
@@ -38,7 +38,7 @@
   {
     "id": 3,
     "name": "Tasker App",
-    "tech-Stack": {
+    "techStack": {
       "frontend": ["JavaScript", "Css"],
       "backend": ["LocalStorage"]
     },
@@ -56,7 +56,7 @@
   {
     "id": 4,
     "name": "World Metrics Service",
-    "tech-Stack": {
+    "techStack": {
       "frontend": ["JavaScript", "ReactJs", "ReduxJs", "Scss"],
       "backend": []
     },
@@ -74,7 +74,7 @@
   {
     "id": 5,
     "name": "book Store",
-    "tech-Stack": {
+    "techStack": {
       "frontend": ["JavaScript", "ReactJs", "ReduxJs", "Css"],
       "backend": []
     },
@@ -92,7 +92,7 @@
   {
     "id": 6,
     "name": "simple Landing Page",
-    "tech-Stack": {
+    "techStack": {
       "frontend": ["Html", "Css", "Bootstrap"],
       "backend":  []
     },

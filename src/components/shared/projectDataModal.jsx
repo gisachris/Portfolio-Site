@@ -1,6 +1,8 @@
 import { useState, useContext, useEffect, useRef } from 'react';
 import projectModalContext from '../../contexts/projectModalContext';
 import closeButton from '../../assets/icons/closeButtonPrimary.png';
+import demoLink from '../../assets/icons/liveDemoLink.png';
+import sourceLink from '../../assets/icons/sourceCodeLink.png';
 import '../../styles/css/projectModal.css';
 import '../../styles/css/helpers.css';
 
@@ -60,19 +62,32 @@ const ProjectModal = () => {
         {Data && (
           <>
             <section className="projectDetails">
-              <div className="projectImage"></div>
+              {Data.images.large && (
+                <div className="projectImage">
+                  <img src={Data.images.large} alt="projectDisplay" />
+                </div>
+              )}
               <div className="projectDescription">
-                <h1 className="projectTitle"></h1>
-                <p className="projectText"></p>
+                {Data.name && (<h1 className="projectTitle">{Data.name}</h1>)}
+                {Data.description && (<p className="projectText">{Data.description}.</p>)}
               </div>
             </section>
             <section className="moreProjectInfo">
               <section className="projectLinks">
-                <section className="liveDemoLink"></section>
-                <section className="sourceCodeLink"></section>
+                <a href={Data.links.liveDemo} target='blank' className="liveDemoLink">
+                  <span className="linkText">Live Demo</span>
+                  <img src={demoLink} alt="demoLinkIcon" className='liveDemoIcon'/>
+                </a>
+                <a href={Data.links.sourceCode} target='blank' className="sourceCodeLink">
+                  <span className="linkText">SourceCode</span>
+                  <img src={sourceLink} alt="sourceLinkIcon" className='sourceCodeIcon'/>
+                </a>
               </section>
               <section className="projectTechStack">
-                <section className="frontEndTechnologies"></section>
+                <span className="techHeader">Technologies</span>
+                {Data.techStack.frontend && (
+                  <span className="technologyType">FrontEnd</span>
+                )}
                 <section className="backEndTechnologies"></section>
               </section>
             </section>
