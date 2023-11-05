@@ -1,6 +1,8 @@
 import {useState } from 'react';
 import formContext from "../contexts/formContext";
+import projectModalContext from '../contexts/projectModalContext';
 import FeaturedApps from './featured';
+import ProjectModal from './shared/projectDataModal';
 import Contact from './contact';
 import Testimonials from './testimonials';
 import Reachout from './reachOut';
@@ -10,6 +12,11 @@ import '../styles/css/reach.css';
 
 const MainBody = ({isOpen}) => {
   const [formInput, setFormInput] = useState(null);
+  const [projectData, setProjectData] = useState({
+    status: false,
+    Data: null
+  })
+
   return (
     <div className={isOpen ? 'MainBlur' : "Main"}>
       <div className="testing loc-1" id="Home">
@@ -17,7 +24,10 @@ const MainBody = ({isOpen}) => {
       </div>
       <div className="testing loc-2" id="About" />
       <div className="testing loc-3" id="Skills" />
-      <FeaturedApps />
+      <projectModalContext.Provider value={{projectData, setProjectData}}>
+        <FeaturedApps />
+        <ProjectModal />
+      </projectModalContext.Provider>
       <section className="testimonialContactReachHolder" id="Contact">
         <formContext.Provider value={{formInput, setFormInput}}>
           <Testimonials />

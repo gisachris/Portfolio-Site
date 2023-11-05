@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useContext } from "react";
+import projectModalContext from "../contexts/projectModalContext";
 import projects from "../data/featured.json";
 import Loader from "../components/shared/loader";
 import '../styles/css/featured.css';
@@ -9,6 +10,7 @@ const FeaturedApps = () => {
   const [showProjectType, setshowProjectType] = useState('all');
   const [loading, setLoading] = useState(false);
   const projectRefs = useRef([]);
+  const { projectData, setProjectData } = useContext(projectModalContext);
 
   useEffect(() =>{
     if (projects) {
@@ -25,10 +27,6 @@ const FeaturedApps = () => {
     projectRefs.current[index].classList.remove('showProjectDetail');
   }
 
-  const showDataModal = (id) => {
-    console.log(id);
-  }
-
   const setshowbyProjectType = (e) => {
     setshowProjectType(e.target.dataset.value);
     setLoading(true);
@@ -36,6 +34,19 @@ const FeaturedApps = () => {
     setTimeout(() => {
       setLoading(false);
     }, 2000);
+  }
+
+  const showProjectModal = (project) => {
+    setLoading(true);
+
+    setProjectData({
+      status: true,
+      Data: project
+    })
+
+    setTimeout(() => {
+      setLoading(false);
+    }, 1500)
   }
 
   return (
@@ -53,14 +64,14 @@ const FeaturedApps = () => {
       </section>
       <section className="projects">
         {loading && <Loader />}
-        <section className={`projectsHolder projects-grid-container-${showProjectType || 'all'} ${loading ? 'blurred' : ''}`}>
+        <section className={`projectsHolder projects-grid-container-${showProjectType || 'all'} ${loading || projectData.status ? 'blurred' : ''}`}>
           {featuredProjects && featuredProjects.map((project, index) => (
             <div
               className={`project grid-item grid-item-${project.id && project.id}`}
               key={project.id}
               onMouseEnter={() => overlayInfo(index)}
               onMouseLeave={() => removeOverlay(index)}
-              onClick={() => showDataModal(project.id)}
+              onClick={() => showProjectModal(project)}
             >
               <div className="overlayInfo" ref={(element) => projectRefs.current[index] = element}>
                 <div className="imfoSection">
