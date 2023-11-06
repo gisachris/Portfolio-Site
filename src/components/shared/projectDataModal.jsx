@@ -86,7 +86,7 @@ const ProjectModal = () => {
               <section className="projectTechStack">
                 <span className="techHeader">Technologies</span>
                 {Data.techStack.frontend && (
-                  <span className="technologyType">FrontEnd</span>
+                  <span className="technologyType">Frontend</span>
                 )}
                 <section className="backEndTechnologies"></section>
               </section>

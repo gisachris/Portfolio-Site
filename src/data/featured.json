@@ -3,8 +3,9 @@
     "id": 1,
     "name": "EduPlanner Web Service",
     "techStack": {
-      "frontend": ["ReactJs", "Javascript", "ReduxJs"],
-      "backend": ["Ruby", "Rails", "PostgreSql"]
+      "frontend": ["reactjs", "javascript", "reduxjs"],
+      "backend": ["ruby", "rails", "postgresql"],
+      "testing": ["rspec", "capybara"]
     },
     "description": "EduPlanner Application is a seamless feature-rich UI and UX application Built using React.js and Ruby on Rails to Simplify Registrations and Bookings for Available Online classes on the EduPlanner web application.",
     "images": {
@@ -21,8 +22,9 @@
     "id": 2,
     "name": "MovieBest App",
     "techStack": {
-      "frontend": ["JavaScript", "Css"],
-      "backend": ["Api", "Postman"]
+      "frontend": ["javascript", "css"],
+      "backend": ["api", "postman"],
+      "testing": ["jest"]
     },
     "description": "This is an API based Web application that renders a list of movies from the movie best API and displays them with intricate design and functionality that allows you the client  to have the best movie browsing experience possible",
     "images": {
@@ -39,8 +41,9 @@
     "id": 3,
     "name": "Tasker App",
     "techStack": {
-      "frontend": ["JavaScript", "Css"],
-      "backend": ["LocalStorage"]
+      "frontend": ["javascript", "css"],
+      "backend": ["localstorage"],
+      "testing": ["jest"]
     },
     "description": "This is a to do list application used to store and display a user's tasks give functionality to check across finished tasks as well as all other CRUD operations. This program  was made with the JavaScript language and styling with css",
     "images": {
@@ -57,8 +60,8 @@
     "id": 4,
     "name": "World Metrics Service",
     "techStack": {
-      "frontend": ["JavaScript", "ReactJs", "ReduxJs", "Scss"],
-      "backend": []
+      "frontend": ["javascript", "reactjs", "reduxjs", "scss", "api", "postman"],
+      "testing": ["jest"]
     },
     "description": "A world class web service that retrieves data from the restCountries API and displays it in a myriad of ways with top notch UI-design and craftsmanship as well as industry standard techniques and functionality to get you the information you desire from any country in the world",
     "images": {
@@ -75,8 +78,8 @@
     "id": 5,
     "name": "book Store",
     "techStack": {
-      "frontend": ["JavaScript", "ReactJs", "ReduxJs", "Css"],
-      "backend": []
+      "frontend": ["javascript", "reactjs", "reduxjs", "css", "photoshop", "figma"],
+      "testing": ["jest"]
     },
     "description": "This is a state of the art book store application that have remarkable UI and UX design to Retrieve, display and Manipulate book Data as the user sees fit. Built with react and redux.",
     "images": {
@@ -93,8 +96,7 @@
     "id": 6,
     "name": "simple Landing Page",
     "techStack": {
-      "frontend": ["Html", "Css", "Bootstrap"],
-      "backend":  []
+      "frontend": ["html", "css", "bootstrap", "photoshop", "figma"]
     },
     "description": "Html, Css and Bootstrap landing page application for a law Firm.",
     "images": {

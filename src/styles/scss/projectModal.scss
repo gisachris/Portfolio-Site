@@ -28,26 +28,14 @@
   @keyframes imageShowCase {
     0% {
       transform: scale(1);
-      object-position: 50% 50%;
     }
 
-    35% {
-      transform: scale(1.5);
-    }
-
-    55% {
-      transform: scale(1.5);
-      object-position: center left;
-    }
-
-    75% {
-      transform: scale(1.5);
-      object-position: center right;
+    50% {
+      transform: scale(1.2);
     }
 
     100% {
       transform: scale(1);
-      object-position: center;
     }
   }
 
@@ -102,7 +90,7 @@
             object-fit: cover;
             object-position: 50% 50%;
             transform: scale(1);
-            animation: imageShowCase 15s linear forwards;
+            animation: imageShowCase 10s linear forwards;
           }
         }
 
@@ -145,13 +133,14 @@
           width: 45%;
           height: 100%;
           display: flex;
+          justify-content: center;
           column-gap: 10px;
 
           a {
             border: 2px solid $primary-color-dark;
             background-color: $primary-color-dark;
             border-radius: 10px;
-            width: 50%;
+            width: 40%;
             height: 50px;
             display: flex;
             justify-content: center;
@@ -197,8 +186,8 @@
           .technologyType {
             border-radius: 10px;
             padding: 5px 10px;
-            background-color: $tertiary-color;
-            color: $neutral-light;
+            background-color: $neutral-light;
+            color: $neutral-dark;
             font-size: 1.2rem;
             width: fit-content;
             font-family: $third-font;
@@ -218,7 +207,6 @@
             height: 50%;
           }
         }
-
       }
 
       .noDataAlert {
