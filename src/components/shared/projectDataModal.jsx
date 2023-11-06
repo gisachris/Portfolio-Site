@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect, useRef } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 import projectModalContext from '../../contexts/projectModalContext';
 import closeButton from '../../assets/icons/closeButtonPrimary.png';
 import demoLink from '../../assets/icons/liveDemoLink.png';

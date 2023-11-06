@@ -88,7 +88,7 @@
           .projectTitle {
             width: fit-content;
             padding: 0 15px;
-            padding-left: 0px;
+            padding-left: 0;
             font-size: 1.5rem;
             font-family: $third-font;
             color: $neutral-light;
@@ -109,7 +109,7 @@
         width: 100%;
         height: 25%;
         padding: 10px;
-        padding-left: 0px;
+        padding-left: 0;
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
@@ -132,12 +132,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 0px 10px;
+            padding: 0 10px;
             text-decoration: none;
 
             span {
               width: 85%;
-              font-size: 3vw; 
+              font-size: 3vw;
               overflow: hidden;
               text-overflow: ellipsis;
               text-align: center;
@@ -189,8 +189,8 @@
               display: flex;
               column-gap: 5px;
               height: 30px;
-  
-              .singletechHolder{
+
+              .singletechHolder {
                 margin-top: 5px;
                 width: 25px;
                 padding: 2px;
@@ -199,7 +199,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-  
+
                 img {
                   width: 100%;
                   object-fit: contain;
@@ -384,6 +384,7 @@
 
             span {
               width: 85%;
+              overflow: hidden;
               font-size: 1rem;
               text-align: center;
               font-weight: bold;
@@ -402,7 +403,7 @@
         }
 
         .techgroup {
-          width: 100%;
+          min-width: 100%;
           height: 25.5%;
           display: flex;
           column-gap: 10px;
