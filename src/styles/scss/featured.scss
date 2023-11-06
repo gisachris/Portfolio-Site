@@ -1,6 +1,195 @@
 @import './partials/config';
 
-@media screen and (max-width: 767px) {}
+@media screen and (max-width: 767px) {
+  @keyframes showProjectHoverWindow {
+    0% {
+      height: 0%;
+      opacity: 0;
+    }
+
+    100% {
+      height: 100%;
+      opacity: 1;
+    }
+  }
+
+  #Portfolio {
+    width: 100%;
+    overflow-x: hidden;
+    margin-bottom: 50px;
+
+    .portfolioHeader {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 40px 0;
+      margin-bottom: 5px;
+      row-gap: 15px;
+
+      .headerText {
+        width: fit-content;
+
+        @include sectionTitle();
+      }
+
+      .featuredText {
+        @include sectionTopText();
+
+        width: fit-content;
+      }
+
+      .usageNotice {
+        font-size: 0.9rem;
+        font-family: $primary-font;
+        color: $tertiary-color;
+      }
+    }
+
+    .projectTypeSelectorsHolder {
+      display: none;
+    }
+
+    .projects {
+      width: 100%;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    .projects-grid-container-all {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(4, 1fr);
+      grid-row-gap: 25px;
+      width: 95%;
+      max-width: 750px;
+      padding: 15px;
+      margin: 0 auto;
+
+      .grid-item {
+        border-radius: 10px;
+        box-shadow: 2px 2px 4px black;
+        border: 2px solid $semi-dark;
+        width: 100%;
+        height: 350px;
+      }
+
+      .grid-item-1 {
+        grid-area: 1 / 1 / 2 / 2;
+      }
+
+      .grid-item-2 {
+        grid-area: 2 / 1 / 3 / 2;
+      }
+
+      .grid-item-3 {
+        grid-area: 3 / 1 / 4 / 2;
+      }
+
+      .grid-item-4 {
+        grid-area: 4 / 1 / 5 / 2;
+      }
+
+      .grid-item-5 {
+        display: none;
+        grid-area: 5 / 1 / 6 / 2;
+      }
+
+      .grid-item-6 {
+        display: none;
+        grid-area: 6 / 1 / 7 / 2;
+      }
+    }
+
+    .projectsHolder {
+      .project {
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        border: 0;
+
+        .overlayInfo {
+          position: absolute;
+          background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+          width: 100%;
+          height: 0%;
+          opacity: 0;
+
+          .imfoSection {
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .projectName {
+              @include sectionTopText();
+
+              font-size: 1.5rem;
+              width: fit-content;
+              color: $neutral-light;
+            }
+
+            .projectDetails {
+              @include sectionTopText();
+
+              font-size: 0.8rem;
+              color: $neutral-light;
+            }
+          }
+        }
+
+        .showProjectDetail {
+          animation: showProjectHoverWindow 300ms ease-in forwards;
+        }
+
+        .projectImage {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .noProjectsAlert {
+      width: 100%;
+      margin: 20px 0;
+      grid-area: 1 / 1 / 2 / 2;
+
+      .alert {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 15px;
+
+        p {
+          width: 95%;
+          font-size: 0.9rem;
+          color: $neutral-light;
+          font-family: $third-font;
+          text-align: center;
+          line-height: 25px;
+        }
+
+        a {
+          text-decoration: none;
+          font-size: 1rem;
+          font-family: $third-font;
+          color: $primary-color-dark;
+
+          &:hover {
+            border-bottom: 2px solid $primary-color-dark;
+          }
+        }
+      }
+    }
+  }
+}
 
 @media screen and (min-width: 767px) {
   @keyframes showProjectHoverWindow {

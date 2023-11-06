@@ -1,5 +1,11 @@
 @import './partials/config';
 
+@media screen and (max-width: 767px) {
+  .projectModalHolder {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 767px) {
   @keyframes projectView {
     from {

@@ -21,16 +21,6 @@ const ProjectModal = () => {
     }
   }
 
-  const begginingDelay = () => {
-    if(status){
-      setIsLoading(true)
-
-      setTimeout(() => {
-        setIsLoading(false)
-      }, 200)
-    }
-  }
-
   const handleCloseButtonClick = () => {
     closeButtonRef.current.classList.add("clickBounce");
     hideModal();
