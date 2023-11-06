@@ -47,7 +47,36 @@
     }
 
     .projectTypeSelectorsHolder {
-      display: none;
+      width: 70%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 15px;
+      margin-bottom: 20px;
+      color: $neutral-light;
+
+      .typeSelector {
+        font-size: 0.9rem;
+        font-family: $primary-font;
+        cursor: pointer;
+      }
+      
+      .typeSelector:nth-child(3) {
+        display: none;
+      }
+    }
+
+    .active {
+      background-color: $primary-color-dark;
+      padding: 5px 15px;
+      border-radius: 6px;
+      text-align: center;
+      color: black;
+
+      &:hover {
+        text-shadow: 0 0 0 transparent;
+      }
     }
 
     .projects {
@@ -57,6 +86,85 @@
     }
 
     .projects-grid-container-all {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(4, 1fr);
+      grid-row-gap: 25px;
+      width: 95%;
+      max-width: 750px;
+      padding: 15px;
+      margin: 0 auto;
+
+      .grid-item {
+        border-radius: 10px;
+        box-shadow: 2px 2px 4px black;
+        border: 2px solid $semi-dark;
+        width: 100%;
+        height: 350px;
+      }
+
+      .grid-item-1 {
+        grid-area: 1 / 1 / 2 / 2;
+      }
+
+      .grid-item-2 {
+        grid-area: 2 / 1 / 3 / 2;
+      }
+
+      .grid-item-3 {
+        grid-area: 3 / 1 / 4 / 2;
+      }
+
+      .grid-item-4 {
+        grid-area: 4 / 1 / 5 / 2;
+      }
+
+      .grid-item-5 {
+        display: none;
+        grid-area: 5 / 1 / 6 / 2;
+      }
+
+      .grid-item-6 {
+        display: none;
+        grid-area: 6 / 1 / 7 / 2;
+      }
+    }
+
+    .projects-grid-container-mobile {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(2, 1fr);
+      grid-row-gap: 25px;
+      width: 95%;
+      max-width: 750px;
+      padding: 15px;
+      margin: 0 auto;
+
+      .grid-item {
+        border-radius: 10px;
+        box-shadow: 2px 2px 4px black;
+        border: 2px solid $semi-dark;
+        width: 100%;
+        height: 350px;
+      }
+
+      .grid-item-1 {
+        grid-area: 1 / 1 / 2 / 2;
+      }
+
+      .grid-item-2,
+      .grid-item-3,
+      .grid-item-5,
+      .grid-item-6 {
+        display: none;
+      }
+
+      .grid-item-4 {
+        grid-area: 2 / 1 / 3 / 2;
+      }
+    }
+
+    .projects-grid-container-webmob {
       display: grid;
       grid-template-columns: 100%;
       grid-template-rows: repeat(4, 1fr);
