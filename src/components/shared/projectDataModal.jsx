@@ -9,7 +9,6 @@ import '../../styles/css/helpers.css';
 const ProjectModal = () => {
   const { projectData, setProjectData } = useContext(projectModalContext);
   const { status, Data } = projectData;
-  const [isLoading, setIsLoading] = useState(false);
   const closeButtonRef = useRef();
 
   const hideModal = () => {
@@ -41,7 +40,7 @@ const ProjectModal = () => {
   return(
     <div className={`projectModalHolder ${status ? 'showProjectModal' : ''}`} >
       <div className="dataDisplayShadow" onClick={hideModal}/>
-      <div className={`dataDisplayBoard ${isLoading ? 'blurred' : ''}`}>
+      <div className={`dataDisplayBoard`}>
         <img 
           ref={closeButtonRef}
           src={closeButton}
@@ -80,7 +79,7 @@ const ProjectModal = () => {
                     <span className="technologyType">Frontend</span>
                     <section className="technologies">
                       {Data.techStack.frontend.map((technology) => (
-                        <div className="singletechHolder" title={`${technology} was used in the development of this project`}>
+                        <div className="singletechHolder" key={technology} title={`${technology} was used in the development of this project`}>
                           <img src={`src/assets/technologies/${technology}.png`} alt="technology" />
                         </div>
                       ))}
@@ -92,7 +91,7 @@ const ProjectModal = () => {
                     <span className="technologyType">Backend</span>
                     <section className="technologies">
                       {Data.techStack.backend.map((technology) => (
-                        <div className="singletechHolder" title={`${technology} was used in the development of this project`}>
+                        <div className="singletechHolder" key={technology} title={`${technology} was used in the development of this project`}>
                           <img src={`src/assets/technologies/${technology}.png`} alt="technology" />
                         </div>
                       ))}
@@ -104,7 +103,7 @@ const ProjectModal = () => {
                     <span className="technologyType">Testing</span>
                     <section className="technologies">
                       {Data.techStack.testing.map((technology) => (
-                        <div className="singletechHolder" title={`${technology} was used in the Testing of this project`}>
+                        <div className="singletechHolder" key={technology} title={`${technology} was used in the Testing of this project`}>
                           <img src={`src/assets/technologies/${technology}.png`} alt="technology" />
                         </div>
                       ))}

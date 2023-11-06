@@ -1,8 +1,236 @@
 @import './partials/config';
 
 @media screen and (max-width: 767px) {
+  @keyframes bounce {
+    0% {
+      width: 30px;
+    }
+
+    50% {
+      width: 28px;
+    }
+
+    100% {
+      width: 30px;
+    }
+  }
+
+  @keyframes projectView {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
   .projectModalHolder {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
     display: none;
+
+    .dataDisplayShadow {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .dataDisplayBoard {
+      position: relative;
+      z-index: 150;
+      width: 95%;
+      max-width: 750px;
+      margin: 0 auto;
+      height: 85%;
+      max-height: 700px;
+      background-color: $semi-dark;
+      border-radius: 10px;
+      border: 2px solid $primary-color-dark;
+      padding: 10px 10px;
+
+      .projectDetails {
+        width: 100%;
+        height: 75%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        column-gap: 15px;
+        justify-content: space-around;
+
+        .projectImage {
+          width: 90%;
+          border: 2px solid $neutral-dark;
+          border-radius: 10px;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 50% 50%;
+            transform: scale(1);
+          }
+        }
+
+        .projectDescription {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          row-gap: 10px;
+
+          .projectTitle {
+            width: fit-content;
+            padding: 0 15px;
+            padding-left: 0px;
+            font-size: 1.5rem;
+            font-family: $third-font;
+            color: $neutral-light;
+            border-bottom: 2px solid $primary-color-dark;
+          }
+
+          .projectText {
+            width: 95%;
+            height: 80%;
+            font-size: 1rem;
+            color: $neutral-light;
+            font-family: $primary-font;
+          }
+        }
+      }
+
+      .moreProjectInfo {
+        width: 100%;
+        height: 25%;
+        padding: 10px;
+        padding-left: 0px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        column-gap: 10px;
+
+        .projectLinks {
+          width: 35%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          row-gap: 10px;
+
+          a {
+            border: 2px solid $primary-color-dark;
+            background-color: $primary-color-dark;
+            border-radius: 10px;
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0px 10px;
+            text-decoration: none;
+
+            span {
+              width: 85%;
+              font-size: 3vw; 
+              overflow: hidden;
+              text-overflow: ellipsis;
+              text-align: center;
+              font-weight: bold;
+              font-family: $secondary-font;
+              color: $neutral-dark;
+            }
+
+            .liveDemoIcon {
+              width: 15px;
+            }
+
+            .sourceCodeIcon {
+              width: 20px;
+            }
+          }
+        }
+
+        .projectTechStack {
+          width: 65%;
+          margin: 0 auto;
+          row-gap: 10px;
+
+          .techHeader {
+            display: inline-block;
+            width: fit-content;
+            color: $neutral-light;
+            font-size: 1rem;
+            font-family: $third-font;
+            padding-right: 15px;
+            border-bottom: 2px solid $primary-color-dark;
+            margin-bottom: 10px;
+          }
+
+          .techgroup {
+            width: fit-content;
+            height: 25.5%;
+            display: flex;
+            column-gap: 10px;
+            align-items: center;
+            justify-content: center;
+
+            .technologyType {
+              display: none;
+            }
+
+            .technologies {
+              width: 100%;
+              display: flex;
+              column-gap: 5px;
+              height: 30px;
+  
+              .singletechHolder{
+                margin-top: 5px;
+                width: 25px;
+                padding: 2px;
+                background-color: $background-color;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+  
+                img {
+                  width: 100%;
+                  object-fit: contain;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .modalCloseButton {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 30px;
+      cursor: pointer;
+    }
+
+    .clickBounce {
+      width: 30px;
+      animation: bounce 200ms linear forwards;
+    }
+  }
+
+  .showProjectModal {
+    opacity: 0;
+    animation: projectView 200ms linear forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -109,7 +337,7 @@
           .projectTitle {
             width: fit-content;
             padding: 0 15px;
-            padding-left: 0px;
+            padding-left: 0;
             font-size: 1.5rem;
             font-family: $third-font;
             color: $neutral-light;
@@ -130,7 +358,7 @@
         width: 100%;
         height: 45%;
         padding: 10px;
-        padding-left: 0px;
+        padding-left: 0;
         display: flex;
         justify-content: space-around;
         column-gap: 20px;
@@ -151,16 +379,16 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 0px 10px;
+            padding: 0 10px;
             text-decoration: none;
 
             span {
-             width: 85%;
-             font-size: 1rem;
-             text-align: center;
-             font-weight: bold;
-             font-family: $secondary-font;
-             color: $neutral-dark;
+              width: 85%;
+              font-size: 1rem;
+              text-align: center;
+              font-weight: bold;
+              font-family: $secondary-font;
+              color: $neutral-dark;
             }
 
             .liveDemoIcon {
@@ -188,7 +416,7 @@
           display: flex;
           flex-direction: column;
           row-gap: 10px;
-          padding: 0px 10px;
+          padding: 0 10px;
 
           .techHeader {
             color: $neutral-light;
@@ -215,7 +443,7 @@
             column-gap: 10px;
             height: 50px;
 
-            .singletechHolder{
+            .singletechHolder {
               margin-top: 10px;
               width: 40px;
               height: 40px;
@@ -271,7 +499,7 @@
       animation: bounce 200ms linear forwards;
     }
   }
-  
+
   .showProjectModal {
     opacity: 0;
     animation: projectView 200ms linear forwards;
