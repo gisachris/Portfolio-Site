@@ -33,3 +33,20 @@ $inter-font: 'Inter', sans-serif;
   font-family: $font-family;
   border: 0;
 }
+
+@mixin sectionTitle() {
+  font-family: $primary-font;
+  font-size: 0.9rem;
+  color: $primary-color-dark;
+  background-color: $other-color;
+  border: 0;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+@mixin sectionTopText() {
+  font-family: $third-font;
+  font-size: 1.5rem;
+  color: $neutral-light;
+  text-align: center;
+}
