@@ -86,9 +86,41 @@ const ProjectModal = () => {
               <section className="projectTechStack">
                 <span className="techHeader">Technologies</span>
                 {Data.techStack.frontend && (
-                  <span className="technologyType">Frontend</span>
+                  <div className="techgroup">
+                    <span className="technologyType">Frontend</span>
+                    <section className="technologies">
+                      {Data.techStack.frontend.map((technology) => (
+                        <div className="singletechHolder" title={`${technology} was used in the development of this project`}>
+                          <img src={`src/assets/technologies/${technology}.png`} alt="technology" />
+                        </div>
+                      ))}
+                    </section>
+                  </div>
                 )}
-                <section className="backEndTechnologies"></section>
+                {Data.techStack.backend && (
+                  <div className="techgroup">
+                    <span className="technologyType">Backend</span>
+                    <section className="technologies">
+                      {Data.techStack.backend.map((technology) => (
+                        <div className="singletechHolder" title={`${technology} was used in the development of this project`}>
+                          <img src={`src/assets/technologies/${technology}.png`} alt="technology" />
+                        </div>
+                      ))}
+                    </section>
+                  </div>
+                )}
+                {Data.techStack.testing && (
+                  <div className="techgroup">
+                    <span className="technologyType">Testing</span>
+                    <section className="technologies">
+                      {Data.techStack.testing.map((technology) => (
+                        <div className="singletechHolder" title={`${technology} was used in the Testing of this project`}>
+                          <img src={`src/assets/technologies/${technology}.png`} alt="technology" />
+                        </div>
+                      ))}
+                    </section>
+                  </div>
+                )}
               </section>
             </section>
           </>

@@ -3,7 +3,7 @@
     "id": 1,
     "name": "EduPlanner Web Service",
     "techStack": {
-      "frontend": ["reactjs", "javascript", "reduxjs"],
+      "frontend": ["reactjs", "javascript", "reduxjs", "photoshop", "figma"],
       "backend": ["ruby", "rails", "postgresql"],
       "testing": ["rspec", "capybara"]
     },
