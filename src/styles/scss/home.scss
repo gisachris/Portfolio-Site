@@ -2,7 +2,178 @@
 
 @media screen and (min-width: 767px) {
   #Home {
-    min-height: 200px;
+    width: 100%;
+    padding-bottom: 50px;
+
+    .introHeader {
+      width: 100%;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 15px;
+
+      .headerpart1 {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        .introductionText {
+          word-spacing: .2rem;
+          font-size: 1.5rem;
+          font-family: $inter-font;
+          color: $neutral-light;
+
+          a {
+            color: $primary-color-dark;
+            word-spacing: 0.05rem;
+          }
+        }
+
+        img {
+          margin-left: 10px;
+          width: 35px;
+        }
+      }
+
+      .headerpart2 {
+        width: 100%;
+        font-size: 2rem;
+        color: $neutral-light;
+        font-family: $inter-font;
+        font-weight: bold;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 15px;
+        margin-top: 15px;
+ 
+        .creative {
+
+        }
+      }
+
+      .headerpart3 {
+        margin-top: 25px;
+        width: 100%;
+
+        .desc {
+          width: fit-content;
+          margin: 0 auto;
+          font-size: 0.8rem;
+          font-weight: 500;
+          color: $neutral-light;
+          font-family: $inter-font;
+        }
+      }
+    }
+
+    .headPieceSection {
+      width: 100%;
+      margin-top: 15px;
+
+      .headPieceContainer {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        // width: fit-content;
+        width: 170px;
+        margin: 0 auto;
+        height: 200px;
+        border-radius: 50%;
+        border-top-right-radius: 0%;
+        border-top-left-radius: 0%;
+        // border: 2px solid red;
+        overflow: hidden;
+
+        .background {
+          position: absolute;
+          bottom: 0;
+          width: 165px;
+          height: 160px;
+          border-radius: 50%;
+          background-color: $primary-color-dark;
+          border: 2px solid $semi-dark;
+        }
+
+        img {
+          position: absolute;
+          bottom: 0;
+          object-fit: contain;
+          width: 200px;
+        }
+      }
+    }
+
+    .achievementSection {
+      width: 100%;
+      margin-top: 50px;
+
+      .cardHolder {
+        width: 75%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        column-gap: 25px;
+
+        .arch {
+          width: 33.5%;
+          max-width: 410px;
+          background-color: $other-color;
+          border-radius: 15px;
+          padding: 10px 15px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          column-gap: 20px;
+
+          img {
+            width: 45px;
+            padding: 5px;
+            border-radius: 50%;
+            background-color: $neutral-light;
+            object-fit: contain;
+          }
+
+          .text {
+            width: 85%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            row-gap: 10px;
+
+            .upperText {
+              color: $primary-color-dark;
+              font-size: 1.2rem;
+              font-family: $inter-font;
+              font-weight: 900;
+              height: 35%;
+            }
+
+            .subText {
+              color: $neutral-light;
+              font-size: 1rem;
+              font-family: $inter-font;
+              text-align: center;
+              font-weight: 500;
+              height: 65%;
+            }
+          }
+
+          a {
+            width: 10%;
+            font-size: 1.2rem;
+            color: lightgray;
+            font-family: $primary-font;
+            font-weight: 900;
+            text-decoration: none;            
+          }
+        }
+      }
+    }
   }
-  
 }
