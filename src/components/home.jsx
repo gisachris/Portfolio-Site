@@ -1,3 +1,4 @@
+import { Link } from 'react-scroll';
 import emblemOne from '../assets/icons/emblem-one.png';
 import emblemTwo from '../assets/icons/emblem-two.png';
 import emblemThree from '../assets/icons/emblem-three.png';
@@ -13,7 +14,7 @@ const HomePage = () => {
         upper: '3+',
         sub: 'Years of learning and working Experience'
       },
-      link: "#About"
+      link: "About"
     },
     {
       emblem: emblemTwo,
@@ -21,7 +22,7 @@ const HomePage = () => {
         upper: '50+',
         sub: 'Completed Projects'
       },
-      link: "#Portfolio"
+      link: "Portfolio"
     },
     {
       emblem: emblemThree,
@@ -29,7 +30,7 @@ const HomePage = () => {
         upper: '35+',
         sub: 'Happy Clients and  colleagues'
       },
-      link: "#Testimonials"
+      link: "Testimonials"
     }
   ];
 
@@ -63,12 +64,12 @@ const HomePage = () => {
         <div className="cardHolder">
           {cards.map((card) => (
             <div className="arch" key={card.link}>
-            <img src={card.emblem} alt="" />
-            <section className="text">
-              <span className="upperText">{card.text.upper}</span>
-              <span className="subText">{card.text.sub}</span>
-            </section>
-            <a href={card.link}>&gt;</a>
+              <img src={card.emblem} alt="" />
+              <section className="text">
+                <span className="upperText">{card.text.upper}</span>
+                <span className="subText">{card.text.sub}</span>
+              </section>
+              <Link to={card.link} spy={true} smooth={true} offset={0} duration={500}>&gt;</Link>
           </div>
           ))}
         </div>

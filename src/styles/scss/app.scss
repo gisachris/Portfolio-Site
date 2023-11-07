@@ -1,7 +1,9 @@
 @import 'partials/config';
 
 //base settings
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
