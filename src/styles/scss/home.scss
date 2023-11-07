@@ -3,7 +3,7 @@
 @media screen and (min-width: 767px) {
   #Home {
     width: 100%;
-    padding-bottom: 50px;
+    margin-bottom: 100px;
 
     .introHeader {
       width: 100%;
@@ -38,7 +38,9 @@
       }
 
       .headerpart2 {
-        width: 100%;
+        width: 75%;
+        max-width: 700px;
+        margin: 0 auto;
         font-size: 2rem;
         color: $neutral-light;
         font-family: $inter-font;
@@ -48,9 +50,11 @@
         justify-content: center;
         column-gap: 15px;
         margin-top: 15px;
- 
-        .creative {
 
+        .textHolder {
+          width: 100%;
+          display: flex;
+          column-gap: 15px;
         }
       }
 

@@ -43,9 +43,11 @@ const HomePage = () => {
           <img src={wavingHand} alt="waving Hand" />
         </div>
         <div className="headerpart2">
-          <span className="creative">Creative Designer</span>
-          <span className="and">&</span>
-          <div className="flipTtitles">Frontend Developer</div>
+          <div className="textHolder">
+            <span className="creative">Creative Designer</span>
+            <span className="and">&</span>
+            <span className='stack'>FullStack Developer</span>
+          </div>
         </div>
         <div className="headerpart3">
           <h1 className="desc">I Design and Code Web services and Applications</h1>
