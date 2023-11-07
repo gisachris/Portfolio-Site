@@ -1,6 +1,7 @@
 import {useState } from 'react';
 import formContext from "../contexts/formContext";
 import projectModalContext from '../contexts/projectModalContext';
+import HomePage from './home';
 import FeaturedApps from './featured';
 import ProjectModal from './shared/projectDataModal';
 import Contact from './contact';
@@ -19,9 +20,7 @@ const MainBody = ({isOpen}) => {
 
   return (
     <div className={isOpen ? 'MainBlur' : "Main"}>
-      <div className="testing loc-1" id="Home">
-        <h1>some text</h1>
-      </div>
+      <HomePage />
       <div className="testing loc-2" id="About" />
       <div className="testing loc-3" id="Skills" />
       <projectModalContext.Provider value={{projectData, setProjectData}}>
