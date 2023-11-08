@@ -11,6 +11,8 @@ const Testimonials = () => {
   const [recoms, setRecoms] = useState(null);
   const [dataFetched, setDataFetched] = useState(false);
   const recomsHolder = useRef(null);
+  const hasEffectRun = useRef(false);
+
   // eslint-disable-next-line
   const recommendationsLink = process.env.VITE_RECOMMENDATIONS_LINK;
 
@@ -18,51 +20,53 @@ const Testimonials = () => {
 
   useEffect(() => {
     // Intersection observer
-    if(recoms === null){
-      const observer = new IntersectionObserver( async (entries) => {
-        const [entry] = entries;
-        try {
-          if (entry.isIntersecting && dataFetched === false) {
-            setLoading(true);
-    
-            const request = await fetch(recommendationsLink);
-            if (request.ok && dataFetched === false) {
-              const response = await request.json();
-              setRecoms(response.posts);
-              setDataFetched(true);
-            }
-            setLoading(false);
+    const observer = new IntersectionObserver( async (entries) => {
+      const [entry] = entries;
+      try {
+        if (entry.isIntersecting && !hasEffectRun.current) {
+          hasEffectRun.current = true;
+          setLoading(true);
+  
+          const request = await fetch(recommendationsLink);
+          if (request.ok && dataFetched === false) {
+            const response = await request.json();
+            setRecoms(response.posts);
+            setDataFetched(true);
           }
-        } catch (error) {
           setLoading(false);
+        }
+      } catch (error) {
+        setLoading(false);
+        setPopupShow({
+          status: true,
+          message: `${error}`,
+          pass: false,
+        });
+
+        setTimeout(() => {
           setPopupShow({
-            status: true,
-            message: `${error}`,
+            status: false,
+            message: null,
             pass: false,
           });
-  
-          setTimeout(() => {
-            setPopupShow({
-              status: false,
-              message: null,
-              pass: false,
-            });
-          }, 3000)
-        }
-      }, {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.8,
-      });
-  
-      let recommendationsHolder = recomsHolder.current;
-  
-      if (recommendationsHolder) {
-        observer.observe(recommendationsHolder);
+        }, 3000)
       }
+    }, {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.8,
+    });
+
+    let recommendationsHolder = recomsHolder.current;
+
+    if (recommendationsHolder) {
+      observer.observe(recommendationsHolder);
     }
 
-  });
+    return () => {
+      if (recommendationsHolder) observer.unobserve(recommendationsHolder);
+    }
+  }, []);
 
   return (
     <section ref={recomsHolder} id="Testimonials">
