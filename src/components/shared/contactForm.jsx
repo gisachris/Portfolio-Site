@@ -22,6 +22,7 @@ const ContactForm = () => {
     innerForm.classList.add("formBlured");
     setLoading(true);
 
+    // eslint-disable-next-line
     const keys = process.env;
 
     emailjs.sendForm(`${keys.VITE_SERVICE_ID}`, `${keys.VITE_TEMPLATE_ID}`, form.current, `${keys.VITE_PUBLIC_KEY}`)

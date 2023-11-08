@@ -11,6 +11,7 @@ const Testimonials = () => {
   const [recoms, setRecoms] = useState(null);
   const [dataFetched, setDataFetched] = useState(false);
   const recomsHolder = useRef(null);
+  // eslint-disable-next-line
   const recommendationsLink = process.env.VITE_RECOMMENDATIONS_LINK;
 
   const { setPopupShow } = useContext(PopupContext);
