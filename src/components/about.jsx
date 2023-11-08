@@ -16,7 +16,7 @@ const AboutPage = () =>  {
           <span className="aboutText">About Me</span>
         </div>
         <div className="paragraph">
-        <div class="text">
+        <div className="text">
           <p>
             I'm Gisa Chris, a solutions developer for the Web.
           </p>

@@ -29,6 +29,7 @@
           a {
             color: $primary-color-dark;
             word-spacing: 0.05rem;
+            text-decoration: underline;
           }
         }
 
@@ -126,10 +127,12 @@
       margin-top: 25px;
 
       .cardHolder {
-        width: fit-content;
+        width: 85%;
+        min-width: 200px;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
+        align-items: center;
         justify-content: center;
         row-gap: 10px;
 
@@ -223,6 +226,7 @@
           a {
             color: $primary-color-dark;
             word-spacing: 0.05rem;
+            text-decoration: underline;
           }
         }
 
