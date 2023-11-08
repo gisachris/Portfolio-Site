@@ -28,7 +28,7 @@ const Navigation = ({ isOpen, toggleNavigation }) => {
             <Link to="Contact" spy={true} smooth={true} offset={500} duration={500} onClick={toggleNavigation}>Contact</Link>
           </section>
           <section className="navHireButton">
-            <button type="submit" className="HireButton">Hire Me</button>
+            <a href="https://drive.google.com/file/d/1ky-Ikl2mZ-YB4LQqljbg8tEOSr1N9rV6/view?usp=drive_link" className="aboutButton" target='blank'>My Resume</a>
           </section>
         </nav>
       </div>

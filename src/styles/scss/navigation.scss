@@ -82,6 +82,23 @@
     }
   }
 
+  .navHireButton {
+    margin-top: 20px;
+
+    a {
+      @include button-base($primary-color-dark, $other-color, $primary-font);
+
+      text-decoration: none;
+      border-radius: 20px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-left: 10px solid rgb(185, 127, 0);
+      width: fit-content;
+      padding: 6px 15px;
+      justify-self: start;
+    }
+  }
+
   .navLinks {
     width: 100%;
     margin-top: 10px;
@@ -104,18 +121,6 @@
         background-color: $primary-color-dark;
         color: $neutral-dark;
       }
-    }
-  }
-
-  .navHireButton {
-    margin-left: 12px;
-
-    button {
-      @include button-base($primary-color-dark, $other-color, $primary-font);
-
-      border-radius: 20px;
-      width: 100px;
-      justify-self: start;
     }
   }
 }
@@ -172,6 +177,27 @@
     }
   }
 
+  .navHireButton {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    margin-right: 20px;
+    padding-right: 10px;
+    justify-content: flex-end;
+
+    a {
+      @include button-base($primary-color-dark, $other-color, $primary-font);
+
+      text-decoration: none;
+      border-radius: 20px;
+      padding: 8px 15px;
+      // width: 100px;
+      // justify-self: start;
+
+      cursor: pointer;
+    }
+  }
+
   .navLinks {
     display: flex;
     align-items: center;
@@ -196,24 +222,6 @@
 
     .active {
       animation: linkChange 0.3s normal ease-in forwards;
-    }
-  }
-
-  .navHireButton {
-    display: flex;
-    align-items: center;
-    width: 20%;
-    margin-right: 20px;
-    padding-right: 10px;
-    justify-content: flex-end;
-
-    button {
-      @include button-base($primary-color-dark, $other-color, $primary-font);
-
-      border-radius: 20px;
-      width: 100px;
-      justify-self: start;
-      cursor: pointer;
     }
   }
 }

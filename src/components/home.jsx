@@ -39,7 +39,7 @@ const HomePage = () => {
       <section className="introHeader">
         <div className="headerpart1">
           <h1 className="introductionText">
-            Hi, I am <a href='#About'>Gisa Chris</a> 
+            Hi, I am <Link to="About" spy={true} smooth={true} offset={0} duration={500}>Gisa Chris</Link>
           </h1>
           <img src={wavingHand} alt="waving Hand" />
         </div>

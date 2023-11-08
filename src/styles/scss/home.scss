@@ -29,6 +29,7 @@
           a {
             color: $primary-color-dark;
             word-spacing: 0.05rem;
+            text-decoration: underline;
           }
         }
 
@@ -126,10 +127,12 @@
       margin-top: 25px;
 
       .cardHolder {
-        width: 95%;
+        width: 85%;
+        min-width: 200px;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
+        align-items: center;
         justify-content: center;
         row-gap: 10px;
 
@@ -198,7 +201,7 @@
 @media screen and (min-width: 767px) {
   #Home {
     width: 100%;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
 
     .introHeader {
       width: 100%;
@@ -223,6 +226,7 @@
           a {
             color: $primary-color-dark;
             word-spacing: 0.05rem;
+            text-decoration: underline;
           }
         }
 
@@ -233,7 +237,7 @@
       }
 
       .headerpart2 {
-        width: 75%;
+        // width: 75%;
         max-width: 700px;
         margin: 0 auto;
         font-size: 2rem;
