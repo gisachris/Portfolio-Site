@@ -13,6 +13,8 @@ const Testimonials = () => {
   const recomsHolder = useRef(null);
   const hasEffectRun = useRef(false);
 
+  // eslint-disable-next-line 
+  const recommendationsLink = process.env.RECOMMENDATIONS_LINK;
   const { setPopupShow } = useContext(PopupContext);
 
   useEffect(() => {
@@ -23,9 +25,8 @@ const Testimonials = () => {
         if (entry.isIntersecting && !hasEffectRun.current) {
           hasEffectRun.current = true;
           setLoading(true);
-
-          // eslint-disable-next-line  
-          const request = await fetch(process.env.VITE_RECOMMENDATIONS_LINK);
+ 
+          const request = await fetch(recommendationsLink);
           if (request.ok && dataFetched === false) {
             const response = await request.json();
             setRecoms(response.posts);

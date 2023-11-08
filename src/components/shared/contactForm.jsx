@@ -22,8 +22,13 @@ const ContactForm = () => {
     innerForm.classList.add("formBlured");
     setLoading(true);
 
-    // eslint-disable-next-line
-    emailjs.sendForm(`${process.env.VITE_SERVICE_ID}`, `${process.env.VITE_TEMPLATE_ID}`, form.current, `${process.env.VITE_PUBLIC_KEY}`)
+    /* eslint-disable */
+    const serviceId = process.env.SERVICE_ID;
+    const templateId = process.env.TEMPLATE_ID;
+    const publicKey = process.env.PUBLIC_KEY;
+    /* eslint-disable */
+  
+    emailjs.sendForm(`${serviceId}`, `${templateId}`, form.current, `${publicKey}`)
       .then(() => {
         const innerForm = form.current.querySelector(".form");
         innerForm.classList.remove("formBlured");
