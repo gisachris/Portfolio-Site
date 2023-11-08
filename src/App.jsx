@@ -4,7 +4,7 @@ import Navigation from './components/navigation';
 // import Toggler from '../src/components/shared/toggler';
 import PopUpMessage from '../src/components/shared/message';
 import PopupContext from './contexts/popupContext';
-import './styles/css/App.css';
+import './styles/css/app.css';
 
 function App() {
   // navigation state
