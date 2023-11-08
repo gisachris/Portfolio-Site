@@ -2,7 +2,7 @@ import { useState, useRef, useContext, useEffect } from "react";
 import PopupContext from "../../contexts/popupContext";
 import formContext from "../../contexts/formContext";
 import emailjs from "@emailjs/browser";
-import sendButton from "../../assets/icons/emailbutton.svg";
+import sendButton from "/icons/emailButton.svg";
 import Loader from "./loader";
 
 const ContactForm = () => {

@@ -6,7 +6,7 @@ const AboutPage = () =>  {
       <section className="aboutpictureSection">
         <div className="aboutPicturecontainer">
           <div className="aboutPicturecontent">
-            <img src="src/assets/images/profileclear.png" alt="Inside Image" />
+            <img src="/images/profileclear.png" alt="Inside Image" />
           </div>
         </div>
       </section>

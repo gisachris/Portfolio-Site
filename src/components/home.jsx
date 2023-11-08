@@ -1,9 +1,9 @@
 import { Link } from 'react-scroll';
-import emblemOne from '../assets/icons/emblem-one.png';
-import emblemTwo from '../assets/icons/emblem-two.png';
-import emblemThree from '../assets/icons/emblem-three.png';
-import headPiece from '../assets/images/mini.png'
-import wavingHand from '../assets/icons/wavingHand.png';
+import emblemOne from '/icons/emblem-one.png';
+import emblemTwo from '/icons/emblem-two.png';
+import emblemThree from '/icons/emblem-three.png';
+import headPiece from '/images/mini.png'
+import wavingHand from '/icons/wavingHand.png';
 import '../styles/css/home.css';
 
 const HomePage = () => {

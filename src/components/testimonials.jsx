@@ -18,51 +18,50 @@ const Testimonials = () => {
 
   useEffect(() => {
     // Intersection observer
-    const observer = new IntersectionObserver( async (entries) => {
-      const [entry] = entries;
-      try {
-        if (entry.isIntersecting && dataFetched === false) {
-          setLoading(true);
-  
-          const request = await fetch(recommendationsLink);
-          if (request.ok && dataFetched === false) {
-            const response = await request.json();
-            setRecoms(response.posts);
-            setDataFetched(true);
+    if(recoms === null){
+      const observer = new IntersectionObserver( async (entries) => {
+        const [entry] = entries;
+        try {
+          if (entry.isIntersecting && dataFetched === false) {
+            setLoading(true);
+    
+            const request = await fetch(recommendationsLink);
+            if (request.ok && dataFetched === false) {
+              const response = await request.json();
+              setRecoms(response.posts);
+              setDataFetched(true);
+            }
+            setLoading(false);
           }
+        } catch (error) {
           setLoading(false);
-        }
-      } catch (error) {
-        setLoading(false);
-        setPopupShow({
-          status: true,
-          message: `${error}`,
-          pass: false,
-        });
-
-        setTimeout(() => {
           setPopupShow({
-            status: false,
-            message: null,
+            status: true,
+            message: `${error}`,
             pass: false,
           });
-        }, 3000)
+  
+          setTimeout(() => {
+            setPopupShow({
+              status: false,
+              message: null,
+              pass: false,
+            });
+          }, 3000)
+        }
+      }, {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.8,
+      });
+  
+      let recommendationsHolder = recomsHolder.current;
+  
+      if (recommendationsHolder) {
+        observer.observe(recommendationsHolder);
       }
-    }, {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.8,
-    });
-
-    let recommendationsHolder = recomsHolder.current;
-
-    if (recommendationsHolder) {
-      observer.observe(recommendationsHolder);
     }
 
-    return () => {
-      if (recommendationsHolder) observer.unobserve(recommendationsHolder);
-    }    
   });
 
   return (

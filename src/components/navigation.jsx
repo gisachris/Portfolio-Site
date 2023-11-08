@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import '../styles/css/navigation.css';
-import logo from '../assets/images/logo.png';
-import menuButton from '../assets/icons/hamenu.png';
-import closeButton from '../assets/icons/close.png';
+import logo from '/images/logo.png';
+import menuButton from '/icons/hamenu.png';
+import closeButton from '/icons/close.png';
 import { Link } from 'react-scroll';
 
 const Navigation = ({ isOpen, toggleNavigation }) => {
