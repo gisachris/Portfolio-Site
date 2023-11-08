@@ -1,37 +1,29 @@
 @import './partials/config';
 
-@media screen and (min-width: 767px) {
+@media screen and (max-width: 767px) {
   #About {
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    column-gap: 10px;
-    margin-bottom: 100px;
+    row-gap: 10px;
+    margin-bottom: 50px;
 
-    .pictureSection {
-      width: 50%;
+    .aboutpictureSection {
+      width: 80%;
+      margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: center;
 
-      // .background {
-      //   width: 500px;
-      //   height: 400px;
-      //   background-image: url('src/assets/icons/aboutbackground.svg');
-      //   background-position: center center;
-      //   background-repeat: no-repeat;
-      //   background-size: cover;
-      //   overflow: hidden;
-      // }
-
-      .container {
+      .aboutPicturecontainer {
         position: relative;
         overflow: hidden;
         width: 100%;
 
-        .content {
-          width: fit-content;
+        .aboutPicturecontent {
+          width: 100%;
           margin: 0 auto;
           background-image: url('src/assets/icons/aboutbackground.svg');
           background-position: center bottom;
@@ -48,8 +40,8 @@
 
           img {
             object-fit: contain;
-            width: fit-content;
-            padding: 0px 20px;
+            width: 100%;
+            padding: 0 20px;
             -webkit-mask-image: url('src/assets/icons/aboutbackground.svg');
             mask-image: url('src/assets/icons/aboutbackground.svg');
             -webkit-mask-repeat: no-repeat;
@@ -60,11 +52,11 @@
             mask-position: center bottom;
           }
         }
-      }      
+      }
     }
 
-    .detailsSection {
-      width: 50%;
+    .aboutdetailsSection {
+      width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -72,15 +64,15 @@
       row-gap: 15px;
       padding: 15px;
 
-      .header {
+      .aboutheader {
         width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         justify-content: center;
         row-gap: 10px;
 
-        .detailsHeader {
+        .aboutdetailsHeader {
           @include sectionTitle();
         }
 
@@ -90,11 +82,134 @@
         }
       }
 
-      .paragraph {
+      .aboutparagraph {
+        width: 95%;
+        margin: 0 auto;
+
+        .aboutpagepartext {
+          text-align: center;
+          color: $neutral-light;
+          font-size: 0.98rem;
+          font-family: $primary-font;
+          font-weight: 500;
+          line-height: 1.6rem;
+          width: 100%;
+          background-color: rgba($color: #000, $alpha: 0.2);
+          border-radius: 10px;
+          padding: 15px 10px;
+
+          p {
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+      .aboutbuttonSection {
         width: 100%;
+        text-align: center;
+        margin-top: 35px;
+
+        .aboutButton {
+          @include button-base($primary-color-dark, $other-color, $primary-font);
+          border-radius: 20px;
+          width: 100px;
+          // justify-self: center;
+          text-decoration: none;
+          font-size: 0.9rem;
+          padding: 10px 15px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 767px) {
+  #About {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    margin-bottom: 100px;
+
+    .aboutpictureSection {
+      width: 50vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .aboutPicturecontainer {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+
+        .aboutPicturecontent {
+          width: 100%;
+          margin: 0 auto;
+          background-image: url('src/assets/icons/aboutbackground.svg');
+          background-position: center bottom;
+          background-size: 98%;
+          background-repeat: no-repeat;
+          -webkit-mask-image: url('src/assets/icons/aboutbackground.svg');
+          mask-image: url('src/assets/icons/aboutbackground.svg');
+          -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+          -webkit-mask-size: cover;
+          mask-size: cover;
+          -webkit-mask-position: center bottom;
+          mask-position: center bottom;
+
+          img {
+            object-fit: contain;
+            width: 100%;
+            padding: 0 20px;
+            -webkit-mask-image: url('src/assets/icons/aboutbackground.svg');
+            mask-image: url('src/assets/icons/aboutbackground.svg');
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-size: cover;
+            mask-size: cover;
+            -webkit-mask-position: center bottom;
+            mask-position: center bottom;
+          }
+        }
+      }
+    }
+
+    .aboutdetailsSection {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      row-gap: 15px;
+      padding: 15px;
+
+      .aboutheader {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        row-gap: 10px;
+
+        .aboutdetailsHeader {
+          @include sectionTitle();
+        }
+
+        .aboutText {
+          @include sectionTopText();
+          font-size: 2rem;
+        }
+      }
+
+      .aboutparagraph {
+        width: 100%;
+        overflow-y: scroll;
         overflow: hidden;
 
-        .text {
+        .aboutpagepartext {
           text-align: left;
           color: $neutral-light;
           font-size: 0.98rem;
@@ -102,7 +217,8 @@
           font-weight: 500;
           line-height: 1.6rem;
           max-width: 600px;
-          background-color: rgba($color: #000000, $alpha: 0.2);
+          min-height: fit-content;
+          background-color: rgba($color: #000, $alpha: 0.2);
           border-radius: 10px;
           padding: 10px;
           // padding-left: 5px;
@@ -113,12 +229,13 @@
         }
       }
 
-      .buttonSection {
+      .aboutbuttonSection {
         width: 100%;
         margin-top: 35px;
 
         .aboutButton {
           @include button-base($primary-color-dark, $other-color, $primary-font);
+
           border-radius: 20px;
           width: 100px;
           justify-self: start;

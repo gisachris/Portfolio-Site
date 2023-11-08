@@ -3,22 +3,22 @@ import '../styles/css/about.css';
 const AboutPage = () =>  {
   return (
     <div id='About'>
-      <section className="pictureSection">
-        <div className="container">
-          <div className="content">
+      <section className="aboutpictureSection">
+        <div className="aboutPicturecontainer">
+          <div className="aboutPicturecontent">
             <img src="src/assets/images/profileclear.png" alt="Inside Image" />
           </div>
         </div>
       </section>
-      <section className="detailsSection">
-        <div className="header">
-          <h1 className="detailsHeader">WHO I AM </h1>
+      <section className="aboutdetailsSection">
+        <div className="aboutheader">
+          <h1 className="aboutdetailsHeader">WHO I AM </h1>
           <span className="aboutText">About Me</span>
         </div>
-        <div className="paragraph">
-        <div className="text">
+        <div className="aboutparagraph">
+        <div className="aboutpagepartext">
           <p>
-            I'm Gisa Chris, a solutions developer for the Web.
+            I&apos;m Gisa Chris, a solutions developer for the Web.
           </p>
 
           <p>
@@ -31,7 +31,7 @@ const AboutPage = () =>  {
           </p>
         </div>
         </div>
-        <div className="buttonSection">
+        <div className="aboutbuttonSection">
           <a href="https://drive.google.com/file/d/1ky-Ikl2mZ-YB4LQqljbg8tEOSr1N9rV6/view?usp=drive_link" className="aboutButton" target='blank'>My Resume</a>
         </div>
       </section>
