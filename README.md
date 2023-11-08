@@ -138,6 +138,8 @@ If you like this project consider leaving a star in the repo.
 
 Original design idea by [ Kartik Bansal on Figma.](<https://www.figma.com/file/uDYE2tjJNrNTDTBm4QaG4f/Personal-portfolio-Website-landing-page-UX-UI-kit-(Design-By-Kartik-Bansal)-(Community)?type=design&node-id=91-11&mode=design&t=VqOBASZmsKNPn8P6-0>)
 
+Application icons by <a target="_blank" href="https://icons8.com">Icons8</a>
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->

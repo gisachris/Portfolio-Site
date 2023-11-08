@@ -22,7 +22,7 @@ const ContactForm = () => {
     innerForm.classList.add("formBlured");
     setLoading(true);
 
-    const keys = import.meta.env;
+    const keys = process.env;
 
     emailjs.sendForm(`${keys.VITE_SERVICE_ID}`, `${keys.VITE_TEMPLATE_ID}`, form.current, `${keys.VITE_PUBLIC_KEY}`)
       .then(() => {
