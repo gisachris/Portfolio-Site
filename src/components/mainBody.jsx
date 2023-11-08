@@ -3,6 +3,7 @@ import formContext from "../contexts/formContext";
 import projectModalContext from '../contexts/projectModalContext';
 import HomePage from './home';
 import AboutPage from './about';
+import SkillsPage from './skills';
 import FeaturedApps from './featured';
 import ProjectModal from './shared/projectDataModal';
 import Contact from './contact';
@@ -23,7 +24,7 @@ const MainBody = ({isOpen}) => {
     <div className={isOpen ? 'MainBlur' : "Main"}>
       <HomePage />
       <AboutPage />
-      <div className="testing loc-3" id="Skills" />
+      <SkillsPage />
       <projectModalContext.Provider value={{projectData, setProjectData}}>
         <FeaturedApps />
         <ProjectModal />
