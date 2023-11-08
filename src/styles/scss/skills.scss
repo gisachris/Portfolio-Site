@@ -5,16 +5,20 @@
 @media screen and (min-width: 767px) {
   #Skills {
     width: 100%;
+    height: auto;
+    overflow: hidden;
     display: flex;
     column-gap: 10px;
     margin: 0 auto;
-    margin-bottom: 100px;
+    // margin-bottom: 100px;
 
     .skillsText {
       width: 50%;
+      overflow: hidden;
       display: flex;
       flex-direction: column;
       row-gap: 15px;
+      padding: 20px 0px;
 
       .topText {
         width: 75%;
@@ -68,15 +72,20 @@
 
     .skillsShowCase {
       width: 50%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       .skillsHolder {
         width: 85%;
-        margin: 0 auto;
-        display: flex;
+        margin: 70px auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(70px, 70px));
         gap: 10px;
 
         .skillCover {
-          width: 100px;
+          width: 70px;
           border-radius: 10px;
           background-color: $icon-background;
 
