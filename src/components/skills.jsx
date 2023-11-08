@@ -34,7 +34,7 @@ const SkillsPage = () => {
       <section className="skillsShowCase">
         <div className="skillsHolder">
           {techSkills && techSkills.map((skill) => (
-            <div className="skillCover" key={skill} >
+            <div className="skillCover" key={skill} title={skill}>
               <img
                 src={`src/assets/technologies/${skill}.png` || `src/assets/technologies/${skill}.svg`} 
                 alt="skill Display"
