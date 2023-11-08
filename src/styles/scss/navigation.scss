@@ -108,13 +108,18 @@
   }
 
   .navHireButton {
-    margin-left: 12px;
+    margin-top: 20px;
+    // margin-left: 1px;
 
-    button {
+    a {
       @include button-base($primary-color-dark, $other-color, $primary-font);
-
+      text-decoration: none;
       border-radius: 20px;
-      width: 100px;
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-left: 10px solid rgb(185, 127, 0);
+      width: fit-content;
+      padding: 6px 15px;
       justify-self: start;
     }
   }
@@ -207,9 +212,9 @@
     padding-right: 10px;
     justify-content: flex-end;
 
-    button {
+    a {
       @include button-base($primary-color-dark, $other-color, $primary-font);
-
+      text-decoration: none;
       border-radius: 20px;
       width: 100px;
       justify-self: start;
