@@ -3,5 +3,69 @@
 @media screen and (max-width: 767px) {}
 
 @media screen and (min-width: 767px) {
-  #Skills {}
+  #Skills {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+
+    .skillsText {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+
+      .topText {
+        width: 75%;
+        margin: 0 auto;
+
+        .skillsHeader {
+          @include sectionTitle();
+          width: fit-content;
+          padding: 5px 10px;
+          margin-bottom: 10px;
+        }
+
+        .skillsTopPar {
+          @include sectionTopText();
+          width: fit-content;
+          font-size: 2.3rem;
+          text-align: left;
+        }
+      }
+
+      .lowText {
+        width: 75%;
+        margin: 0 auto;
+        margin-top: 15px;
+        max-width: 500px;
+
+        .lowerPar{
+          font-size: 1rem;
+          font-family: $inter-font;
+          font-weight: 300;
+          color: $neutral-light;
+        }
+      }
+
+      .skillsButtonHolder {
+        width: 75%;
+        margin: 0 auto;
+        margin-top: 20px;
+
+        a {
+          @include button-base($primary-color-dark, $other-color, $primary-font);
+          border-radius: 20px;
+          width: 100px;
+          text-decoration: none;
+          font-size: 0.9rem;
+          padding: 10px 15px;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .skillsShowCase {
+      width: 50%;
+    }
+  }
 }
