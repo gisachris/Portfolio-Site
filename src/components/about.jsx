@@ -3,7 +3,13 @@ import '../styles/css/about.css';
 const AboutPage = () =>  {
   return (
     <div id='About'>
-      <section className="pictureSection"></section>
+      <section className="pictureSection">
+        <div className="container">
+          <div className="content">
+            <img src="src/assets/images/profileclear.png" alt="Inside Image" />
+          </div>
+        </div>
+      </section>
       <section className="detailsSection">
         <div className="header">
           <h1 className="detailsHeader">WHO I AM </h1>

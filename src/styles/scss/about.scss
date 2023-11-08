@@ -11,6 +11,30 @@
 
     .pictureSection {
       width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      // .background {
+      //   width: 500px;
+      //   height: 400px;
+      //   background-image: url('src/assets/icons/aboutbackground.svg');
+      //   background-position: center center;
+      //   background-repeat: no-repeat;
+      //   background-size: cover;
+      //   overflow: hidden;
+      // }
+
+      .container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+
+        .content {
+          width: 400px;
+          
+        }
+      }      
     }
 
     .detailsSection {
