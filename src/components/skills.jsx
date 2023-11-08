@@ -1,7 +1,10 @@
+import skills from '../data/skills.json';
 import { Link } from 'react-scroll';
 import '../styles/css/skills.css';
 
 const SkillsPage = () => {
+  const techSkills = skills || null;
+
   return (
     <div id='Skills'>
       <section className="skillsText">
@@ -19,7 +22,13 @@ const SkillsPage = () => {
         </div>
       </section>
       <section className="skillsShowCase">
-        <div className="skillsHolder"></div>
+        <div className="skillsHolder">
+          {techSkills && techSkills.map((skill) => (
+            <div className="skillCover" key={skill}>
+              <img src={`src/assets/technologies/${skill}.png` || `src/assets/technologies/${skill}.svg`} alt="skill Display" />
+            </div>
+          ))}
+        </div>
       </section>
     </div>
   );
