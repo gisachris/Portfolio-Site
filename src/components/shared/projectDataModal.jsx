@@ -80,7 +80,7 @@ const ProjectModal = () => {
                     <section className="technologies">
                       {Data.techStack.frontend.map((technology) => (
                         <div className="singletechHolder" key={technology} title={`${technology} was used in the development of this project`}>
-                          <img src={`src/assets/technologies/${technology}.png`} alt="technology" />
+                          <img src={`/technologies/${technology}.png`} alt="technology" />
                         </div>
                       ))}
                     </section>
@@ -92,7 +92,7 @@ const ProjectModal = () => {
                     <section className="technologies">
                       {Data.techStack.backend.map((technology) => (
                         <div className="singletechHolder" key={technology} title={`${technology} was used in the development of this project`}>
-                          <img src={`src/assets/technologies/${technology}.png`} alt="technology" />
+                          <img src={`/technologies/${technology}.png`} alt="technology" />
                         </div>
                       ))}
                     </section>
@@ -104,7 +104,7 @@ const ProjectModal = () => {
                     <section className="technologies">
                       {Data.techStack.testing.map((technology) => (
                         <div className="singletechHolder" key={technology} title={`${technology} was used in the Testing of this project`}>
-                          <img src={`src/assets/technologies/${technology}.png`} alt="technology" />
+                          <img src={`/technologies/${technology}.png`} alt="technology" />
                         </div>
                       ))}
                     </section>

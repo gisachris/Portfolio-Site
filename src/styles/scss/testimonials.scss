@@ -209,8 +209,10 @@
       width: fit-content;
       text-align: center;
       margin: 0 auto;
+      color: $neutral-light;
 
       a {
+        margin-left: 5px;
         color: #06f;
       }
     }
@@ -436,8 +438,10 @@
         width: fit-content;
         text-align: center;
         margin: 0 auto;
+        color: $neutral-light;
 
         a {
+          padding-left: 5px;
           color: #06f;
         }
       }

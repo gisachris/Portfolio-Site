@@ -11,6 +11,8 @@ const Testimonials = () => {
   const [recoms, setRecoms] = useState(null);
   const [dataFetched, setDataFetched] = useState(false);
   const recomsHolder = useRef(null);
+  const hasEffectRun = useRef(false);
+
   const recommendationsLink = import.meta.env.VITE_RECOMMENDATIONS_LINK;
 
   const { setPopupShow } = useContext(PopupContext);
@@ -20,10 +22,11 @@ const Testimonials = () => {
     const observer = new IntersectionObserver( async (entries) => {
       const [entry] = entries;
       try {
-        if (entry.isIntersecting && dataFetched === false) {
+        if (entry.isIntersecting && !hasEffectRun.current) {
+          hasEffectRun.current = true;
           setLoading(true);
-  
-          const request = await fetch(recommendationsLink);
+ 
+          const request = await fetch(`${recommendationsLink}`);
           if (request.ok && dataFetched === false) {
             const response = await request.json();
             setRecoms(response.posts);
@@ -61,8 +64,8 @@ const Testimonials = () => {
 
     return () => {
       if (recommendationsHolder) observer.unobserve(recommendationsHolder);
-    }    
-  });
+    }
+  }, []);
 
   return (
     <section ref={recomsHolder} id="Testimonials">

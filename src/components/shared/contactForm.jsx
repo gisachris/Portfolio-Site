@@ -2,7 +2,7 @@ import { useState, useRef, useContext, useEffect } from "react";
 import PopupContext from "../../contexts/popupContext";
 import formContext from "../../contexts/formContext";
 import emailjs from "@emailjs/browser";
-import sendButton from "../../assets/icons/emailbutton.svg";
+import sendButton from "/icons/emailButton.svg";
 import Loader from "./loader";
 
 const ContactForm = () => {
@@ -22,9 +22,11 @@ const ContactForm = () => {
     innerForm.classList.add("formBlured");
     setLoading(true);
 
-    const keys = import.meta.env;
-
-    emailjs.sendForm(`${keys.VITE_SERVICE_ID}`, `${keys.VITE_TEMPLATE_ID}`, form.current, `${keys.VITE_PUBLIC_KEY}`)
+    const serviceId = import.meta.env.VITE_SERVICE_ID;
+    const templateId = import.meta.env.VITE_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_PUBLIC_KEY;
+  
+    emailjs.sendForm(`${serviceId}`, `${templateId}`, form.current, `${publicKey}`)
       .then(() => {
         const innerForm = form.current.querySelector(".form");
         innerForm.classList.remove("formBlured");

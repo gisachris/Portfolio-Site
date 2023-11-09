@@ -2,7 +2,7 @@ import { useState, useEffect, useContext } from "react";
 import Carousel from "nuka-carousel";
 import recommendationsContext from "../../contexts/recomsContext";
 import textCleanup from "../../helpers/textCleanup";
-import linkedInLogo from "../../assets/icons/linkedin.png"
+import linkedInLogo from "/icons/linkedin.png"
 import '../../styles/css/testimonials.css';
 
 const LinkedInRecommendations = () => {

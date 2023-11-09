@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useContext } from "react";
 import PopupContext from "../../contexts/popupContext";
-import check from "../../assets/icons/check_icon.png";
-import fail from "../../assets/icons/fail_icon.png";
+import check from "/icons/check_icon.png";
+import fail from "/icons/fail_icon.png";
 import "../../styles/css/message.css";
 
 const PopUpMessage = () => {
