@@ -15,6 +15,7 @@ const Testimonials = () => {
 
   // eslint-disable-next-line 
   const recommendationsLink = process.env.RECOMMENDATIONS_LINK;
+  console.log(recommendationsLink);
   const { setPopupShow } = useContext(PopupContext);
 
   useEffect(() => {
@@ -26,7 +27,7 @@ const Testimonials = () => {
           hasEffectRun.current = true;
           setLoading(true);
  
-          const request = await fetch(recommendationsLink);
+          const request = await fetch(`${recommendationsLink}`);
           if (request.ok && dataFetched === false) {
             const response = await request.json();
             setRecoms(response.posts);

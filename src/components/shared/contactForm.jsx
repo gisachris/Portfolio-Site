@@ -24,8 +24,11 @@ const ContactForm = () => {
 
     /* eslint-disable */
     const serviceId = process.env.SERVICE_ID;
+    console.log(serviceId);
     const templateId = process.env.TEMPLATE_ID;
-    const publicKey = process.env.PUBLIC_KEY;
+    console.log(templateId);
+    const publicKey = import.meta.env.VITE_PUBLIC_KEY;
+    console.log(publicKey);
     /* eslint-disable */
   
     emailjs.sendForm(`${serviceId}`, `${templateId}`, form.current, `${publicKey}`)
