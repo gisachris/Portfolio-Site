@@ -22,16 +22,10 @@ const ContactForm = () => {
     innerForm.classList.add("formBlured");
     setLoading(true);
 
-    /* eslint-disable */
-    const serviceId = process.env.SERVICE_ID;
-    // console.log(serviceId);
-    const templateId = process.env.TEMPLATE_ID;
-    // console.log(templateId);
+    const serviceId = import.meta.env.VITE_SERVICE_ID;
+    const templateId = import.meta.env.VITE_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_PUBLIC_KEY;
-    console.log(`me testing env variables vite style: ${import.meta.env.VITE_PUBLIC_KEY}`);
-    console.log(`me testing env variables react + vite style: ${process.env.VITE_PUBLIC_KEY}`);
-    console.log(`me testing env variables react style: ${process.env.PUBLIC_KEY}`);
-    /* eslint-disable */
+    console.log(`${serviceId}, ${templateId}, ${publicKey}`);
   
     emailjs.sendForm(`${serviceId}`, `${templateId}`, form.current, `${publicKey}`)
       .then(() => {

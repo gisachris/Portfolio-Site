@@ -13,9 +13,8 @@ const Testimonials = () => {
   const recomsHolder = useRef(null);
   const hasEffectRun = useRef(false);
 
-  // eslint-disable-next-line 
-  const recommendationsLink = process.env.RECOMMENDATIONS_LINK;
-  console.log(recommendationsLink);
+  const recommendationsLink = import.meta.env.VITE_RECOMMENDATIONS_LINK;
+
   const { setPopupShow } = useContext(PopupContext);
 
   useEffect(() => {
