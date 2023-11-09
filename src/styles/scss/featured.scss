@@ -43,6 +43,8 @@
         font-size: 0.9rem;
         font-family: $primary-font;
         color: $tertiary-color;
+        width: 100%;
+        text-align: center;
       }
     }
 
@@ -55,6 +57,7 @@
       column-gap: 15px;
       margin-bottom: 20px;
       color: $neutral-light;
+      text-align: center;
 
       .typeSelector {
         font-size: 0.9rem;

@@ -58,9 +58,9 @@ const FeaturedApps = () => {
       </section>
       <section className="projectTypeSelectorsHolder">
         <span className={`typeSelector ${showProjectType === 'all' ? 'active' : ''}`} data-value="all" onClick={(e) => setshowbyProjectType(e)}>All</span>
-        <span className={`typeSelector ${showProjectType === 'mobile' ? 'active' : ''}`} data-value="mobile" onClick={(e) => setshowbyProjectType(e)}>Mobile Apps</span>
-        <span className={`typeSelector ${showProjectType === 'web' ? 'active' : ''}`} data-value="web" onClick={(e) => setshowbyProjectType(e)}>Website Design</span>
-        <span className={`typeSelector ${showProjectType === 'webmob' ? 'active' : ''}`} data-value="webmob" onClick={(e) => setshowbyProjectType(e)}>Website Development</span>
+        <span className={`typeSelector ${showProjectType === 'mobile' ? 'active' : ''}`} data-value="mobile" onClick={(e) => setshowbyProjectType(e)}>Mobile</span>
+        <span className={`typeSelector ${showProjectType === 'web' ? 'active' : ''}`} data-value="web" onClick={(e) => setshowbyProjectType(e)}>Design</span>
+        <span className={`typeSelector ${showProjectType === 'webmob' ? 'active' : ''}`} data-value="webmob" onClick={(e) => setshowbyProjectType(e)}>Development</span>
       </section>
       <section className="projects">
         {loading && <Loader />}
