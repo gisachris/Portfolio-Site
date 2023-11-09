@@ -118,12 +118,15 @@
     height: auto;
     overflow: hidden;
     display: flex;
+    align-items: center;
+    justify-content: center;
     column-gap: 10px;
     margin: 0 auto;
     // margin-bottom: 100px;
 
     .skillsText {
       width: 50%;
+      max-width: 660px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
@@ -185,6 +188,7 @@
 
     .skillsShowCase {
       width: 50%;
+      max-width: 600px;
       overflow: hidden;
       display: flex;
       align-items: center;
