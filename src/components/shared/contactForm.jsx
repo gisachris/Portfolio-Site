@@ -24,11 +24,13 @@ const ContactForm = () => {
 
     /* eslint-disable */
     const serviceId = process.env.SERVICE_ID;
-    console.log(serviceId);
+    // console.log(serviceId);
     const templateId = process.env.TEMPLATE_ID;
-    console.log(templateId);
+    // console.log(templateId);
     const publicKey = import.meta.env.VITE_PUBLIC_KEY;
-    console.log(publicKey);
+    console.log(`me testing env variables vite style: ${import.meta.env.VITE_PUBLIC_KEY}`);
+    console.log(`me testing env variables react + vite style: ${process.env.VITE_PUBLIC_KEY}`);
+    console.log(`me testing env variables react style: ${process.env.PUBLIC_KEY}`);
     /* eslint-disable */
   
     emailjs.sendForm(`${serviceId}`, `${templateId}`, form.current, `${publicKey}`)
