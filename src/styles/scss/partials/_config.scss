@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;900&family=Poppins:wght@500;600&family=Roboto:wght@700&family=Work+Sans:wght@500&display=swap');
+
+//dark-mode
+
+$background-color: #212529;
+$background-color-type-two: rgb(18, 23, 25);
+$background-color-type-flip: rgb(42, 45, 46);
+$primary-color-dark: #ffb742;
+$secondary-color-dark: #fff;
+$tertiary-color: #7b7b7b;
+$other-color: #292b2e;
+$neutral-light: #fff;
+$neutral-dark: #000;
+$semi-dark: #1c1c1c;
+$icon-background: #383e45;
+
+// Light-mode
+
+// $background-color: ;
+// $primary-color-light: ;
+// $secondary-color-light: ;
+// $tertiary-color: ;
+// $other-color: ;
+
+//fonts
+$primary-font: "Poppins", sans-serif;
+$secondary-font: 'Work Sans', sans-serif;
+$third-font: 'Roboto', sans-serif;
+$inter-font: 'Inter', sans-serif;
+
+//mixins
+@mixin button-base($bg-color, $font-color, $font-family) {
+  padding: 10px 5px;
+  background-color: $bg-color;
+  color: $font-color;
+  font-family: $font-family;
+  border: 0;
+}
+
+@mixin sectionTitle() {
+  font-family: $primary-font;
+  font-size: 0.9rem;
+  color: $primary-color-dark;
+  background-color: $other-color;
+  border: 0;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+@mixin sectionTopText() {
+  font-family: $third-font;
+  font-size: 1.5rem;
+  color: $neutral-light;
+  text-align: center;
+}

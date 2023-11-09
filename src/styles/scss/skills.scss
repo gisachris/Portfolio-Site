@@ -1,0 +1,214 @@
+@import './partials/config';
+
+@media screen and (max-width: 767px) {
+  #Skills {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    column-gap: 10px;
+    margin: 0 auto;
+
+    .skillsText {
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      row-gap: 10px;
+      padding: 10px 0;
+
+      .topText {
+        width: 75%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .skillsHeader {
+          @include sectionTitle();
+
+          width: fit-content;
+          padding: 5px 10px;
+          margin-bottom: 10px;
+        }
+
+        .skillsTopPar {
+          @include sectionTopText();
+
+          width: fit-content;
+          font-size: 2.3rem;
+          text-align: center;
+        }
+      }
+
+      .lowText {
+        width: 75%;
+        margin: 0 auto;
+        margin-top: 15px;
+        max-width: 500px;
+
+        .lowerPar {
+          font-size: 1rem;
+          font-family: $inter-font;
+          font-weight: 300;
+          color: $neutral-light;
+          text-align: center;
+        }
+      }
+
+      .skillsButtonHolder {
+        display: none;
+        bottom: 0;
+        width: 75%;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        a {
+          @include button-base($primary-color-dark, $other-color, $primary-font);
+
+          border-radius: 20px;
+          width: 100px;
+          text-decoration: none;
+          font-size: 0.9rem;
+          padding: 10px 15px;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .skillsShowCase {
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .skillsHolder {
+        width: 85%;
+        margin: 30px auto;
+        text-align: center;
+        font-size: 0;
+
+        .skillCover {
+          display: inline-block;
+          margin: 5px;
+          width: 70px;
+          border-radius: 10px;
+          background-color: $icon-background;
+          box-shadow: -6px 9px 15px rgba(0, 0, 0, 0.5);
+
+          img {
+            width: 100%;
+            padding: 10px;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 767px) {
+  #Skills {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    column-gap: 10px;
+    margin: 0 auto;
+    // margin-bottom: 100px;
+
+    .skillsText {
+      width: 50%;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+      padding: 20px 0;
+
+      .topText {
+        width: 75%;
+        margin: 0 auto;
+
+        .skillsHeader {
+          @include sectionTitle();
+
+          width: fit-content;
+          padding: 5px 10px;
+          margin-bottom: 10px;
+        }
+
+        .skillsTopPar {
+          @include sectionTopText();
+
+          width: fit-content;
+          font-size: 2.3rem;
+          text-align: left;
+        }
+      }
+
+      .lowText {
+        width: 75%;
+        margin: 0 auto;
+        margin-top: 15px;
+        max-width: 500px;
+
+        .lowerPar {
+          font-size: 1rem;
+          font-family: $inter-font;
+          font-weight: 300;
+          color: $neutral-light;
+        }
+      }
+
+      .skillsButtonHolder {
+        width: 75%;
+        margin: 0 auto;
+        margin-top: 20px;
+
+        a {
+          @include button-base($primary-color-dark, $other-color, $primary-font);
+
+          border-radius: 20px;
+          width: 100px;
+          text-decoration: none;
+          font-size: 0.9rem;
+          padding: 10px 15px;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .skillsShowCase {
+      width: 50%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .skillsHolder {
+        width: 85%;
+        margin: 70px auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(70px, 70px));
+        gap: 10px;
+
+        .skillCover {
+          width: 70px;
+          border-radius: 10px;
+          background-color: $icon-background;
+
+          img {
+            width: 100%;
+            padding: 10px;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
+}

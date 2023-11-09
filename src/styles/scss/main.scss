@@ -1,0 +1,64 @@
+@media screen and (max-width: 767px) {
+  .Main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .MainBlur {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    filter: blur(10px);
+    overflow-x: hidden;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .Main {
+    display: grid;
+    grid-template-rows: auto;
+    position: relative;
+    width: 100%;
+    margin-top: 70px;
+  }
+
+  .MainBlur {
+    display: grid;
+    grid-template-rows: auto;
+    position: relative;
+    width: 100%;
+    margin-top: 70px;
+  }
+
+  .testing {
+    min-height: 400px;
+  }
+}
+
+.loc-1 {
+  background-color: lightcoral;
+}
+
+.loc-2 {
+  background-color: lightblue;
+}
+
+.loc-3 {
+  background-color: lightgreen;
+}
+
+.loc-4 {
+  background-color: lightpink;
+}
+
+.loc-5 {
+  background-color: lightsalmon;
+}
+
+.loc-6 {
+  background-color: lightseagreen;
+}

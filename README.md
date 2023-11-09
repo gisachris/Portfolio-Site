@@ -1,10 +1,4 @@
-<a name="readme-top"></a>
-
-<div align="center">
-
-  <h3><b>My first portfolio</b></h3>
-
-</div>
+<!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
 
@@ -18,52 +12,44 @@
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
-# 📖 [my portfolio] <a name="about-project"></a>
+<!-- PROJECT DESCRIPTION -->
 
-my portfolio is a responsive website designed for both mobile and desktop use
+# 📖 My portfolio <a name="about-project"></a>
 
-## 🛠 Built With <a name="built-with">html and css</a>
+**My portolio** is a web application to showcase my projects, experience and Professional Information all in one package. Intuitive design, functionality and great user experience are the core fundamentals with this react application.
 
-### Tech Stack <a name="tech-stack">html and css</a>
+## 🛠 Built With <a name="built-with"></a>
 
-i buit this website using the html and css tech stack.
+### Tech Stack <a name="tech-stack"></a>
 
 <details>
-  <summary>structure</summary>
+  <summary>React</summary>
   <ul>
-    <li><a href="https://html.com/">html.com</a></li>
+    <li><a href="https://www.reactdev.org/">React</a></li>
   </ul>
 </details>
 
-<details>
-  <summary>styling</summary>
-  <ul>
-    <li><a href="https://css.com/">css.com</a></li>
-  </ul>
-</details>
+<!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-- one of the key features to this website is its responsiveness to mobile and desktop/pc
-- Use the HTML for the structure
-- Use the CSS for the styling
-- Use the design from the Figma 
+- **Display My experience**
+- **Display My past projects**
+- **Provide modes of communication a person can use to reach me.**
+- **Descibe my professional personality**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [gisachris.github.io/week1_portfolio/](https://gisachris.github.io/week1_portfolio/)
+[Checkout the live site here!](https://gisadev.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -71,126 +57,95 @@ i buit this website using the html and css tech stack.
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-
+To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
 In order to run this project you need:
 
-
-Example command:
-
 ```sh
- install vs code or any other text editor.
+ Nodejs
 ```
- 
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-
-Example commands:
-
 ```sh
-  cd my-folder
-  git clone https://github.com/gisachris/week1_portfolio```
-
+   git clone https://github.com/gisachris/Portfolio-Site.git
+   cd Portfolio-Site
+```
 
 ### Install
 
 Install this project with:
 
-
-Example command:
-
 ```sh
-  node.js V16 and above
+  cd Portfolio-Site
+  npm install
 ```
-
 
 ### Usage
 
 To run the project, execute the following command:
 
-
-Example command:
-
 ```sh
-  use git bash to open in Vs code
+  npm run dev
 ```
-
-
-### Run tests
-
-To run tests, run the following command:
-
-
-Example command:
-
-```sh
-Run "npx stylelint "**/*.{css,scss}" --fix " to fix linters 
-```
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
 
+👤 **Gisa Chris**
 
-👤 Gisa Chris
-
--GitHub: https://github.com/gisachris
-
--Twitter: https://twitter.com/_GisaChris
-
--LinkedIn: https://www.linkedin.com/in/gisa-chris-907948267/
-
-👤 Anthony MakDessy
-
--GitHub: https://github.com/ANTOINE1128
-
-<span><b>project presentation</b></span>
-
--presentation:https://www.loom.com/share/487900f0670d4b909bad5a405b21a862
+- GitHub: [@gisachris](https://github.com/gisachris)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/gisa-chris/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
--adding more imagery and completing the portfolio
--adding tech support 24/7
-- Use the array of objects to display the content
-- Make a contact form for the portfolio
-- Make the desktop version of the design
+- [ ] **Animations and better user Experience**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the issues page: https://github.com/gisachris/portfolio_week1/issues
+Feel free to check the [issues page](https://github.com/gisachris/budget_builder/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- SUPPORT -->
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project consider viewing my other profiles and sending job inquiries. thank you
+If you like this project consider leaving a star in the repo.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank all my fellow coding partners
+Original design idea by [ Kartik Bansal on Figma.](<https://www.figma.com/file/uDYE2tjJNrNTDTBm4QaG4f/Personal-portfolio-Website-landing-page-UX-UI-kit-(Design-By-Kartik-Bansal)-(Community)?type=design&node-id=91-11&mode=design&t=VqOBASZmsKNPn8P6-0>)
+
+Application icons by <a target="_blank" href="https://icons8.com">Icons8</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- LICENSE -->
+
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/gisachris/week1_portfolio/blob/new-features/MIT.md) licensed.
+This project is [MIT](./MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

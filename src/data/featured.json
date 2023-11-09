@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "name": "EduPlanner Web Service",
+    "techStack": {
+      "frontend": ["reactjs", "javascript", "reduxjs", "photoshop", "figma"],
+      "backend": ["ruby", "rails", "postgresql"],
+      "testing": ["rspec", "capybara"]
+    },
+    "description": "EduPlanner Application is a seamless feature-rich UI and UX application Built using React.js and Ruby on Rails to Simplify Registrations and Bookings for Available Online classes on the EduPlanner web application.",
+    "images": {
+      "small": "/images/projects/eduplanner_small.png",
+      "large": "/images/projects/eduplanner_large.png"
+    },
+    "links": {
+      "liveDemo": "https://edu-planner.onrender.com/",
+      "sourceCode": "https://github.com/gisachris/EduPlanner-Frontend"
+    },
+    "type": ["all","mobile","web", "webmob"]
+  },
+  {
+    "id": 2,
+    "name": "MovieBest App",
+    "techStack": {
+      "frontend": ["javascript", "css"],
+      "backend": ["api", "postman"],
+      "testing": ["jest"]
+    },
+    "description": "This is an API based Web application that renders a list of movies from the movie best API and displays them with intricate design and functionality that allows you the client  to have the best movie browsing experience possible",
+    "images": {
+      "small": "",
+      "large": "/images/projects/moviebest.png"
+    },
+    "links": {
+      "liveDemo": "https://moviebest.onrender.com/",
+      "sourceCode": "https://github.com/gisachris/MovieBest-website"
+    },
+    "type": ["all","web","webmob"]
+  },
+  {
+    "id": 3,
+    "name": "Tasker App",
+    "techStack": {
+      "frontend": ["javascript", "css"],
+      "backend": ["localstorage"],
+      "testing": ["jest"]
+    },
+    "description": "This is a to do list application used to store and display a user's tasks give functionality to check across finished tasks as well as all other CRUD operations. This program  was made with the JavaScript language and styling with css",
+    "images": {
+      "small": "/images/projects/lister_small.png",
+      "large": "/images/projects/lister_large.png"
+    },
+    "links": {
+      "liveDemo": "https://lister-hm86.onrender.com/",
+      "sourceCode": "https://github.com/gisachris/To-Do-List-app"
+    },
+    "type": ["all","web","mobile","webmob"]
+  },
+  {
+    "id": 4,
+    "name": "World Metrics Service",
+    "techStack": {
+      "frontend": ["javascript", "reactjs", "reduxjs", "scss", "api", "postman"],
+      "testing": ["jest"]
+    },
+    "description": "A world class web service that retrieves data from the restCountries API and displays it in a myriad of ways with top notch UI-design and craftsmanship as well as industry standard techniques and functionality to get you the information you desire from any country in the world",
+    "images": {
+      "small": "/images/projects/worldmetrics_small.png",
+      "large": "/images/projects/worldmetrics_large.png"
+    },
+    "links": {
+      "liveDemo": "https://worldmetrics-lw0g.onrender.com/",
+      "sourceCode": "https://github.com/gisachris/world-Metrics-service"
+    },
+    "type": ["all", "web","webmob","mobile"]
+  },
+  {
+    "id": 5,
+    "name": "book Store",
+    "techStack": {
+      "frontend": ["javascript", "reactjs", "reduxjs", "css", "photoshop", "figma"],
+      "testing": ["jest"]
+    },
+    "description": "This is a state of the art book store application that have remarkable UI and UX design to Retrieve, display and Manipulate book Data as the user sees fit. Built with react and redux.",
+    "images": {
+      "small": "/images/projects/bookcms_small.png",
+      "large": "/images/projects/bookcms_large.png"
+    },
+    "links": {
+      "liveDemo": "https://bookcms.onrender.com/",
+      "sourceCode": "https://github.com/gisachris/react-bookstore-application"
+    },
+    "type": ["all","web"]
+  },
+  {
+    "id": 6,
+    "name": "simple Landing Page",
+    "techStack": {
+      "frontend": ["html", "css", "bootstrap", "photoshop", "figma"]
+    },
+    "description": "Html, Css and Bootstrap landing page application for a law Firm.",
+    "images": {
+      "small": "",
+      "large": "/images/projects/simplePage.png"
+    },
+    "links": {
+      "liveDemo": "https://simple-landing-page.pages.dev/",
+      "sourceCode": "https://github.com/gisachris/simple_landing_page"
+    },
+    "type": ["all","web","webmob", "mobile"]
+  }
+]
