@@ -12,7 +12,7 @@ const AnimatedText = () => {
     const locations = ['top', 'right', 'bottom', 'left'];
     const currentLocation = locations[Math.floor(Math.random() * 4)];
 
-    if (index < titles.length) {
+    if (index < titles.length && index !== titles.length - 1) {
       setText1(titles[index]);
       textHolderRef.current.classList.add(`style-border-${currentLocation}`);
       textRef.current.classList.add(`drop-text-from-${currentLocation}`);
@@ -25,6 +25,7 @@ const AnimatedText = () => {
     }
 
     if(index === titles.length - 1){
+      setIndex(titles.length - 1);
       setText1(titles[index]);
       textHolderRef.current.classList.add('holderStay');
       textRef.current.classList.add('textStay');
