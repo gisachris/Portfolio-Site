@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import '../../styles/css/aniText.css';
 
 const AnimatedText = () => {
-  const titles = ['Web Developer', 'Backend Engineer', 'FrontEnd Developer', 'Rails Enthusiast', 'Rails Developer', 'Web Enthusiast',  'FullStack Developer'];
+  const titles = ['Web Developer', 'Api Developer', 'Backend Engineer', 'FrontEnd Developer', 'Rails Enthusiast', 'Rails Developer', 'Web Enthusiast',  'FullStack Developer'];
   const textHolderRef = useRef();
   const textRef = useRef();
   const [index, setIndex] = useState(0);
@@ -20,7 +20,6 @@ const AnimatedText = () => {
       setTimeout(() => {
         textHolderRef.current.classList.remove(`style-border-${currentLocation}`);
         textRef.current.classList.remove(`drop-text-from-${currentLocation}`);
-        console.log(index);
         setIndex((prevIndex) => prevIndex + 1);
       }, 3500);
     }
@@ -29,7 +28,7 @@ const AnimatedText = () => {
       setText1(titles[index]);
       textHolderRef.current.classList.add('holderStay');
       textRef.current.classList.add('textStay');
-    };
+    }
   }, [index]);
 
   return (
