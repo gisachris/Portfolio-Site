@@ -1,0 +1,127 @@
+@import './partials/config';
+
+.animatedTextHolder {
+  overflow: hidden;
+  position: relative;
+  width: fit-content;
+  border-left: 0px;
+  opacity: 0;
+
+
+  .textFirst {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+  }
+}
+
+// animation classes
+@keyframes animateTop {
+  4% {
+    border-top-width: 3px;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    border-top-width: 3px;
+    opacity: 0;
+  }
+}
+
+.style-border-top {
+  border-top-width: 0px;
+  border-top-style: solid;
+  border-top-color: $primary-color-dark;
+  opacity: 0;
+  animation: animateTop 5s linear forwards;
+}
+
+@keyframes animateBottom {
+  8% {
+    border-bottom-width: 3px;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    border-bottom-width: 3px;
+    opacity: 0;
+  }
+}
+
+.style-border-bottom {
+  border-bottom-color: $primary-color-dark;
+  border-bottom-style: solid;
+  border-bottom-width: 0px;
+  opacity: 0;
+  animation: animateBottom 5s linear forwards;
+}
+
+@keyframes animateRight {
+  8% {
+    border-right-width: 3px;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    border-right-width: 3px;
+    opacity: 0;
+  }
+}
+
+.style-border-right {
+  border-right-style: solid;
+  border-right-color: $primary-color-dark;
+  border-right-width: 0px;
+  opacity: 0;
+  animation: animateRight 5s linear forwards;
+}
+
+@keyframes animateLeft {
+  8% {
+    border-left-width: 3px;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    border-left-width: 3px;
+    opacity: 0;
+  }
+}
+
+.style-border-left {
+  border-left-style: solid;
+  border-left-color: $primary-color-dark;
+  border-left-width: 0px;
+  opacity: 0;
+  animation: animateLeft 5s linear forwards;
+}

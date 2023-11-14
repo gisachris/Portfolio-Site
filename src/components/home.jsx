@@ -1,4 +1,5 @@
 import { Link } from 'react-scroll';
+import AnimatedText from './shared/animatedText';
 import emblemOne from '/icons/emblem-one.png';
 import emblemTwo from '/icons/emblem-two.png';
 import emblemThree from '/icons/emblem-three.png';
@@ -47,7 +48,9 @@ const HomePage = () => {
           <div className="textHolder">
             <span className="creative">Creative Designer</span>
             <span className="and">&</span>
-            <span className='stack'>FullStack Developer</span>
+            <div className="stack">
+              <AnimatedText />
+            </div>
           </div>
         </div>
         <div className="headerpart3">
