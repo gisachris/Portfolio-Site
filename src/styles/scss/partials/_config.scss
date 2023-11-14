@@ -53,3 +53,11 @@ $inter-font: 'Inter', sans-serif;
   color: $neutral-light;
   text-align: center;
 }
+
+@mixin animatedTextAttributes($fontSize) {
+  display: inline-flex;
+  position: relative;
+  flex-direction: column;
+  width: fit-content;
+  justify-content: center;
+}

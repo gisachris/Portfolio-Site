@@ -31,6 +31,7 @@
             color: $primary-color-dark;
             word-spacing: 0.05rem;
             text-decoration: underline;
+            cursor: pointer;
           }
         }
 
@@ -201,6 +202,7 @@
             transform: rotate(90deg);
             text-align: center;
             vertical-align: middle;
+            cursor: pointer;
           }
         }
       }
@@ -238,6 +240,7 @@
             color: $primary-color-dark;
             word-spacing: 0.05rem;
             text-decoration: underline;
+            cursor: pointer;
           }
         }
 
@@ -267,14 +270,21 @@
 
           .creative {
             width: fit-content;
+            max-width: 45%;
           }
 
           .and {
             width: fit-content;
+            max-width: 5%;
           }
 
           .stack {
-            width: fit-content;
+            width: 200px;
+            height: 50px;
+            // border: 2px solid red;
+            display: flex;
+            align-items: center;
+            justify-content: start;
           }
         }
       }
@@ -399,6 +409,7 @@
             transform: rotate(90deg);
             text-align: center;
             vertical-align: middle;
+            cursor: pointer;
           }
         }
       }
@@ -435,6 +446,7 @@
             color: $primary-color-dark;
             word-spacing: 0.05rem;
             text-decoration: underline;
+            cursor: pointer;
           }
         }
 
@@ -445,7 +457,6 @@
       }
 
       .headerpart2 {
-        // width: 75%;
         max-width: 700px;
         margin: 0 auto;
         font-size: 2rem;
@@ -462,6 +473,25 @@
           width: 100%;
           display: flex;
           column-gap: 15px;
+
+          .creative {
+            width: fit-content;
+            overflow: hidden;
+          }
+
+          .and {
+            width: fit-content;
+            overflow: hidden;
+          }
+
+          .stack {
+            width: 350px;
+            height: 40px;
+            // border: 2px solid red;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+          }
         }
       }
 
@@ -582,6 +612,7 @@
             font-family: $primary-font;
             font-weight: 900;
             text-decoration: none;
+            cursor: pointer;
           }
         }
       }
