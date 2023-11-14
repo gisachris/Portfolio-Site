@@ -6,7 +6,7 @@
   width: fit-content;
   border-left: 0px;
   opacity: 0;
-
+  transition: border 0.5s ease-in-out;
 
   .textFirst {
     position: relative;
@@ -14,11 +14,12 @@
     top: 0px;
     bottom: 0px;
     right: 0px;
+    transition: position 0.5s ease-in-out;
   }
 }
 
-// animation classes
-@keyframes animateTop {
+// container animation classes
+@keyframes animateBorderTop {
   4% {
     border-top-width: 3px;
   }
@@ -42,10 +43,10 @@
   border-top-style: solid;
   border-top-color: $primary-color-dark;
   opacity: 0;
-  animation: animateTop 5s linear forwards;
+  animation: animateBorderTop 3.5s linear forwards;
 }
 
-@keyframes animateBottom {
+@keyframes animateBorderBottom {
   8% {
     border-bottom-width: 3px;
   }
@@ -69,10 +70,10 @@
   border-bottom-style: solid;
   border-bottom-width: 0px;
   opacity: 0;
-  animation: animateBottom 5s linear forwards;
+  animation: animateBorderBottom 3.5s linear forwards;
 }
 
-@keyframes animateRight {
+@keyframes animateBorderRight {
   8% {
     border-right-width: 3px;
   }
@@ -96,10 +97,10 @@
   border-right-color: $primary-color-dark;
   border-right-width: 0px;
   opacity: 0;
-  animation: animateRight 5s linear forwards;
+  animation: animateBorderRight 3.5s linear forwards;
 }
 
-@keyframes animateLeft {
+@keyframes animateBorderLeft {
   8% {
     border-left-width: 3px;
   }
@@ -123,5 +124,191 @@
   border-left-color: $primary-color-dark;
   border-left-width: 0px;
   opacity: 0;
-  animation: animateLeft 5s linear forwards;
+  animation: animateBorderLeft 3.5s linear forwards;
+}
+
+// text child animation classes
+
+@keyframes animateTextTop {
+  0% {
+    opacity: 0px;
+    top: -25px;
+  }
+
+  5% {
+    opacity: 1;
+    top: 0px;
+  }
+
+  80% {
+    top: 0px;
+    opacity: 1;
+  } 
+  
+  85% {
+    top: -25px;
+    opacity: 0;
+  }
+
+  100% {
+    top: -25px;
+    opacity: 0;
+  }
+}
+
+.drop-text-from-top {
+  top: -25px;
+  opacity: 0;
+  animation: animateTextTop 3.5s linear forwards;
+}
+
+@keyframes animateTextBottom {
+  0% {
+    opacity: 0px;
+    top: 25px;
+  }
+
+  5% {
+    opacity: 1;
+    top: 0px;
+  }
+
+  80% {
+    top: 0px;
+    opacity: 1;
+  } 
+  
+  85% {
+    top: 25px;
+    opacity: 0;
+  }
+
+  100% {
+    top: 25px;
+    opacity: 0;
+  }
+}
+
+.drop-text-from-bottom {
+  top: 25px;
+  opacity: 0;
+  animation: animateTextBottom 3.5s linear forwards;
+}
+
+@keyframes animateTextLeft {
+  0% {
+    opacity: 0;
+    left: -40px;
+  }
+
+  5% {
+    opacity: 1;
+    left: 0px;
+  }
+
+  90% {
+    left: 0px;
+    opacity: 1;
+  } 
+
+  100% {
+    left: -40px;
+    opacity: 0;
+  }
+}
+
+.drop-text-from-left {
+  left: -40px;
+  opacity: 0;
+  animation: animateTextLeft 3.5s linear forwards;
+}
+
+@keyframes animateTextRight {
+  0% {
+    opacity: 0;
+    left: 40px;
+  }
+
+  5% {
+    opacity: 1;
+    left: 0px;
+  }
+
+  90% {
+    left: 0px;
+    opacity: 1;
+  } 
+
+  100% {
+    left: 40px;
+    opacity: 0;
+  }
+}
+
+.drop-text-from-right {
+  left: 40px;
+  opacity: 0;
+  animation: animateTextRight 3.5s linear forwards;
+}
+
+@keyframes animateStayText {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+//last titles
+
+@keyframes holderStayAnimation {
+  8% {
+    border-left-width: 3px;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  97% {
+    border-left-width: 3px;
+  }
+
+  100% {
+    opacity: 1;
+    border-left-width: 0px;
+  }
+}
+
+@keyframes textStayAnimation {
+  0% {
+    opacity: 0;
+    left: -40px;
+  }
+
+  5% {
+    opacity: 1;
+    left: 0px;
+  }
+
+  100% {
+    left: 0px;
+    opacity: 1;
+  }
+}
+
+.holderStay {
+  border-left-style: solid;
+  border-left-color: $primary-color-dark;
+  border-left-width: 0px;
+  opacity: 0;
+  animation: holderStayAnimation 3.5s linear forwards;
+}
+
+.textStay {
+  left: -40px;
+  opacity: 0;
+  animation: textStayAnimation 3.5s linear forwards;
 }

@@ -2,40 +2,35 @@ import { useState, useRef, useEffect } from 'react';
 import '../../styles/css/aniText.css';
 
 const AnimatedText = () => {
-  const titles = ['FullStack Developer', 'Backend Engineer', 'FrontEnd Developer', 'Rails Enthusiast'];
-  const counter = useRef(0);
+  const titles = ['Web Developer', 'Backend Engineer', 'FrontEnd Developer', 'Rails Enthusiast', 'Rails Developer', 'Web Enthusiast',  'FullStack Developer'];
   const textHolderRef = useRef();
   const textRef = useRef();
-  const currentBorder = useRef('top');
-  const textLocation = useRef('top');
-  const [text1, setText1] = useState(titles[counter.current]);
-
-  const changeText = () => {
-    // classes : drop-text-from-${textLocation} 
-    const locations = ['top', 'right', 'bottom', 'left'];
-    const locationId = Math.floor(Math.random() * 4);
-    const currentLocation = locations[locationId];
-    textHolderRef.current.classList.add(`style-border-${currentLocation}`);
-
-    setTimeout(() => {
-      textHolderRef.current.classList.remove(`style-border-${currentLocation}`);
-      if(counter.current === titles.length - 1){
-        counter.current = 0;
-        setText1(titles[counter.current]);
-      }else {
-        counter.current++;
-        setText1(titles[counter.current]);
-      }
-    }, 5000);
-  };
+  const [index, setIndex] = useState(0);
+  const [text1, setText1] = useState(titles[0]);
 
   useEffect(() => {
-    const intervalId = setInterval(changeText, 5000);
+    const locations = ['top', 'right', 'bottom', 'left'];
+    const currentLocation = locations[Math.floor(Math.random() * 4)];
 
-    return () => {
-      clearInterval(intervalId);
+    if (index < titles.length) {
+      setText1(titles[index]);
+      textHolderRef.current.classList.add(`style-border-${currentLocation}`);
+      textRef.current.classList.add(`drop-text-from-${currentLocation}`);
+
+      setTimeout(() => {
+        textHolderRef.current.classList.remove(`style-border-${currentLocation}`);
+        textRef.current.classList.remove(`drop-text-from-${currentLocation}`);
+        console.log(index);
+        setIndex((prevIndex) => prevIndex + 1);
+      }, 3500);
+    }
+
+    if(index === titles.length - 1){
+      setText1(titles[index]);
+      textHolderRef.current.classList.add('holderStay');
+      textRef.current.classList.add('textStay');
     };
-  }, []);
+  }, [index]);
 
   return (
     <div className={`animatedTextHolder`} ref={textHolderRef}>
