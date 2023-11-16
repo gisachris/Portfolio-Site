@@ -8,8 +8,6 @@ import '../../styles/css/testimonials.css';
 const LinkedInRecommendations = () => {
   const [recoms, loading] = useContext(recommendationsContext);
   const pureRecomendations = recoms ? recoms.filter(r => r.received === "true") : null;
-  console.log(recoms);
-  console.log(pureRecomendations);
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
