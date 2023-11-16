@@ -63,11 +63,11 @@ const ProjectModal = () => {
             </section>
             <section className="moreProjectInfo">
               <section className="projectLinks">
-                <a href={Data.links.liveDemo} target='blank' className="liveDemoLink">
+                <a href={Data.links.liveDemo} target='blank' rel='noreferrer' className="liveDemoLink">
                   <span className="linkText">Live Demo</span>
                   <img src={demoLink} alt="demoLinkIcon" className='liveDemoIcon'/>
                 </a>
-                <a href={Data.links.sourceCode} target='blank' className="sourceCodeLink">
+                <a href={Data.links.sourceCode} target='blank' rel='noreferrer' className="sourceCodeLink">
                   <span className="linkText">SourceCode</span>
                   <img src={sourceLink} alt="sourceLinkIcon" className='sourceCodeIcon'/>
                 </a>
