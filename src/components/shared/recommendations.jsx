@@ -7,7 +7,9 @@ import '../../styles/css/testimonials.css';
 
 const LinkedInRecommendations = () => {
   const [recoms, loading] = useContext(recommendationsContext);
-  const pureRecomendations = recoms ? recoms.filter(r => r.received === true) : null;
+  const pureRecomendations = recoms ? recoms.filter(r => r.received === "true") : null;
+  console.log(recoms);
+  console.log(pureRecomendations);
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -83,7 +85,7 @@ const LinkedInRecommendations = () => {
               </section>
               <section className="extras">
               <img src={linkedInLogo} className="linkednLogo" alt="linkednLogo" />
-              <a href="https://www.linkedin.com/in/gisa-chris/" className="readmore">Read More...</a>
+              <a href="https://www.linkedin.com/in/gisa-chris/" target="blank" rel="noreferrer" className="readmore">Read More...</a>
               </section>
             </div>
             ))}
