@@ -73,10 +73,10 @@ const HomePage = () => {
                 <span className="subText">{card.text.sub}</span>
               </section>
               <Link to={card.link} spy={true} smooth={true} offset={0} duration={500}>&gt;</Link>
-          </div>
+            </div>
           ))}
         </div>
-          
+
       </section>
     </div>
   );
