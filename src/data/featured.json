@@ -39,22 +39,20 @@
   },
   {
     "id": 3,
-    "name": "Tasker App",
+    "name": "Ospos Point of Sale System",
     "techStack": {
-      "frontend": ["javascript", "css"],
-      "backend": ["localstorage"],
-      "testing": ["jest"]
+      "frontend": ["html","php", "bootstrap"],
+      "backend": ["php", "codeigniter"]
     },
-    "description": "This is a to do list application used to store and display a user's tasks give functionality to check across finished tasks as well as all other CRUD operations. This program  was made with the JavaScript language and styling with css",
+    "description": "Open Source Point of Sale is a web-based point of sale system. The application is written in PHP, it uses MySQL (or MariaDB) as data storage back-end and has a simple but intuitive user interface.",
     "images": {
-      "small": "/images/projects/lister_small.png",
-      "large": "/images/projects/lister_large.png"
+      "small": "",
+      "large": "/images/projects/ospos.png"
     },
     "links": {
-      "liveDemo": "https://lister-hm86.onrender.com/",
-      "sourceCode": "https://github.com/gisachris/To-Do-List-app"
+      "sourceCode": "https://github.com/gisachris/ospos_project"
     },
-    "type": ["all","web","mobile","webmob"]
+    "type": ["all","web","webmob"]
   },
   {
     "id": 4,
