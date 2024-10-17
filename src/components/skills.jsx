@@ -26,9 +26,9 @@ const SkillsPage = () => {
           {techSkills && techSkills.map((skill) => (
             <div className="skillCover" key={skill} title={skill}>
               <img
-                src={`/technologies/${skill}.png` || `/technologies/${skill}.svg`} 
+                src={`/technologies/${skill}.png` || `/technologies/${skill}.svg`}
                 alt="skill Display"
-                />
+              />
             </div>
           ))}
         </div>
