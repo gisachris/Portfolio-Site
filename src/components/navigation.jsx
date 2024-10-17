@@ -6,7 +6,7 @@ import closeButton from '/icons/close.png';
 import { Link } from 'react-scroll';
 
 const Navigation = ({ isOpen, toggleNavigation }) => {
-  return(
+  return (
     <>
       <div className="navHolder">
         <section className="hamburgerSection">
@@ -28,7 +28,7 @@ const Navigation = ({ isOpen, toggleNavigation }) => {
             <Link to="Contact" spy={true} smooth={true} offset={500} duration={500} onClick={toggleNavigation}>Contact</Link>
           </section>
           <section className="navHireButton">
-            <a href="https://drive.google.com/file/d/1ky-Ikl2mZ-YB4LQqljbg8tEOSr1N9rV6/view?usp=drive_link" className="aboutButton" target='blank'>My Resume</a>
+            <a href="https://drive.google.com/file/d/1GEjS6uO6AQsbOqytgpK-jJOccwTD-uTw/view?usp=sharing" className="aboutButton" target='blank'>My Resume</a>
           </section>
         </nav>
       </div>

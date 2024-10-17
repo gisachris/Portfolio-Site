@@ -3,7 +3,7 @@ import AnimatedText from './shared/animatedText';
 import emblemOne from '/icons/emblem-one.png';
 import emblemTwo from '/icons/emblem-two.png';
 import emblemThree from '/icons/emblem-three.png';
-import headPiece from '/images/mini.png'
+import headPiece from '/images/mini_update.png';
 import wavingHand from '/icons/wavingHand.png';
 import '../styles/css/home.css';
 
@@ -73,10 +73,10 @@ const HomePage = () => {
                 <span className="subText">{card.text.sub}</span>
               </section>
               <Link to={card.link} spy={true} smooth={true} offset={0} duration={500}>&gt;</Link>
-          </div>
+            </div>
           ))}
         </div>
-          
+
       </section>
     </div>
   );
