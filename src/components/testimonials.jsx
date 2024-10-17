@@ -19,13 +19,13 @@ const Testimonials = () => {
 
   useEffect(() => {
     // Intersection observer
-    const observer = new IntersectionObserver( async (entries) => {
+    const observer = new IntersectionObserver(async (entries) => {
       const [entry] = entries;
       try {
         if (entry.isIntersecting && !hasEffectRun.current) {
           hasEffectRun.current = true;
           setLoading(true);
- 
+
           const request = await fetch(`${recommendationsLink}`);
           if (request.ok && dataFetched === false) {
             const response = await request.json();
