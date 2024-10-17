@@ -3,7 +3,7 @@ import AnimatedText from './shared/animatedText';
 import emblemOne from '/icons/emblem-one.png';
 import emblemTwo from '/icons/emblem-two.png';
 import emblemThree from '/icons/emblem-three.png';
-import headPiece from '/images/mini_update.webp';
+import headPiece from '/images/mini_update.png';
 import wavingHand from '/icons/wavingHand.png';
 import '../styles/css/home.css';
 
